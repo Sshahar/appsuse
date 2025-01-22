@@ -16,6 +16,7 @@ export function MailPreview({ mail, setCmpType }) {
 
     const previewStyle = {
         "display": "grid",
+        "gridColumn": 2,
         "gridAutoFlow": "column",
         "gridTemplateColumns": "20px 20px 1fr 1fr 1fr",
         "gap": "10px",

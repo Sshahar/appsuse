@@ -1,3 +1,4 @@
+import { MailFolderList } from "../cmps/MailFolderList.jsx"
 import { MailList } from "../cmps/MailList.jsx"
 import { mailService } from "../services/mail.service.js"
 import { MailDetails } from "./MailDetails.jsx"
@@ -18,12 +19,10 @@ export function MailIndex() {
         setFilterBy(prevFilter => ({ ...prevFilter, ...newFilter }))
     }
 
-    console.log('cmpType:', cmpType)
     return (
-        <div className='books-container'>
-            <h2>Mail app</h2>
-            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType}/>
-            {/* <MailList mails={mails} /> */}
+        <div class="main-mail-index">
+            <MailFolderList />
+            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{'gridColumn': 2}}/>
         </div>
     )
 }

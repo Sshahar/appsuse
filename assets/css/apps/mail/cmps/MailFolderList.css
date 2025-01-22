@@ -1,0 +1,9 @@
+.folder {
+    background-color: #F6F8FC;
+}
+
+.main-folder-list {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    background-color: '#F6F8FC';
+}

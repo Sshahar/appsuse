@@ -7,7 +7,7 @@
 
 @import './basics/base.css';
 @import './basics/helpers.css';
-/* @import './basics/layout.css'; */
+@import './basics/layout.css';
 
 /* Pages */
 @import './pages/home.css';
@@ -21,7 +21,12 @@
 @import './cmps/UserMsg.css';
 @import './cmps/AppHeader.css';
 
+/* Mail Cmps */
 /* @import './apps/mail/cmps/MailList.css'; */
+@import './apps/mail/cmps/MailIndex.css';
+@import './apps/mail/cmps/MailFolderList.css';
+
+/* Note Cmps */
 @import './apps/note/cmps/NoteList.css';
 @import './apps/note/cmps/note.css';
 @import './apps/note/cmps/note-img.css';
