@@ -1,8 +1,14 @@
+import { MailPreview } from "./MailPreview.jsx"
+
+
 export function MailList({mails}) {
     return (
         <React.Fragment>
             <div>Mail list</div>
-            <pre>{JSON.stringify(mails)}</pre>
+            {mails.map(mail => (
+                <MailPreview key={mail.id} mail={mail} />
+            ))
+            }
         </React.Fragment>
     )
 }

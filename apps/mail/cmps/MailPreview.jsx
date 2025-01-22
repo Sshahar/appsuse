@@ -1,3 +1,8 @@
-export function MailPreview() {
-    return <div>Mail Preview</div>
+export function MailPreview({mail}) {
+    return (
+        <React.Fragment>            
+            <pre>{JSON.stringify(mail)}</pre>
+        </React.Fragment>
+    )
+    
 }
