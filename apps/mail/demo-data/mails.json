@@ -1,0 +1,28 @@
+
+[{
+    "id": "e101",
+    "createdAt": 1551133930500,
+    "subject": "Miss you!",
+    "body": "Would love to catch up sometimes",
+    "isRead": false,
+    "isStared": false,
+    "sentAt": 1551133930594,
+    "removedAt": null,
+    "labels": [],
+    "from": "momo@momo.com",
+    "to": "user@appsus.com"
+},
+{
+    "id": "e102",
+    "createdAt": 15511930500,
+    "subject": "Vacation to Rome",
+    "body": "Hey! I\"m going on a vacation to rome next summer, will you come with?",
+    "isRead": false,
+    "isStared": false,
+    "sentAt": 15511339314,
+    "removedAt": null,
+    "labels": [],
+    "from": "momo@momo.com",
+    "to": "user@appsus.com"
+}
+]
