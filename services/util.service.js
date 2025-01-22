@@ -1,4 +1,6 @@
 export const utilService = {
+    loadFromStorage,
+    saveToStorage,
     makeId,
     makeLorem,
     getRandomIntInclusive,
@@ -8,6 +10,7 @@ export const utilService = {
     getMonthName,
     saveToStorage,
     loadFromStorage,
+    getLocaleDate,
 }
 
 function makeId(length = 6) {
@@ -62,11 +65,23 @@ function getMonthName(date) {
     ]
     return monthNames[date.getMonth()]
 }
-function saveToStorage(key, val) {
-    localStorage.setItem(key, JSON.stringify(val))
+
+function saveToStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value))
 }
 
 function loadFromStorage(key) {
-    var val = localStorage.getItem(key)
-    return JSON.parse(val)
+    const data = localStorage.getItem(key)
+    return (data) ? JSON.parse(data) : undefined
+}
+
+function getClientLocale() {
+    return (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language
+}
+
+
+function getLocaleDate(date, options = {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+}) {
+    return new Date(date).toLocaleDateString(getClientLocale(), options)
 }
