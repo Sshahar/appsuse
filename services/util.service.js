@@ -10,6 +10,7 @@ export const utilService = {
     getMonthName,
     saveToStorage,
     loadFromStorage,
+    getLocaleDate,
 }
 
 function makeId(length = 6) {
@@ -72,4 +73,15 @@ function saveToStorage(key, value) {
 function loadFromStorage(key) {
     const data = localStorage.getItem(key)
     return (data) ? JSON.parse(data) : undefined
+}
+
+function getClientLocale() {
+    return (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language
+}
+
+
+function getLocaleDate(date, options = {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+}) {
+    return new Date(date).toLocaleDateString(getClientLocale(), options)
 }
