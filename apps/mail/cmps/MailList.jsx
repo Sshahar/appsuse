@@ -1,12 +1,12 @@
 import { MailPreview } from "./MailPreview.jsx"
 
+export function MailList({mails, setCmpType}) {
 
-export function MailList({mails}) {
     return (
         <React.Fragment>
             <div>Mail list</div>
             {mails.map(mail => (
-                <MailPreview key={mail.id} mail={mail} />
+                <MailPreview key={mail.id} mail={mail} setCmpType={setCmpType}/>
             ))
             }
         </React.Fragment>

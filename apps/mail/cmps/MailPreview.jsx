@@ -1,6 +1,10 @@
 import { utilService } from '../../../services/util.service.js'
 
-export function MailPreview({ mail }) {
+const { useLocation, useNavigate } = ReactRouter
+
+export function MailPreview({ mail, setCmpType }) {
+    const navigate = useNavigate()
+    
     const iconStyle = {
         "height": "20px",
         "width": "20px",
@@ -16,11 +20,17 @@ export function MailPreview({ mail }) {
         "gridTemplateColumns": "20px 20px 1fr 1fr 1fr",
         "gap": "10px",
         "backgroundColor": "#F2F6FC",
+        "cursor": "pointer",
+    }
+
+    function onPreviewClick() {
+        navigate(`${mail.id}`)
+        setCmpType(() =>'details')
     }
 
     return (
         <React.Fragment>
-            <div style={previewStyle}>
+            <div style={previewStyle} onClick={onPreviewClick}>
                 {/* Select */}
                 <input type="checkbox" name="mail.id" style={selectStyle} />
                 {/* Star */}

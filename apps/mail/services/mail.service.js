@@ -54,21 +54,7 @@ function query(filterBy = {}) {
 }
 
 function get(mailId) {
-    const mail = {
-        id: 'e101',
-        createdAt: 1551133930500,
-        subject: 'Miss you!',
-        body: 'Would love to catch up sometimes',
-        isRead: false,
-        isStared: false,
-        sentAt: 1551133930594,
-        removedAt: null,
-        labels: [],
-        from: 'momo@momo.com',
-        to: 'user@appsus.com',
-    }
-    return mail
-    // return storageService.get(MAIL_KEY, mailId)
+    return storageService.get(MAIL_KEY, mailId)
 }
 
 function remove(mailId) {
