@@ -1,0 +1,17 @@
+.add-note{
+
+    display: flex;
+    justify-content: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   
+  
+}
+.add-note input{
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    border: 0;
+    padding: 12px 16px ;
+    border-radius: 10px;
+    width: 50%;
+    
+}

@@ -9,6 +9,8 @@ export const noteService = {
     get,
     remove,
     save,
+    getEmptyNote,
+    
     
     
 }

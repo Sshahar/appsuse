@@ -1,9 +1,12 @@
+export function AddNote({addNote}){
 
-
-export function AddNote(){
-
-
+    function onAddNote({target}){
+        addNote(target.value)
+        target.value= ''
+    }
     return (
-        <input name="addNote" type="text" placeholder="enter anyhing on your mind" />
+        <div className="add-note">
+        <input name="addNote" type="text" onBlur={onAddNote} placeholder="enter anyhing on your mind"  />
+        </div>
     )
 }
