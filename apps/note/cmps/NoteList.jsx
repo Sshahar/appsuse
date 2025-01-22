@@ -12,6 +12,7 @@ export function NoteList({notes}) {
                 return(
                 <article className="note" style={note.style} key={note.id}>
               <NotePreview note={note}/>
+              {/* <button onClick={}>delete</button> */}
               </article>
             )
             })}
