@@ -126,37 +126,16 @@ function _createMails() {
     let mails = utilService.loadFromStorage(MAIL_KEY)
     // Should load demo data?
     if (!mails || !mails.length) {
-        mails =
-            [{
-                "id": "e101",
-                "createdAt": 1551133930500,
-                "subject": "Miss you!",
-                "body": "Would love to catch up sometimes",
-                "isRead": false,
-                "isStared": false,
-                "sentAt": 1551133930594,
-                "removedAt": null,
-                "labels": [],
-                "from": "momo@momo.com",
-                "to": "user@appsus.com"
-            },
-            {
-                "id": "e102",
-                "createdAt": 15511930500,
-                "subject": "Vacation to Rome",
-                "body": "Hey! I\"m going on a vacation to rome next summer, will you come with?",
-                "isRead": false,
-                "isStared": false,
-                "sentAt": 15511339314,
-                "removedAt": null,
-                "labels": [],
-                "from": "momo@momo.com",
-                "to": "user@appsus.com"
-            }
-            ]
-
-        utilService.saveToStorage(MAIL_KEY, mails)
+        return fetch('apps/mail/demo-data/mails.json')
+            .then(data => data.json())
+            .then(mails => {
+                utilService.saveToStorage(MAIL_KEY, mails)
+                return mails
+            })
+            .catch(err => console.log('Cannot read demo mails', err))
     }
+
+    return Promise.resolve(mails)
 }
 
 function _createMail(createdAt, subject, body, isRead, isStared, sentAt, removedAt, labels, from, to) {
