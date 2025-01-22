@@ -1,1 +1,14 @@
  /* note list */
+ .note-list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 10px;
+    justify-items: center;
+ }
+ .note-list .note{
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+ }

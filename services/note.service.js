@@ -45,7 +45,7 @@ function save(note) {
     }
 }
 
-function getEmptyNote(createdAt = new Date,type='NoteTxt',isPinned=false,style ={  backgroundColor: '#00d'},info={txt:''} ) {
+function getEmptyNote(createdAt = new Date,type='NoteTxt',isPinned=false,style ={  backgroundColor: '#FFFFFF'},info={} ) {
     return { createdAt, type, isPinned,style,info}
 }
 
@@ -61,9 +61,9 @@ function _createNotes() {
     let notes = utilService.loadFromStorage(NOTE_KEY)
     if (!notes || !notes.length) {
         notes = [
-            _createNote(1112222, 'NoteTxt',true,{  backgroundColor: '#00d'}, { txt: 'Fullstack Me Baby!' }),
-            _createNote(1112223, 'NoteImg',false,{  backgroundColor: '#00d'},  { url: 'http://some-img/me', title: 'Bobi and Me' }),
-            _createNote(1112224, 'NoteTodos',false,{  backgroundColor: '#00d'},  { title: 'Get my stuff together', todos: [ { txt: 'Driving license', doneAt: null }, { txt: 'Coding power', doneAt: 187111111 } ] }),]
+            _createNote(1112222, 'NoteTxt',true,{  backgroundColor: '#FFFFFF'}, { txt: 'Fullstack Me Baby!' }),
+            _createNote(1112223, 'NoteImg',false,{  backgroundColor: '#FFFFFF'},  { url: 'https://picsum.photos/200/300', title: 'Bobi and Me' }),
+            _createNote(1112224, 'NoteTodos',false,{  backgroundColor: '#FFFFFF'},  { title: 'Get my stuff together', todos: [ { txt: 'Driving license', doneAt: null }, { txt: 'Coding power', doneAt: 187111111 } ] }),]
             utilService.saveToStorage(NOTE_KEY, notes)
     }
 }
