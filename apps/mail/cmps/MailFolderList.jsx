@@ -10,12 +10,12 @@ export function MailFolderList({ setCmpType, filterByLabel, initSelectedFolder }
             setCmpType(label)
             return
         }
-        const to = label !== 'compose' ? 'list' : 'compose'
 
+        const to = label !== 'compose' ? 'list' : 'compose'
         setCmpType(to)
         filterByLabel(label)
     }
-    // Allow filtering by different folders: inbox / sent / trash/ draft
+
     return (<div className="main-folder-list">
         <div onClick={() => onNav('compose')}>
             <img className="icon" src="assets/img/mail/compose.png" />Compose

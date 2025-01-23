@@ -1,16 +1,18 @@
-.mail-compose {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-.mail-compose .main-compose-form {
-    display: grid;
-    gap: 10px;
-
-    grid-column: 2;
-}
-
-.mail-compose .main-compose-form textarea {
-    height: 40vh;
+.main-mail-index {
+    .mail-compose {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .mail-compose .main-compose-form {
+        display: grid;
+        gap: 10px;
+    
+        grid-column: 2;
+    }
+    
+    .mail-compose .main-compose-form textarea {
+        height: 40vh;
+    }
 }

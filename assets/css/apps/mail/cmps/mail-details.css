@@ -1,3 +1,5 @@
-.mail-details {
-    display: grid;
+.main-mail-index {
+    .mail-details {
+        display: grid;
+    }
 }

@@ -1,20 +1,22 @@
-.folder {
-    cursor: pointer;
-    background-color: var(--mail-bgc-1);
-    text-transform: capitalize;
-}
+.main-mail-index {
+    .folder {
+        cursor: pointer;
+        background-color: var(--mail-bgc-1);
+        text-transform: capitalize;
+    }
 
-.folder:hover {
-    background-color: var(--mail-bgc-2);
-}
+    .folder:hover {
+        background-color: var(--mail-bgc-2);
+    }
 
-.selected-folder {
-    background-color: var(--mail-bgc-3);
-}
+    .selected-folder {
+        background-color: var(--mail-bgc-3);
+    }
 
-.main-folder-list {
-    grid-column: 1;
-    /* TODO: find a way to use 1 / -1 */
-    grid-row: 1 / span 5;
-    background-color: '#F6F8FC';
+    .main-folder-list {
+        grid-column: 1;
+        /* TODO: find a way to use 1 / -1 */
+        grid-row: 1 / span 5;
+        background-color: '#F6F8FC';
+    }
 }

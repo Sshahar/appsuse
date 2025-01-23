@@ -62,18 +62,23 @@ export function MailIndex() {
         mail.isRead = true
         mailService.save(mail)
     }
+
+    function onSetCmpType(newCmpType) {
+        setCmpType(newCmpType)
+    }
+
     return (
         <div className="main-mail-index">
             <MailFolderList
                 labels={filterBy.labels}
-                setCmpType={setCmpType}
+                setCmpType={onSetCmpType}
                 initSelectedFolder={getSelectedFolder()}
                 filterByLabel={filterByLabel} />
 
             <DynamicCmp
                 cmpType={cmpType}
                 mails={mails}
-                setCmpType={setCmpType}
+                setCmpType={onSetCmpType}
                 mainStyle={{ 'gridColumn': 2 }}
                 sendMail={onSendMail}
                 deleteMail={onDeleteMail}
