@@ -60,11 +60,15 @@ export function NoteIndex() {
         noteService.save(note).then(() =>loadNotes())
 
     }
+    function onChangeColor(note,color){
+        const updatedNote = {  ...note, style: { ...note.style, backgroundColor: color }}
+        noteService.save(updatedNote).then(() =>loadNotes())
+    }
     
     if(!notes) return <h1>Loading...</h1>
     return (<div className="note-index">
       <AddNote addNote={addNote}/>
-     <NoteList pinState={pinState} onSetEdit={onSetEdit} onRemoveNote={onRemoveNote} notes={notes}/>
+     <NoteList onChangeColor={onChangeColor} pinState={pinState} onSetEdit={onSetEdit} onRemoveNote={onRemoveNote} notes={notes}/>
      {(editNote&&<NoteEdit note={editNote} changeNote={changeNote} onSetEdit={onSetEdit}/>)}
     </div>)
 }

@@ -2,7 +2,7 @@ import { NoteEdit } from "./noteEdit.jsx"
 import { NotePreview } from "./NotePreview.jsx"
 
 const { useEffect, useState } = React
-export function NoteList({ notes, onSetEdit, onRemoveNote,pinState }) {
+export function NoteList({ notes, onSetEdit, onRemoveNote, pinState,onChangeColor }) {
     const [editMode, setEdit] = useState(false)
     function toggleModal() {
         setEdit(!editMode)
@@ -26,13 +26,19 @@ export function NoteList({ notes, onSetEdit, onRemoveNote,pinState }) {
                                     <path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z" />
                                 </svg>
                             </button>
-                            <button onClick={() => pinState(note)} className={`note-pin ${(note.isPinned)? 'pinned':undefined}`}>
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                            <button onClick={() => pinState(note)} className={`note-pin ${(note.isPinned) ? 'pinned' : undefined}`}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path fill="none" d="M0 0h24v24H0z" />
                                     <path fill="#000" d="M17 4v7l2 3v2h-6v5l-1 1-1-1v-5H5v-2l2-3V4c0-1.1.9-2 2-2h6c1.11 0 2 .89 2 2zM9 4v7.75L7.5 14h9L15 11.75V4H9z" />
                                 </svg>
-
                             </button>
+                            <label className="note-color">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000">
+                                    <path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z" /><circle cx="6.5" cy="11.5" r="1.5" />
+                                    <circle cx="9.5" cy="7.5" r="1.5" /><circle cx="14.5" cy="7.5" r="1.5" /><circle cx="17.5" cy="11.5" r="1.5" />
+                                </svg>
+                                <input className="note-color-picker" onInput={(ev)=>onChangeColor(note,ev.target.value)} value={note.style.backgroundColor} type="color" name="noteColor" id="noteColor" />
+                            </label>
                         </div>
 
                     </article>

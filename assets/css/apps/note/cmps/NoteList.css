@@ -24,8 +24,8 @@
   align-items: center;
   margin-bottom: 5px;
  }
- .note-options button{
-  margin-right: 5px;
+ .note-options button,.note-color{
+  margin-inline: 5px;
    background: none;
    border: 0;
    bottom: 0;
@@ -42,10 +42,14 @@
    justify-content: space-between;
  }
  .note-pin svg{
-  opacity: 0.5;
+  opacity: 0.3;
   width: 15px;
   height: 15px;
  }
  .pinned svg{
   opacity: 1;
+ }
+ .note-color .note-color-picker{
+    display: none;
+
  }
