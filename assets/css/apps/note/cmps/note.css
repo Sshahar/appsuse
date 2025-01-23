@@ -1,0 +1,12 @@
+.note-title{
+    text-align: center;
+    font-size: 1.1em;
+    padding: 2px;
+}
+.note-todo-txt{
+    font-size: 0.8em;
+    text-align: center;
+}
+.note-txt{
+    margin-inline-start: 5px;
+}
