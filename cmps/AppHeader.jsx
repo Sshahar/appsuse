@@ -4,7 +4,7 @@ const { Link, NavLink } = ReactRouterDOM
 const { useState, useEffect, useRef } = React
 
 export function AppHeader() {
-    const [logoType, setLogoType] = useState('mail')
+    const [logoType, setLogoType] = useState('default')
 
     return (<header className="app-header">
         <Link to="/">
@@ -32,7 +32,7 @@ function DynamicLogo(props) {
 }
 
 function DefaultLogo(props) {
-    return (<h3>LOGO!</h3>)
+    return (<h3><img src="assets/img/main-logo.png" alt="" /></h3>)
 }
 
 function MailLogo(props) {
