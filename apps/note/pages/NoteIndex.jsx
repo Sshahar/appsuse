@@ -29,10 +29,21 @@ export function NoteIndex() {
                             .catch(err => console.log(err))              
     }
 
-    noteService.query()
+    function onRemoveNote(noteId) {
+        noteService.remove(noteId)
+            .then(() => {
+                setNotes(notes => notes.filter(note => note.id !== noteId))
+                showSuccessMsg(`note removed successfully!`)
+            })
+            .catch(err => {
+                console.log('Problems removing note:', err)
+                showErrorMsg(`Problems removing note (${noteId})`)
+            })
+    }
+    
     if(!notes) return <h1>Loading...</h1>
     return (<div className="note-index">
       <AddNote addNote={addNote}/>
-        <NoteList notes={notes}/>
+        <NoteList onRemoveNote={onRemoveNote} notes={notes}/>
     </div>)
 }
