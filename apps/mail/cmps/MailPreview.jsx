@@ -1,9 +1,11 @@
 import { utilService } from '../../../services/util.service.js'
 
 const { useLocation, useNavigate } = ReactRouter
+const { useState, useEffect, useRef } = React
 
 export function MailPreview({ mail, setCmpType, deleteMail }) {
     const navigate = useNavigate()
+    const [isHovered, setIsHovered] = useState(false)
 
     const iconStyle = {
         "height": "20px",
@@ -37,9 +39,20 @@ export function MailPreview({ mail, setCmpType, deleteMail }) {
         deleteMail(mail.id)
     }
 
+    function onHover() {
+        setIsHovered(true)
+    }
+
+    function onUnhover() {
+        setIsHovered(false)
+    }
+
+    // TODO: add mobile support (using cmpType)
+    const cmpType = isHovered ? 'buttons' : 'date'
+
     return (
         <React.Fragment>
-            <div style={previewStyle} onClick={onPreviewClick}>
+            <div style={previewStyle} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
                 {/* Select */}
                 <input type="checkbox" name="mail.id" style={selectStyle} />
                 {/* Star */}
@@ -52,12 +65,22 @@ export function MailPreview({ mail, setCmpType, deleteMail }) {
                 <span>{mail.subject}</span>
                 {/* Date \ buttons */}
                 <span>
-                    <span onClick={onDeleteMail}>
-                        <img style={iconStyle} src="assets/img/mail/trash.svg" />
-                    </span>
-                    {utilService.getLocaleDate(mail.sentAt)}</span>
+                    <DynamicButtons cmpType={cmpType} sentAt={mail.sentAt} onDeleteMail={onDeleteMail} />
+                </span>
             </div>
 
         </React.Fragment>
     )
+}
+
+function DynamicButtons(props) {
+    switch (props.cmpType) {
+        case 'date':
+            return (<span>{utilService.getLocaleDate(props.sentAt)}</span>)
+        case 'buttons':
+            return (
+                <span onClick={props.onDeleteMail}>
+                    <img className='icon' src="assets/img/mail/trash.svg" />
+                </span>)
+    }
 }
