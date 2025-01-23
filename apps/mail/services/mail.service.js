@@ -74,10 +74,10 @@ function remove(mailId) {
 }
 
 function save(mail) {
-    mail.createdAt = new Date()
     if (mail.id) {
         return storageService.put(MAIL_KEY, mail)
     } else {
+        mail.createdAt = new Date()
         return storageService.post(MAIL_KEY, mail)
     }
 }
