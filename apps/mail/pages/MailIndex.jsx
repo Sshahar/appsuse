@@ -12,7 +12,6 @@ export function MailIndex() {
     const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
 
     useEffect(() => {
-        console.log('filterBy:', filterBy)
         mailService.query(filterBy).then(setMails)
     }, [filterBy])
 
@@ -21,8 +20,6 @@ export function MailIndex() {
     }
 
     function onSendMail(mail) {
-        console.log('hello')
-        console.log('mail:', mail)
         mail.from = mailService.getLoggedinUser().email
         mailService.save(mail)
     }
