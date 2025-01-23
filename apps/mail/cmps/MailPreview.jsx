@@ -18,7 +18,6 @@ export function MailPreview({ mail, setCmpType, deleteMail }) {
         "gridAutoFlow": "column",
         "gridTemplateColumns": "20px 20px 1fr 1fr 1fr",
         "gap": "10px",
-        "backgroundColor": "#F2F6FC",
         "cursor": "pointer",
     }
 
@@ -43,11 +42,22 @@ export function MailPreview({ mail, setCmpType, deleteMail }) {
         setIsHovered(false)
     }
     
+    function getCssClasses() {
+        const classes = ['mail-preview']
+        
+        if (mail.isRead) {
+            classes.push('is-read')
+        } else {
+            classes.push('is-not-read')
+        }
+        return classes.join(' ')
+    }
+    
     // TODO: add mobile support (using cmpType)
     const cmpType = isHovered ? 'buttons' : 'date'
     return (
         <React.Fragment>
-            <div className="mail-preview" style={previewStyle} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
+            <div className={getCssClasses()} style={previewStyle} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
                 {/* Select */}
                 <input type="checkbox" name="mail.id" style={selectStyle} />
                 {/* Star */}
