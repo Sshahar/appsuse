@@ -6,12 +6,12 @@ const MAIL_KEY = 'mailDB'
 _createMails()
 
 const loggedinUser = {
-    email: 'user@appsus.com',
-    fullname: 'Mahatma Appsus'
+    email: 'john-doe@appsus.com',
+    fullname: 'Johnny Doe'
 }
 
 export const mailService = {
-    loggedinUser,
+    getLoggedinUser,
     query,
     get,
     remove,
@@ -19,6 +19,10 @@ export const mailService = {
     getEmptyMail,
     getNextMailId,
     getDefaultFilter,
+}
+
+function getLoggedinUser() {
+    return loggedinUser
 }
 
 function query(filterBy = {}) {
@@ -49,6 +53,13 @@ function query(filterBy = {}) {
             //     mails = mails.filter(mail => mail.labels.some(label => filterBy.labels.includes(label)))
             // }
 
+            // Is addressed to us?
+            // create a scope
+            if (true) {
+                const regex = new RegExp(loggedinUser.email, 'i')
+                mails = mails.filter(mail => regex.test(mail.to))
+            }
+
             return mails
         })
 }
@@ -62,6 +73,7 @@ function remove(mailId) {
 }
 
 function save(mail) {
+    mail.createdAt = new Date()
     if (mail.id) {
         return storageService.put(MAIL_KEY, mail)
     } else {
@@ -69,7 +81,7 @@ function save(mail) {
     }
 }
 
-function getEmptyMail(createdAt, subject = '', body = '', isRead = '', isStared = '', sentAt = '', removedAt = '', labels = '', from = '', to = '') {
+function getEmptyMail(createdAt, subject = '', body = '', isRead = undefined, isStared = false, sentAt = undefined, removedAt = undefined, labels = [], from = '', to = '') {
     return {
         createdAt,
         subject,

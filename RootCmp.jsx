@@ -19,9 +19,10 @@ export function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 {/* TODO: learn how to use nested routes (history won't work, render won't work) */}
-                <Route path="/mail" element={<MailIndex />} />
-                <Route path="/mail/:mailId" element={<MailDetails />} />
-                <Route path="/mail/compose" element={<MailCompose />} />
+                <Route path="/mail" element={<MailIndex />}>
+                    <Route path="/mail/compose" element={<MailCompose />} />
+                    <Route path="/mail/:mailId" element={<MailDetails />} />
+                </Route>
 
                 <Route path="/note" element={<NoteIndex />} />
             </Routes>

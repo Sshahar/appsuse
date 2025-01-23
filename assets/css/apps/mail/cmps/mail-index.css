@@ -3,3 +3,7 @@
     grid-template-columns: 160px 1fr;
     background-color: #F6F8FC;
 }
+
+.main-mail-index .btn {
+    cursor: pointer;
+}

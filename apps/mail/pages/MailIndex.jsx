@@ -20,10 +20,17 @@ export function MailIndex() {
         setFilterBy(prevFilter => ({ ...prevFilter, ...newFilter }))
     }
 
+    function onSendMail(mail) {
+        console.log('hello')
+        console.log('mail:', mail)
+        mail.from = mailService.getLoggedinUser().email
+        mailService.save(mail)
+    }
+
     return (
         <div className="main-mail-index">
-            <MailFolderList />
-            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{'gridColumn': 2}}/>
+            <MailFolderList setCmpType={setCmpType} />
+            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{'gridColumn': 2}} sendMail={onSendMail}/>
         </div>
     )
 }
