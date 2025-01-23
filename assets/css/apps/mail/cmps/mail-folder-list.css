@@ -1,12 +1,41 @@
 .main-mail-index {
+    
     .folder {
+        position: relative;
         cursor: pointer;
         background-color: var(--mail-bgc-1);
         text-transform: capitalize;
+        margin-inline-start: 1em;
+        padding: .3em;
+    }
+
+    .compose-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        border-radius: 16px;
+        color: #001d35;
+        height: 56px;
+        padding: 0 24px 0 0;
+        min-width: 96px;
+        background-color: var(--mail-bgc-4);
+        margin-block-end: .5em;
     }
 
     .folder:hover {
         background-color: var(--mail-bgc-2);
+    }
+
+    /* Center icons */
+    .folder img {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+    }
+
+    .folder span {
+        margin-inline-start: 20px;
     }
 
     .selected-folder {

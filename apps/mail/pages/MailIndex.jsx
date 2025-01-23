@@ -28,8 +28,9 @@ export function MailIndex() {
             })
     }
 
-    function onSetFilterBy(newFilter) {
-        setFilterBy(prevFilter => ({ ...prevFilter, ...newFilter }))
+    function onSetFilter(newFilter) {
+        debugger
+        setFilterBy(() => ({...filterBy, ...newFilter}))
     }
 
     function onSendMail(mail) {
@@ -51,6 +52,8 @@ export function MailIndex() {
     }
 
     function getSelectedFolder() {
+        if (filterBy.isStarred) return 'starred'
+        
         const labels = filterBy.labels
         if (labels.includes('inbox')) return 'inbox'
         if (labels.includes('sent')) return 'sent'
@@ -79,13 +82,16 @@ export function MailIndex() {
             .catch(err => console.log('error updating mail:', err))
     }
 
+
+
     return (
         <div className="main-mail-index">
             <MailFolderList
                 labels={filterBy.labels}
                 setCmpType={onSetCmpType}
                 selectedFolder={getSelectedFolder()}
-                filterByLabel={filterByLabel} />
+                filterByLabel={filterByLabel}
+                onSetFilter={onSetFilter} />
 
             <DynamicCmp
                 cmpType={cmpType}

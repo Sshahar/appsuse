@@ -48,7 +48,7 @@ function query(filterBy = {}) {
                 mails = mails.filter(mail => mail.isRead === filterBy.isRead)
             }
             if (filterBy.isStarred) {
-                mails = mails.filter(mail => mail.isRead === filterBy.isStarred)
+                mails = mails.filter(mail => mail.isStarred)
             }
             if (!!filterBy.labels) {
                 mails = mails.filter(mail => mail.labels.some(l => filterBy.labels.includes(l)))
@@ -103,7 +103,7 @@ function getDefaultFilter() {
         txt: '',
         isRead: undefined,
         isStarred: undefined,
-        labels: ['inbox']
+        labels: ['inbox', 'sent', 'trash', 'draft']
     }
 }
 
