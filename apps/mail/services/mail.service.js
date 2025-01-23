@@ -32,7 +32,7 @@ function query(filterBy = {}) {
     //     isRead: true,
     //     // (optional property, if missing: show all)
     //     isStared: true, // (optional property, if missing: show all)
-    //     lables: ['important', 'romantic'] // has any of the labels
+    //     labels: ['important', 'romantic'] // has any of the labels
     // }
     return storageService.query(MAIL_KEY)
         .then(mails => {
@@ -49,9 +49,9 @@ function query(filterBy = {}) {
             if (filterBy.isStared) {
                 mails = mails.filter(mail => mail.isRead === filterBy.isStared)
             }
-            // if (!!filterBy.lables) {
-            //     mails = mails.filter(mail => mail.labels.some(label => filterBy.labels.includes(label)))
-            // }
+            if (!!filterBy.labels) {
+                mails = mails.filter(mail => mail.labels.some(l => filterBy.labels.includes(l)))
+            }
 
             // Is addressed to us?
             // create a scope
@@ -102,7 +102,7 @@ function getDefaultFilter() {
         txt: '',
         isRead: undefined,
         isStared: undefined,
-        lables: []
+        labels: ['inbox']
     }
 }
 
