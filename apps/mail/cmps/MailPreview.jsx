@@ -2,7 +2,7 @@ import { utilService } from '../../../services/util.service.js'
 
 const { useLocation, useNavigate } = ReactRouter
 
-export function MailPreview({ mail, setCmpType }) {
+export function MailPreview({ mail, setCmpType, deleteMail }) {
     const navigate = useNavigate()
 
     const iconStyle = {
@@ -31,6 +31,12 @@ export function MailPreview({ mail, setCmpType }) {
         setCmpType(() => 'details')
     }
 
+    function onDeleteMail(ev) {
+        ev.stopPropagation()
+
+        deleteMail(mail.id)
+    }
+
     return (
         <React.Fragment>
             <div style={previewStyle} onClick={onPreviewClick}>
@@ -45,7 +51,11 @@ export function MailPreview({ mail, setCmpType }) {
                 {/* Subject */}
                 <span>{mail.subject}</span>
                 {/* Date \ buttons */}
-                <span>{utilService.getLocaleDate(mail.sentAt)}</span>
+                <span>
+                    <span onClick={onDeleteMail}>
+                        <img style={iconStyle} src="assets/img/mail/trash.svg" />
+                    </span>
+                    {utilService.getLocaleDate(mail.sentAt)}</span>
             </div>
 
         </React.Fragment>

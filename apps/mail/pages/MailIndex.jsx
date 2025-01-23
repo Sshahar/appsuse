@@ -27,10 +27,17 @@ export function MailIndex() {
         mailService.save(mail)
     }
 
+    // TODO: switch to useContext
+    function onDeleteMail(mailId) {
+        mailService.remove(mailId)
+            .then(setMails(prevMails => prevMails.filter(mail => mail.id !== mailId)))
+            .catch(err => console.log('err', err))
+    }
+
     return (
         <div className="main-mail-index">
             <MailFolderList setCmpType={setCmpType} />
-            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{'gridColumn': 2}} sendMail={onSendMail}/>
+            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{ 'gridColumn': 2 }} sendMail={onSendMail} deleteMail={onDeleteMail} />
         </div>
     )
 }
