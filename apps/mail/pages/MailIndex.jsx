@@ -98,6 +98,6 @@ function DynamicCmp(props) {
         case 'details':
             return <MailDetails {...props} />
         case 'compose':
-            return <MailCompose {...props} />
+            return <MailList {...props} />
     }
 }
