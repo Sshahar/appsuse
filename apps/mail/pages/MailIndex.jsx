@@ -72,7 +72,7 @@ export function MailIndex() {
             <MailFolderList
                 labels={filterBy.labels}
                 setCmpType={onSetCmpType}
-                initSelectedFolder={getSelectedFolder()}
+                selectedFolder={getSelectedFolder()}
                 filterByLabel={filterByLabel} />
 
             <DynamicCmp

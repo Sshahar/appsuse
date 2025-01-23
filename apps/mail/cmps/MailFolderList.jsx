@@ -2,9 +2,7 @@ const { useLocation, useNavigate } = ReactRouter
 const { useParams, Link } = ReactRouterDOM
 const { useState, useEffect, useRef } = React
 
-export function MailFolderList({ setCmpType, filterByLabel, initSelectedFolder }) {
-    const [selectedFolder, setSelectedFolder] = useState(initSelectedFolder)
-    console.log('initSelectedFolder:', initSelectedFolder)
+export function MailFolderList({ setCmpType, filterByLabel, selectedFolder }) {
     function onNav(label) {
         if (label === 'compose') {
             setCmpType(label)
