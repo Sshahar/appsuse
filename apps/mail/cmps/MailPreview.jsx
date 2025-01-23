@@ -6,7 +6,7 @@ const { useState, useEffect, useRef } = React
 export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
     const navigate = useNavigate()
     const [isHovered, setIsHovered] = useState(false)
-
+    const [isSelected, setIsSelected] = useState(false)
 
     const selectStyle = { "order": "0", "padding": "0 10px 0 13px", "position": "relative", "width": "20px" }
 
@@ -53,6 +53,11 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
         }
         return classes.join(' ')
     }
+
+    function onToggleSelected(ev) {
+        ev.stopPropagation()
+        setIsSelected(prevIsSelected => !prevIsSelected)
+    }
     
     // TODO: add mobile support (using cmpType)
     const cmpType = isHovered ? 'buttons' : 'date'
@@ -60,7 +65,7 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
         <React.Fragment>
             <div className={getCssClasses()} style={previewStyle} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
                 {/* Select */}
-                <input type="checkbox" name="mail.id" style={selectStyle} />
+                <input type="checkbox" name="mail.id" style={selectStyle} onClick={onToggleSelected} checked={isSelected}/>
                 {/* Star */}
                 <span style={starStyle}>
                     <img className="icon" src="assets/img/mail/asset 19.png" />
