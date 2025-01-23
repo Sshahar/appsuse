@@ -58,6 +58,10 @@ export function MailIndex() {
         if (labels.includes('draft')) return 'draft'
     }
     
+    function onSetMailRead(mail) {
+        mail.isRead = true
+        mailService.save(mail)
+    }
     return (
         <div className="main-mail-index">
             <MailFolderList
@@ -74,6 +78,8 @@ export function MailIndex() {
                 sendMail={onSendMail}
                 deleteMail={onDeleteMail}
                 sortBy={sortBy}
+                // Mail list context
+                setMailRead={onSetMailRead}
             />
         </div>
     )

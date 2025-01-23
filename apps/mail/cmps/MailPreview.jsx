@@ -3,7 +3,7 @@ import { utilService } from '../../../services/util.service.js'
 const { useLocation, useNavigate } = ReactRouter
 const { useState, useEffect, useRef } = React
 
-export function MailPreview({ mail, setCmpType, deleteMail }) {
+export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
     const navigate = useNavigate()
     const [isHovered, setIsHovered] = useState(false)
 
@@ -26,6 +26,7 @@ export function MailPreview({ mail, setCmpType, deleteMail }) {
         // history.push('/mail')
         navigate(`${mail.id}`)
         setCmpType(() => 'details')
+        setMailRead(mail)
     }
 
     function onDeleteMail(ev) {

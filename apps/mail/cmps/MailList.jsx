@@ -1,7 +1,7 @@
 import { MailPreview } from "./MailPreview.jsx"
 const { useState, useEffect, useRef } = React
 
-export function MailList({ mails, setCmpType, deleteMail, sortBy }) {
+export function MailList({ mails, setCmpType, deleteMail, sortBy, setMailRead }) {
 
     function getSortedMails() {
         switch (sortBy.by) {
@@ -15,7 +15,7 @@ export function MailList({ mails, setCmpType, deleteMail, sortBy }) {
     return (
         <React.Fragment>
             {sortedMails.map(mail => (
-                <MailPreview key={mail.id} mail={mail} setCmpType={setCmpType} deleteMail={deleteMail} />
+                <MailPreview key={mail.id} mail={mail} setCmpType={setCmpType} deleteMail={deleteMail} setMailRead={setMailRead}/>
             ))
             }
         </React.Fragment>
