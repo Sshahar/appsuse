@@ -38,31 +38,34 @@ export function MailDetails() {
     if (!mail) return <div>Loading...</div>
     return (
         <React.Fragment>
-            {/* Subject*/}
-            {/* (TODO: add labels such as 'inbox') */}
-            <h2>{mail.subject}</h2>
-            {/* from, to, */}
-            <section style={fromToStyle}>
-                {/* From */}
-                <div>
-                    <span>From: {mail.from}</span>
-                </div>
-                {/* To */}
-                <div style={toStyle}>
-                    {/* {mail.to} */}
-                    <span>to me</span>
-                </div>
-                {/* Date */}
-                <span style={dateStyle}>{utilService.getLocaleDate(mail.sentAt)}</span>
-                {/* Star toggle button */}
-                {/* Reply */}
+            <div className="mail-details">
 
-            </section>
-            {/* body */}
-            <section style={bodyStyle}>
-                {mail.body}
-            </section>
-            {/* {JSON.stringify(mail)} */}
+                {/* Subject*/}
+                {/* (TODO: add labels such as 'inbox') */}
+                <h2>{mail.subject}</h2>
+                {/* from, to, */}
+                <section style={fromToStyle}>
+                    {/* From */}
+                    <div>
+                        <span>From: {mail.from}</span>
+                    </div>
+                    {/* To */}
+                    <div style={toStyle}>
+                        {/* {mail.to} */}
+                        <span>to me</span>
+                    </div>
+                    {/* Date */}
+                    <span style={dateStyle}>{utilService.getLocaleDate(mail.sentAt)}</span>
+                    {/* Star toggle button */}
+                    {/* Reply */}
+
+                </section>
+                {/* body */}
+                <section style={bodyStyle}>
+                    {mail.body}
+                </section>
+                {/* {JSON.stringify(mail)} */}
+            </div>
         </React.Fragment>
     )
 }

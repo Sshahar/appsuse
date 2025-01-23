@@ -1,5 +1,6 @@
 .folder {
     background-color: #F6F8FC;
+    text-transform: capitalize;
 }
 
 .main-folder-list {
