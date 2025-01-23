@@ -5,7 +5,7 @@
         "subject": "Meeting tomorrow",
         "body": "Let's catch up soon!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1617174872000,
         "removedAt": null,
         "labels": [
@@ -20,7 +20,7 @@
         "subject": "Vacation to Rome",
         "body": "Happy to help with the project details.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1682850567000,
         "removedAt": null,
         "labels": [
@@ -36,7 +36,7 @@
         "subject": "Weekly update",
         "body": "Don't forget about our call later today!",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1631614039000,
         "removedAt": null,
         "labels": [
@@ -52,7 +52,7 @@
         "subject": "Miss you!",
         "body": "I'm planning to go on a vacation next summer, and I'd love it if you could join me! Let me know if you're available.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1599462230000,
         "removedAt": null,
         "labels": [
@@ -67,7 +67,7 @@
         "subject": "Meeting tomorrow",
         "body": "I'm going on vacation, see you soon!",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1660561410000,
         "removedAt": null,
         "labels": [
@@ -83,7 +83,7 @@
         "subject": "Meeting tomorrow",
         "body": "Let's catch up soon!",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1600143772000,
         "removedAt": null,
         "labels": [
@@ -99,7 +99,7 @@
         "subject": "Out of office",
         "body": "Let's catch up soon!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1662714214000,
         "removedAt": null,
         "labels": [
@@ -114,7 +114,7 @@
         "subject": "Out of office",
         "body": "We've been discussing the new product launch, and I believe we can optimize the marketing strategy for better results. Let's set up a meeting to finalize the plan.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1732179565000,
         "removedAt": null,
         "labels": [
@@ -129,7 +129,7 @@
         "subject": "Invitation to event",
         "body": "Looking forward to seeing you next week.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1710980980000,
         "removedAt": null,
         "labels": [
@@ -145,7 +145,7 @@
         "subject": "Vacation to Rome",
         "body": "Sending you my best wishes.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1662599374000,
         "removedAt": null,
         "labels": [
@@ -160,7 +160,7 @@
         "subject": "Birthday party",
         "body": "Sending you my best wishes.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1674246293000,
         "removedAt": null,
         "labels": [
@@ -176,7 +176,7 @@
         "subject": "Birthday party",
         "body": "We need to reschedule the meeting.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1584619403000,
         "removedAt": null,
         "labels": [
@@ -192,7 +192,7 @@
         "subject": "Project deadline",
         "body": "I'm going on vacation, see you soon!",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1594557469000,
         "removedAt": null,
         "labels": [
@@ -208,7 +208,7 @@
         "subject": "Vacation to Rome",
         "body": "I'm going on vacation, see you soon!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1654881354000,
         "removedAt": null,
         "labels": [
@@ -224,7 +224,7 @@
         "subject": "Miss you!",
         "body": "Looking forward to seeing you next week.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1695268440000,
         "removedAt": null,
         "labels": [
@@ -239,7 +239,7 @@
         "subject": "Vacation to Rome",
         "body": "Sending you my best wishes.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1677451714000,
         "removedAt": null,
         "labels": [
@@ -255,7 +255,7 @@
         "subject": "Out of office",
         "body": "Thanks for sending the proposal. I've reviewed the document, and I think we can make a few improvements. I'll share my thoughts in a follow-up email shortly.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1628263425000,
         "removedAt": null,
         "labels": [
@@ -270,7 +270,7 @@
         "subject": "Weekly update",
         "body": "Here's the document you requested.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1719799360000,
         "removedAt": null,
         "labels": [
@@ -286,7 +286,7 @@
         "subject": "Invitation to event",
         "body": "It's been a while since we last caught up. Would love to meet up sometime soon and hear how things are going on your end.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1605915788000,
         "removedAt": null,
         "labels": [
@@ -302,7 +302,7 @@
         "subject": "Out of office",
         "body": "We need to reschedule the meeting.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1607767319000,
         "removedAt": null,
         "labels": [
@@ -317,7 +317,7 @@
         "subject": "Birthday party",
         "body": "Don't forget about our call later today!",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1625200119000,
         "removedAt": null,
         "labels": [
@@ -332,7 +332,7 @@
         "subject": "Meeting tomorrow",
         "body": "Let's catch up soon!",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1633614770000,
         "removedAt": null,
         "labels": [
@@ -348,7 +348,7 @@
         "subject": "New job offer",
         "body": "Looking forward to seeing you next week.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1651820328000,
         "removedAt": null,
         "labels": [
@@ -364,7 +364,7 @@
         "subject": "Project deadline",
         "body": "Here's the document you requested.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1708428057000,
         "removedAt": null,
         "labels": [
@@ -379,7 +379,7 @@
         "subject": "Invitation to event",
         "body": "Sending you my best wishes.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1636813506000,
         "removedAt": null,
         "labels": [
@@ -394,7 +394,7 @@
         "subject": "Meeting tomorrow",
         "body": "Here's the document you requested.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1652430486000,
         "removedAt": null,
         "labels": [
@@ -409,7 +409,7 @@
         "subject": "Vacation to Rome",
         "body": "Here's the document you requested.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1641716163000,
         "removedAt": null,
         "labels": [
@@ -424,7 +424,7 @@
         "subject": "Out of office",
         "body": "Can we discuss the new job opportunity?",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1688942862000,
         "removedAt": null,
         "labels": [
@@ -439,7 +439,7 @@
         "subject": "Miss you!",
         "body": "Can we discuss the new job opportunity?",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1587955719000,
         "removedAt": null,
         "labels": [
@@ -454,7 +454,7 @@
         "subject": "Meeting tomorrow",
         "body": "I'm going on vacation, see you soon!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1631739193000,
         "removedAt": null,
         "labels": [
@@ -470,7 +470,7 @@
         "subject": "Meeting tomorrow",
         "body": "Looking forward to seeing you next week.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1673815403000,
         "removedAt": null,
         "labels": [
@@ -486,7 +486,7 @@
         "subject": "Follow-up on last conversation",
         "body": "Here's the document you requested.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1662577821000,
         "removedAt": null,
         "labels": [
@@ -502,7 +502,7 @@
         "subject": "Birthday party",
         "body": "I wanted to remind you about the meeting scheduled for next Tuesday. Please make sure to review the agenda before the call.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1687762840000,
         "removedAt": null,
         "labels": [
@@ -517,7 +517,7 @@
         "subject": "Vacation to Rome",
         "body": "Don't forget about our call later today!",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1618838912000,
         "removedAt": null,
         "labels": [
@@ -532,7 +532,7 @@
         "subject": "Invitation to event",
         "body": "Don't forget about our call later today!",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1600662117000,
         "removedAt": null,
         "labels": [
@@ -548,7 +548,7 @@
         "subject": "Vacation to Rome",
         "body": "Can we discuss the new job opportunity?",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1641145499000,
         "removedAt": null,
         "labels": [
@@ -564,7 +564,7 @@
         "subject": "New job offer",
         "body": "I'm planning to go on a vacation next summer, and I'd love it if you could join me! Let me know if you're available.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1655376477000,
         "removedAt": null,
         "labels": [
@@ -580,7 +580,7 @@
         "subject": "Meeting tomorrow",
         "body": "Don't forget about our call later today!",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1609189404000,
         "removedAt": null,
         "labels": [
@@ -596,7 +596,7 @@
         "subject": "Meeting tomorrow",
         "body": "Sending you my best wishes.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1731092647000,
         "removedAt": null,
         "labels": [
@@ -612,7 +612,7 @@
         "subject": "Vacation to Rome",
         "body": "We need to reschedule the meeting.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1705009703000,
         "removedAt": null,
         "labels": [
@@ -627,7 +627,7 @@
         "subject": "Vacation to Rome",
         "body": "Can we discuss the new job opportunity?",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1629089611000,
         "removedAt": null,
         "labels": [
@@ -642,7 +642,7 @@
         "subject": "Follow-up on last conversation",
         "body": "Here's the document you requested.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1583824236000,
         "removedAt": null,
         "labels": [
@@ -658,7 +658,7 @@
         "subject": "Project deadline",
         "body": "Here's the document you requested.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1700074219000,
         "removedAt": null,
         "labels": [
@@ -673,7 +673,7 @@
         "subject": "Vacation to Rome",
         "body": "Don't forget about our call later today!",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1588358399000,
         "removedAt": null,
         "labels": [
@@ -689,7 +689,7 @@
         "subject": "Miss you!",
         "body": "Can we discuss the new job opportunity?",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1613026094000,
         "removedAt": null,
         "labels": [
@@ -704,7 +704,7 @@
         "subject": "Invitation to event",
         "body": "I'm going on vacation, see you soon!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1712304041000,
         "removedAt": null,
         "labels": [
@@ -720,7 +720,7 @@
         "subject": "Miss you!",
         "body": "We need to reschedule the meeting.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1710559862000,
         "removedAt": null,
         "labels": [
@@ -735,7 +735,7 @@
         "subject": "Follow-up on last conversation",
         "body": "I'm planning to go on a vacation next summer, and I'd love it if you could join me! Let me know if you're available.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1632730319000,
         "removedAt": null,
         "labels": [
@@ -751,7 +751,7 @@
         "subject": "Miss you!",
         "body": "Thanks for sending the proposal. I've reviewed the document, and I think we can make a few improvements. I'll share my thoughts in a follow-up email shortly.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1593116841000,
         "removedAt": null,
         "labels": [
@@ -767,7 +767,7 @@
         "subject": "Miss you!",
         "body": "I'm planning to go on a vacation next summer, and I'd love it if you could join me! Let me know if you're available.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1599234108000,
         "removedAt": null,
         "labels": [
@@ -783,7 +783,7 @@
         "subject": "Project deadline",
         "body": "Don't forget about our call later today!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1627212201000,
         "removedAt": null,
         "labels": [
@@ -798,7 +798,7 @@
         "subject": "Follow-up on last conversation",
         "body": "I'm going on vacation, see you soon!",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1659061097000,
         "removedAt": null,
         "labels": [
@@ -814,7 +814,7 @@
         "subject": "Vacation to Rome",
         "body": "Don't forget about our call later today!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1627784403000,
         "removedAt": null,
         "labels": [
@@ -830,7 +830,7 @@
         "subject": "Meeting tomorrow",
         "body": "It's been a while since we last caught up. Would love to meet up sometime soon and hear how things are going on your end.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1712250982000,
         "removedAt": null,
         "labels": [
@@ -846,7 +846,7 @@
         "subject": "Vacation to Rome",
         "body": "Here's the document you requested.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1638909473000,
         "removedAt": null,
         "labels": [
@@ -862,7 +862,7 @@
         "subject": "Project deadline",
         "body": "Happy to help with the project details.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1609518718000,
         "removedAt": null,
         "labels": [
@@ -878,7 +878,7 @@
         "subject": "Project deadline",
         "body": "We've been discussing the new product launch, and I believe we can optimize the marketing strategy for better results. Let's set up a meeting to finalize the plan.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1677682515000,
         "removedAt": null,
         "labels": [
@@ -894,7 +894,7 @@
         "subject": "Birthday party",
         "body": "It's been a while since we last caught up. Would love to meet up sometime soon and hear how things are going on your end.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1595779970000,
         "removedAt": null,
         "labels": [
@@ -909,7 +909,7 @@
         "subject": "Out of office",
         "body": "Will you join me on this trip to Rome?",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1625776062000,
         "removedAt": null,
         "labels": [
@@ -924,7 +924,7 @@
         "subject": "Vacation to Rome",
         "body": "Don't forget about our call later today!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1727057286000,
         "removedAt": null,
         "labels": [
@@ -939,7 +939,7 @@
         "subject": "Miss you!",
         "body": "I wanted to remind you about the meeting scheduled for next Tuesday. Please make sure to review the agenda before the call.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1598821281000,
         "removedAt": null,
         "labels": [
@@ -954,7 +954,7 @@
         "subject": "Meeting tomorrow",
         "body": "The project deadline has been extended, so we have more time to review everything. I'll send you the details in the next email.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1625181853000,
         "removedAt": null,
         "labels": [
@@ -970,7 +970,7 @@
         "subject": "Vacation to Rome",
         "body": "I'm going on vacation, see you soon!",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1699345129000,
         "removedAt": null,
         "labels": [
@@ -986,7 +986,7 @@
         "subject": "New job offer",
         "body": "I'm going to take a few days off next week for some personal time. If anything urgent comes up, feel free to reach out via phone.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1723998620000,
         "removedAt": null,
         "labels": [
@@ -1002,7 +1002,7 @@
         "subject": "Weekly update",
         "body": "Happy to help with the project details.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1691136660000,
         "removedAt": null,
         "labels": [
@@ -1018,7 +1018,7 @@
         "subject": "Out of office",
         "body": "Can we discuss the new job opportunity?",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1601811237000,
         "removedAt": null,
         "labels": [
@@ -1033,7 +1033,7 @@
         "subject": "Birthday party",
         "body": "I'm going to take a few days off next week for some personal time. If anything urgent comes up, feel free to reach out via phone.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1670326625000,
         "removedAt": null,
         "labels": [
@@ -1049,7 +1049,7 @@
         "subject": "Follow-up on last conversation",
         "body": "Don't forget about our call later today!",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1589059712000,
         "removedAt": null,
         "labels": [
@@ -1065,7 +1065,7 @@
         "subject": "Project deadline",
         "body": "I wanted to remind you about the meeting scheduled for next Tuesday. Please make sure to review the agenda before the call.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1618261462000,
         "removedAt": null,
         "labels": [
@@ -1080,7 +1080,7 @@
         "subject": "Meeting tomorrow",
         "body": "I'm planning to go on a vacation next summer, and I'd love it if you could join me! Let me know if you're available.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1677199913000,
         "removedAt": null,
         "labels": [
@@ -1096,7 +1096,7 @@
         "subject": "Project deadline",
         "body": "Can we discuss the new job opportunity?",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1603675211000,
         "removedAt": null,
         "labels": [
@@ -1112,7 +1112,7 @@
         "subject": "Weekly update",
         "body": "Sending you my best wishes.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1720984102000,
         "removedAt": null,
         "labels": [
@@ -1127,7 +1127,7 @@
         "subject": "Project deadline",
         "body": "Looking forward to seeing you next week.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1591556982000,
         "removedAt": null,
         "labels": [
@@ -1142,7 +1142,7 @@
         "subject": "Out of office",
         "body": "Let's catch up soon!",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1604613578000,
         "removedAt": null,
         "labels": [
@@ -1157,7 +1157,7 @@
         "subject": "New job offer",
         "body": "It's been a while since we last caught up. Would love to meet up sometime soon and hear how things are going on your end.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1644766914000,
         "removedAt": null,
         "labels": [
@@ -1172,7 +1172,7 @@
         "subject": "Vacation to Rome",
         "body": "Can we discuss the new job opportunity?",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1665161241000,
         "removedAt": null,
         "labels": [
@@ -1187,7 +1187,7 @@
         "subject": "Out of office",
         "body": "Don't forget about our call later today!",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1591381309000,
         "removedAt": null,
         "labels": [
@@ -1203,7 +1203,7 @@
         "subject": "Meeting tomorrow",
         "body": "Let's catch up soon!",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1718505191000,
         "removedAt": null,
         "labels": [
@@ -1219,7 +1219,7 @@
         "subject": "Follow-up on last conversation",
         "body": "I'm going to take a few days off next week for some personal time. If anything urgent comes up, feel free to reach out via phone.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1649526780000,
         "removedAt": null,
         "labels": [
@@ -1235,7 +1235,7 @@
         "subject": "Weekly update",
         "body": "Looking forward to seeing you next week.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1645397453000,
         "removedAt": null,
         "labels": [
@@ -1250,7 +1250,7 @@
         "subject": "Project deadline",
         "body": "Looking forward to seeing you next week.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1649981261000,
         "removedAt": null,
         "labels": [
@@ -1265,7 +1265,7 @@
         "subject": "Project deadline",
         "body": "Here's the document you requested.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1734196294000,
         "removedAt": null,
         "labels": [
@@ -1281,7 +1281,7 @@
         "subject": "Weekly update",
         "body": "Let's catch up soon!",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1652619808000,
         "removedAt": null,
         "labels": [
@@ -1297,7 +1297,7 @@
         "subject": "New job offer",
         "body": "The project deadline has been extended, so we have more time to review everything. I'll send you the details in the next email.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1583795144000,
         "removedAt": null,
         "labels": [
@@ -1312,7 +1312,7 @@
         "subject": "New job offer",
         "body": "The project deadline has been extended, so we have more time to review everything. I'll send you the details in the next email.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1623870386000,
         "removedAt": null,
         "labels": [
@@ -1328,7 +1328,7 @@
         "subject": "New job offer",
         "body": "Happy to help with the project details.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1631255851000,
         "removedAt": null,
         "labels": [
@@ -1343,7 +1343,7 @@
         "subject": "New job offer",
         "body": "Sending you my best wishes.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1726115569000,
         "removedAt": null,
         "labels": [
@@ -1359,7 +1359,7 @@
         "subject": "Weekly update",
         "body": "Thanks for sending the proposal. I've reviewed the document, and I think we can make a few improvements. I'll share my thoughts in a follow-up email shortly.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1722109655000,
         "removedAt": null,
         "labels": [
@@ -1375,7 +1375,7 @@
         "subject": "New job offer",
         "body": "I wanted to remind you about the meeting scheduled for next Tuesday. Please make sure to review the agenda before the call.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1673253747000,
         "removedAt": null,
         "labels": [
@@ -1390,7 +1390,7 @@
         "subject": "Vacation to Rome",
         "body": "We need to reschedule the meeting.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1657788773000,
         "removedAt": null,
         "labels": [
@@ -1405,7 +1405,7 @@
         "subject": "Out of office",
         "body": "We've been discussing the new product launch, and I believe we can optimize the marketing strategy for better results. Let's set up a meeting to finalize the plan.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1721494866000,
         "removedAt": null,
         "labels": [
@@ -1420,7 +1420,7 @@
         "subject": "Meeting tomorrow",
         "body": "We need to reschedule the meeting.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1669006686000,
         "removedAt": null,
         "labels": [
@@ -1435,7 +1435,7 @@
         "subject": "Out of office",
         "body": "Sending you my best wishes.",
         "isRead": true,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1590958014000,
         "removedAt": null,
         "labels": [
@@ -1450,7 +1450,7 @@
         "subject": "Vacation to Rome",
         "body": "Looking forward to seeing you next week.",
         "isRead": true,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1609892342000,
         "removedAt": null,
         "labels": [
@@ -1466,7 +1466,7 @@
         "subject": "New job offer",
         "body": "Will you join me on this trip to Rome?",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1655737280000,
         "removedAt": null,
         "labels": [
@@ -1482,7 +1482,7 @@
         "subject": "Miss you!",
         "body": "Sending you my best wishes.",
         "isRead": false,
-        "isStared": true,
+        "isStarred": true,
         "sentAt": 1610695082000,
         "removedAt": null,
         "labels": [
@@ -1498,7 +1498,7 @@
         "subject": "Follow-up on last conversation",
         "body": "It's been a while since we last caught up. Would love to meet up sometime soon and hear how things are going on your end.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1672535234000,
         "removedAt": null,
         "labels": [
@@ -1514,7 +1514,7 @@
         "subject": "Project deadline",
         "body": "Sending you my best wishes.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1719988846000,
         "removedAt": null,
         "labels": [
@@ -1530,7 +1530,7 @@
         "subject": "Vacation to Rome",
         "body": "I'm planning to go on a vacation next summer, and I'd love it if you could join me! Let me know if you're available.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1629882951000,
         "removedAt": null,
         "labels": [
@@ -1545,7 +1545,7 @@
         "subject": "Out of office",
         "body": "We need to reschedule the meeting.",
         "isRead": false,
-        "isStared": false,
+        "isStarred": false,
         "sentAt": 1637475911000,
         "removedAt": null,
         "labels": [

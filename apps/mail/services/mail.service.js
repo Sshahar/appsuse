@@ -32,7 +32,7 @@ function query(filterBy = {}) {
     //     txt: 'puki', // no need to support complex text search
     //     isRead: true,
     //     // (optional property, if missing: show all)
-    //     isStared: true, // (optional property, if missing: show all)
+    //     isStarred: true, // (optional property, if missing: show all)
     //     labels: ['important', 'romantic'] // has any of the labels
     // }
     return storageService.query(MAIL_KEY)
@@ -47,8 +47,8 @@ function query(filterBy = {}) {
             if (filterBy.isRead !== undefined) {
                 mails = mails.filter(mail => mail.isRead === filterBy.isRead)
             }
-            if (filterBy.isStared) {
-                mails = mails.filter(mail => mail.isRead === filterBy.isStared)
+            if (filterBy.isStarred) {
+                mails = mails.filter(mail => mail.isRead === filterBy.isStarred)
             }
             if (!!filterBy.labels) {
                 mails = mails.filter(mail => mail.labels.some(l => filterBy.labels.includes(l)))
@@ -82,13 +82,13 @@ function save(mail) {
     }
 }
 
-function getEmptyMail(createdAt, subject = '', body = '', isRead = undefined, isStared = false, sentAt = undefined, removedAt = undefined, labels = [], from = '', to = '') {
+function getEmptyMail(createdAt, subject = '', body = '', isRead = undefined, isStarred = false, sentAt = undefined, removedAt = undefined, labels = [], from = '', to = '') {
     return {
         createdAt,
         subject,
         body,
         isRead,
-        isStared,
+        isStarred,
         sentAt,
         removedAt,
         labels,
@@ -102,7 +102,7 @@ function getDefaultFilter() {
         status: '',
         txt: '',
         isRead: undefined,
-        isStared: undefined,
+        isStarred: undefined,
         labels: ['inbox']
     }
 }
@@ -126,7 +126,7 @@ function getFilterFromSearchParams(searchParams) {
         status: searchParams.get('status') || '',
         txt: searchParams.get('txt') || '',
         isRead: searchParams.get('isRead') || undefined,
-        isStared: searchParams.get('isStared') || undefined,
+        isStarred: searchParams.get('isStarred') || undefined,
         labels: searchParams.get('labels') || ['inbox']
     }
 }
@@ -148,8 +148,8 @@ function _createMails() {
     return Promise.resolve(mails)
 }
 
-function _createMail(createdAt, subject, body, isRead, isStared, sentAt, removedAt, labels, from, to) {
-    const mail = getEmptyMail(createdAt, subject, body, isRead, isStared, sentAt, removedAt, labels, from, to)
+function _createMail(createdAt, subject, body, isRead, isStarred, sentAt, removedAt, labels, from, to) {
+    const mail = getEmptyMail(createdAt, subject, body, isRead, isStarred, sentAt, removedAt, labels, from, to)
     if (!mail.id) mail.id = utilService.makeId()
     return mail
 }

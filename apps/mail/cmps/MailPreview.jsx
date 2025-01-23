@@ -3,7 +3,7 @@ import { utilService } from '../../../services/util.service.js'
 const { useLocation, useNavigate } = ReactRouter
 const { useState, useEffect, useRef } = React
 
-export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
+export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdateMail }) {
     const navigate = useNavigate()
     const [isHovered, setIsHovered] = useState(false)
     const [isSelected, setIsSelected] = useState(false)
@@ -42,10 +42,10 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
     function onUnhover() {
         setIsHovered(false)
     }
-    
+
     function getCssClasses() {
         const classes = ['mail-preview']
-        
+
         if (mail.isRead) {
             classes.push('is-read')
         } else {
@@ -58,17 +58,24 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead }) {
         ev.stopPropagation()
         setIsSelected(prevIsSelected => !prevIsSelected)
     }
-    
+
+    function onToggleStarred(ev) {
+        ev.stopPropagation()
+        mail.isStarred = !mail.isStarred
+        onUpdateMail(mail)
+    }
+
     // TODO: add mobile support (using cmpType)
     const cmpType = isHovered ? 'buttons' : 'date'
+    const starIcon = mail.isStarred ? 'star.png' : 'star-not.png'
     return (
         <React.Fragment>
             <div className={getCssClasses()} style={previewStyle} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
                 {/* Select */}
-                <input type="checkbox" name="mail.id" style={selectStyle} onClick={onToggleSelected} checked={isSelected}/>
+                <input type="checkbox" name="mail.id" style={selectStyle} onClick={onToggleSelected} defaultChecked={isSelected} />
                 {/* Star */}
-                <span style={starStyle}>
-                    <img className="icon" src="assets/img/mail/asset 19.png" />
+                <span style={starStyle} onClick={onToggleStarred}>
+                    <img className="icon" src={`assets/img/mail/${starIcon}`} />
                 </span>
                 {/* From */}
                 <span>{mail.from}</span>

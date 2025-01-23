@@ -57,7 +57,7 @@ export function MailIndex() {
         if (labels.includes('trash')) return 'trash'
         if (labels.includes('draft')) return 'draft'
     }
-    
+
     function onSetMailRead(mail) {
         mail.isRead = true
         mailService.save(mail)
@@ -65,6 +65,18 @@ export function MailIndex() {
 
     function onSetCmpType(newCmpType) {
         setCmpType(newCmpType)
+    }
+
+    function onUpdateMail(mail) {
+        // update in storage and locally
+        mailService.save(mail)
+            .then(updatedMail => {
+                setMails(prevMails => ([
+                    ...prevMails.filter(m => m.id !== updatedMail.id),
+                    updatedMail
+                ]))
+            })
+            .catch(err => console.log('error updating mail:', err))
     }
 
     return (
@@ -85,6 +97,7 @@ export function MailIndex() {
                 sortBy={sortBy}
                 // Mail list context
                 setMailRead={onSetMailRead}
+                onUpdateMail={onUpdateMail}
             />
         </div>
     )
