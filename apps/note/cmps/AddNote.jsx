@@ -53,8 +53,6 @@ export function AddNote({ addNote }) {
             reader.readAsDataURL(target.files[0])
         } else if (noteTyp === 'NoteTodos') {
             value = value.split(',')
-            // value = value.map(val => { return { 'txt': val, doneAt: null } })
-
             const info = {...note.info, [feild]:value}
             setNote(prevNote => {return {...prevNote,info,...type}})
 

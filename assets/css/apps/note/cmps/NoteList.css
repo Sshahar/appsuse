@@ -18,18 +18,34 @@
     box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
     overflow: hidden;
  }
- .remove-note{
-   position: relative;
+ .note-options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+ }
+ .note-options button{
+  margin-right: 5px;
    background: none;
    border: 0;
    bottom: 0;
- }
- .remove-note svg{
    width: 10px;
    height: 10px;
+ }
+ .note-options svg{
+   width: 12px;
+   height: 12px;
  }
  .note{
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+ }
+ .note-pin svg{
+  opacity: 0.5;
+  width: 15px;
+  height: 15px;
+ }
+ .pinned svg{
+  opacity: 1;
  }
