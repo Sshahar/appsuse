@@ -5,5 +5,8 @@
     
 
     /* Mail vars */
-    --mail-clr-1: #F2F6FC
+    --mail-clr-1: #F2F6FC;
+    --mail-bgc-1: #F6F8FC;
+    --mail-bgc-2: #E9EAEF;
+    --mail-bgc-3: #D2E2FD;
 }

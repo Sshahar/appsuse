@@ -19,6 +19,7 @@ export const mailService = {
     getEmptyMail,
     getNextMailId,
     getDefaultFilter,
+    getFilterFromSearchParams,
 }
 
 function getLoggedinUser() {
@@ -119,6 +120,17 @@ function getNextMailId(mailId) {
 function getMailStatus(mail) {
     return 'inbox/sent/trash/draft'
 }
+
+function getFilterFromSearchParams(searchParams) {
+    return {
+        status: searchParams.get('status') || '',
+        txt: searchParams.get('txt') || '',
+        isRead: searchParams.get('isRead') || undefined,
+        isStared: searchParams.get('isStared') || undefined,
+        labels: searchParams.get('labels') || ['inbox']
+    }
+}
+
 
 function _createMails() {
     let mails = utilService.loadFromStorage(MAIL_KEY)

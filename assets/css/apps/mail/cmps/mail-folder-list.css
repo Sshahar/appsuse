@@ -1,6 +1,15 @@
 .folder {
-    background-color: #F6F8FC;
+    cursor: pointer;
+    background-color: var(--mail-bgc-1);
     text-transform: capitalize;
+}
+
+.folder:hover {
+    background-color: var(--mail-bgc-2);
+}
+
+.selected-folder {
+    background-color: var(--mail-bgc-3);
 }
 
 .main-folder-list {

@@ -3,18 +3,30 @@ import { MailFolderList } from "../cmps/MailFolderList.jsx"
 import { MailList } from "../cmps/MailList.jsx"
 import { mailService } from "../services/mail.service.js"
 import { MailDetails } from "./MailDetails.jsx"
+import { getTruthyValues } from "../services/util.service.js"
 
 const { useState, useEffect, useRef } = React
+const { Link, useSearchParams } = ReactRouterDOM
 
 export function MailIndex() {
     const [mails, setMails] = useState([])
     const [cmpType, setCmpType] = useState('list')
-    const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
-    const [sortBy, setSortBy] = useState({by: 'sentAt', direction: -1})
+    const [sortBy, setSortBy] = useState({ by: 'sentAt', direction: -1 })
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [filterBy, setFilterBy] = useState(mailService.getFilterFromSearchParams(searchParams))
 
     useEffect(() => {
-        mailService.query(filterBy).then(setMails)
+        setSearchParams(getTruthyValues(filterBy)) // {txt:'aba'}
+        loadMails()
     }, [filterBy])
+
+    function loadMails() {
+        mailService.query(filterBy)
+            .then(setMails)
+            .catch(err => {
+                console.log('Problems getting mails:', err)
+            })
+    }
 
     function onSetFilterBy(newFilter) {
         setFilterBy(prevFilter => ({ ...prevFilter, ...newFilter }))
@@ -32,10 +44,37 @@ export function MailIndex() {
             .catch(err => console.log('err', err))
     }
 
+    function filterByLabel(label) {
+        // TODO: implement function
+        const labels = [label]
+        setFilterBy((prevFilter) => ({ ...prevFilter, labels }))
+    }
+
+    function getSelectedFolder() {
+        const labels = filterBy.labels
+        if (labels.includes('inbox')) return 'inbox'
+        if (labels.includes('sent')) return 'sent'
+        if (labels.includes('trash')) return 'trash'
+        if (labels.includes('draft')) return 'draft'
+    }
+    
     return (
         <div className="main-mail-index">
-            <MailFolderList setCmpType={setCmpType} />
-            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{ 'gridColumn': 2 }} sendMail={onSendMail} deleteMail={onDeleteMail} sortBy={sortBy}/>
+            <MailFolderList
+                labels={filterBy.labels}
+                setCmpType={setCmpType}
+                initSelectedFolder={getSelectedFolder()}
+                filterByLabel={filterByLabel} />
+
+            <DynamicCmp
+                cmpType={cmpType}
+                mails={mails}
+                setCmpType={setCmpType}
+                mainStyle={{ 'gridColumn': 2 }}
+                sendMail={onSendMail}
+                deleteMail={onDeleteMail}
+                sortBy={sortBy}
+            />
         </div>
     )
 }
