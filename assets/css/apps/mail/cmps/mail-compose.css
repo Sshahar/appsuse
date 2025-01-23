@@ -2,21 +2,32 @@
     .mail-compose {
         display: grid;
         position: fixed;
+        width: 40vw;
         bottom: 0;
-        right: 0;
-        background-color: yellow;
-        grid-template-columns: 1fr 1fr 1fr;
+        right: 2vw;
+        background-color: #fff;
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);
+        z-index: 1;
         gap: 10px;
     }
     
     .mail-compose .main-compose-form {
         display: grid;
         gap: 10px;
-    
+        
         grid-column: 2;
+    }
+    
+    .main-compose-form .head-div {
+        padding: 5px;
     }
     
     .mail-compose .main-compose-form textarea {
         height: 40vh;
+    }
+
+    .new-message-header {
+        background-color: #F2F6FC;
+        padding: .3em;
     }
 }

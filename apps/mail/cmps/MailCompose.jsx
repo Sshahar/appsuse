@@ -33,14 +33,16 @@ export function MailCompose({sendMail}) {
 
     return (
         <div className="mail-compose">
+            <div className="new-message-header">New Message</div>
+            <div>
             <form className="main-compose-form" onSubmit={onSendMail}>
                 {/* To */}
-                <div>
+                <div className="head-div">
                     <label htmlFor="">To: </label>
                     <input value={to} onChange={handleChange} type="text" name='to' />
                 </div>
                 {/* Subject */}
-                <div>
+                <div className="head-div">
                     <label htmlFor="">Subject: </label>
                     <input value={subject} onChange={handleChange} type="text" name='subject' />
                 </div>
@@ -49,6 +51,7 @@ export function MailCompose({sendMail}) {
                 {/* Send */}
                 <button>Send</button>
             </form>
+            </div>
 
         </div>
     )

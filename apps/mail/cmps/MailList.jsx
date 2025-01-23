@@ -15,10 +15,13 @@ export function MailList({ mails, setCmpType, deleteMail, sortBy, setMailRead, s
     const sortedMails = getSortedMails()
     return (
         <React.Fragment>
-            {sortedMails.map(mail => (
-                <MailPreview key={mail.id} mail={mail} setCmpType={setCmpType} deleteMail={deleteMail} setMailRead={setMailRead} />
-            ))
-            }
+            <div className='mail-list'>
+                {sortedMails.map(mail => (
+                    <MailPreview key={mail.id} mail={mail} setCmpType={setCmpType} deleteMail={deleteMail} setMailRead={setMailRead} />
+                ))
+                }
+            </div>
+
             {cmpType === 'compose' &&
                 <MailCompose sendMail={sendMail} />}
         </React.Fragment>
