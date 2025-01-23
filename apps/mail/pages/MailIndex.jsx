@@ -10,6 +10,7 @@ export function MailIndex() {
     const [mails, setMails] = useState([])
     const [cmpType, setCmpType] = useState('list')
     const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
+    const [sortBy, setSortBy] = useState({by: 'sentAt', direction: -1})
 
     useEffect(() => {
         mailService.query(filterBy).then(setMails)
@@ -34,7 +35,7 @@ export function MailIndex() {
     return (
         <div className="main-mail-index">
             <MailFolderList setCmpType={setCmpType} />
-            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{ 'gridColumn': 2 }} sendMail={onSendMail} deleteMail={onDeleteMail} />
+            <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{ 'gridColumn': 2 }} sendMail={onSendMail} deleteMail={onDeleteMail} sortBy={sortBy}/>
         </div>
     )
 }
