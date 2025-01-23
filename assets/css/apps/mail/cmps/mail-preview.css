@@ -4,7 +4,7 @@
     }
     
     .is-read {
-        background-color: "#F2F6FC",
+        background-color: var(--mail-clr-1),
     }
 
     .is-not-read {
