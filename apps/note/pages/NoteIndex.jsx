@@ -15,11 +15,13 @@ export function NoteIndex() {
                             .then(setNotes)
                             .catch(err => console.log('Problems getting notes:', err))
     }
-    function addNote(type,newNote){
-        
-       const emptyNote = noteService.getEmptyNote()
-        const info = {...emptyNote.info,...newNote}
-        const note = {...emptyNote,info,...type}
+
+    function addNote(newNote){
+        if(newNote.type === 'NoteTodos'){
+            newNote.info.todos =  newNote.info.todos.map(val => { return { 'txt': val, doneAt: null } })
+        }
+        const emptyNote = noteService.getEmptyNote()
+        const note = {...emptyNote,...newNote}
         noteService.save(note)
                             .then(note => {
                                 setNotes([...notes,note])
