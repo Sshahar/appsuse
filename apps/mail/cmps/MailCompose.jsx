@@ -1,3 +1,4 @@
-export function MailCompose() {
+export function MailCompose({mails, setCmpType}) {
+    
     return <div>Mail Compose</div>
 }

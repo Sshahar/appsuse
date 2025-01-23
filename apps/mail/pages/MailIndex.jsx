@@ -1,3 +1,4 @@
+import { MailCompose } from "../cmps/MailCompose.jsx"
 import { MailFolderList } from "../cmps/MailFolderList.jsx"
 import { MailList } from "../cmps/MailList.jsx"
 import { mailService } from "../services/mail.service.js"
@@ -20,7 +21,7 @@ export function MailIndex() {
     }
 
     return (
-        <div class="main-mail-index">
+        <div className="main-mail-index">
             <MailFolderList />
             <DynamicCmp cmpType={cmpType} mails={mails} setCmpType={setCmpType} mainStyle={{'gridColumn': 2}}/>
         </div>
@@ -34,5 +35,7 @@ function DynamicCmp(props) {
             return <MailList {...props} />
         case 'details':
             return <MailDetails {...props} />
+        case 'compose':
+            return <MailCompose {...props} />
     }
 }

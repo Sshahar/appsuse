@@ -4,7 +4,7 @@ const { useLocation, useNavigate } = ReactRouter
 
 export function MailPreview({ mail, setCmpType }) {
     const navigate = useNavigate()
-    
+
     const iconStyle = {
         "height": "20px",
         "width": "20px",
@@ -12,7 +12,7 @@ export function MailPreview({ mail, setCmpType }) {
 
     const selectStyle = { "order": "0", "padding": "0 10px 0 13px", "position": "relative", "width": "20px" }
 
-    const starStyle = {"padding":"0 10px 0 0","WebkitBoxOrdinalGroup":"1","WebkitOrder":"0","order":"0","width":"20px"}
+    const starStyle = { "padding": "0 10px 0 0", "WebkitBoxOrdinalGroup": "1", "WebkitOrder": "0", "order": "0", "width": "20px" }
 
     const previewStyle = {
         "display": "grid",
@@ -25,8 +25,10 @@ export function MailPreview({ mail, setCmpType }) {
     }
 
     function onPreviewClick() {
+        // TODO: import history for it to work
+        // history.push('/mail')
         navigate(`${mail.id}`)
-        setCmpType(() =>'details')
+        setCmpType(() => 'details')
     }
 
     return (
@@ -36,7 +38,7 @@ export function MailPreview({ mail, setCmpType }) {
                 <input type="checkbox" name="mail.id" style={selectStyle} />
                 {/* Star */}
                 <span style={starStyle}>
-                    <img style={iconStyle} src="apps/mail/assets/img/asset 19.png" />
+                    <img style={iconStyle} src="assets/img/mail/asset 19.png" />
                 </span>
                 {/* From */}
                 <span>{mail.from}</span>

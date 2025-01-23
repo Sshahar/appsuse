@@ -39,7 +39,6 @@ export function MailDetails() {
     return (
         <React.Fragment>
             <div className="mail-details">
-
                 {/* Subject*/}
                 {/* (TODO: add labels such as 'inbox') */}
                 <h2>{mail.subject}</h2>

@@ -7,6 +7,7 @@ import { Home } from "./pages/Home.jsx"
 import { MailIndex } from "./apps/mail/pages/MailIndex.jsx"
 import { NoteIndex } from "./apps/note/pages/NoteIndex.jsx"
 import { MailDetails } from "./apps/mail/pages/MailDetails.jsx"
+import { MailCompose } from "./apps/mail/cmps/MailCompose.jsx"
 
 
 
@@ -17,9 +18,11 @@ export function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/mail" element={<MailIndex />}>
-                    <Route path=":mailId" element={<MailDetails />} />
-                </Route>
+                {/* TODO: learn how to use nested routes (history won't work, render won't work) */}
+                <Route path="/mail" element={<MailIndex />} />
+                <Route path="/mail/:mailId" element={<MailDetails />} />
+                <Route path="/mail/compose" element={<MailCompose />} />
+
                 <Route path="/note" element={<NoteIndex />} />
             </Routes>
         </section>
