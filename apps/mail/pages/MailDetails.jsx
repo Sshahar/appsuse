@@ -16,7 +16,7 @@ export function MailDetails() {
         mailService.get(mailId)
             .then(mail => setMail(mail))
             .catch(err => {
-                console.log('Problem getting book:', err)
+                console.log('Problem getting mail:', err)
             })
     }
 
