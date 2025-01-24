@@ -15,10 +15,12 @@ export const noteService = {
     
 }
 
-function query(filterBy = {}) {
+function query(filterBy = null) {
     return storageService.query(NOTE_KEY)
         .then(notes => {
-            
+            if(filterBy){
+                notes = notes.filter( note => note.type === filterBy)
+            }
             notes = notes.sort((a, b) => (b.isPinned - a.isPinned))
             
             return notes

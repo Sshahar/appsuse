@@ -24,12 +24,13 @@ export function AppHeader() {
 function DynamicLogo(props) {
     // console.log('props:', props)
     switch (props.cmpType) {
-        case 'default':
-        case 'book':
+       
         case 'note':
-            return <DefaultLogo {...props} />
+            return <NoteLogo {...props} />
         case 'mail':
             return <MailLogo {...props} />
+
+        default: return <DefaultLogo {...props}/>
     }
 }
 
@@ -39,4 +40,7 @@ function DefaultLogo(props) {
 
 function MailLogo(props) {
     return (<h3><img src="assets/img/mail/logo.png" /></h3>)
+}
+function NoteLogo(props){
+    return (<h3 className="keep-logo"><img src="apps\note\assets\keep.png" /></h3>)
 }

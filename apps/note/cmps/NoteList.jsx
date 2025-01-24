@@ -2,7 +2,7 @@ import { NoteEdit } from "./noteEdit.jsx"
 import { NotePreview } from "./NotePreview.jsx"
 
 const { useEffect, useState } = React
-export function NoteList({ notes, onSetEdit, onRemoveNote, pinState,onChangeColor }) {
+export function NoteList({ notes, onSetEdit, onRemoveNote, pinState, onChangeColor, onduplicate }) {
     const [editMode, setEdit] = useState(false)
     function toggleModal() {
         setEdit(!editMode)
@@ -16,6 +16,11 @@ export function NoteList({ notes, onSetEdit, onRemoveNote, pinState,onChangeColo
                     <article className="note" style={note.style} key={note.id}>
                         <NotePreview note={note} />
                         <div className="note-options">
+                            <button onClick={() => onduplicate(note)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                             <path d="M208 0L332.1 0c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9L448 336c0 26.5-21.5 48-48 48l-192 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48zM48 128l80 0 0 64-64 0 0 256 192 0 0-32 64 0 0 48c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 176c0-26.5 21.5-48 48-48z"/>
+                            </svg>
+                            </button>
                             <button className="remove-note" onClick={() => onRemoveNote(note.id)} >
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z" />
@@ -37,7 +42,7 @@ export function NoteList({ notes, onSetEdit, onRemoveNote, pinState,onChangeColo
                                     <path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z" /><circle cx="6.5" cy="11.5" r="1.5" />
                                     <circle cx="9.5" cy="7.5" r="1.5" /><circle cx="14.5" cy="7.5" r="1.5" /><circle cx="17.5" cy="11.5" r="1.5" />
                                 </svg>
-                                <input className="note-color-picker" onInput={(ev)=>onChangeColor(note,ev.target.value)} value={note.style.backgroundColor} type="color" name="noteColor" id="noteColor" />
+                                <input className="note-color-picker" onInput={(ev) => onChangeColor(note, ev.target.value)} value={note.style.backgroundColor} type="color" name="noteColor" id="noteColor" />
                             </label>
                         </div>
 
