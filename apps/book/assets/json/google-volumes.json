@@ -1,0 +1,725 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 482,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "nBuA0hmspdMC",
+      "etag": "b8OIk3dHhMU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nBuA0hmspdMC",
+      "volumeInfo": {
+        "title": "Effective JavaScript",
+        "authors": [
+          "David Herman"
+        ],
+        "publisher": "Addison-Wesley",
+        "publishedDate": "2012-11-26",
+        "description": "“It’s uncommon to have a programming language wonk who can speak in such comfortable and friendly language as David does. His walk through the syntax and semantics of JavaScript is both charming and hugely insightful; reminders of gotchas complement realistic use cases, paced at a comfortable curve. You’ll find when you finish the book that you’ve gained a strong and comprehensive sense of mastery.” —Paul Irish, developer advocate, Google Chrome “This is not a book for those looking for shortcuts; rather it is hard-won experience distilled into a guided tour. It’s one of the few books on JS that I’ll recommend without hesitation.” —Alex Russell, TC39 member, software engineer, Google In order to truly master JavaScript, you need to learn how to work effectively with the language’s flexible, expressive features and how to avoid its pitfalls. No matter how long you’ve been writing JavaScript code, Effective JavaScript will help deepen your understanding of this powerful language, so you can build more predictable, reliable, and maintainable programs. Author David Herman, with his years of experience on Ecma’s JavaScript standardization committee, illuminates the language’s inner workings as never before—helping you take full advantage of JavaScript’s expressiveness. Reflecting the latest versions of the JavaScript standard, the book offers well-proven techniques and best practices you’ll rely on for years to come. Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency. Key features include Better ways to use prototype-based object-oriented programming Subtleties and solutions for working with arrays and dictionary objects Precise and practical explanations of JavaScript’s functions and variable scoping semantics Useful JavaScript programming patterns and idioms, such as options objects and method chaining In-depth guidance on using JavaScript’s unique “run-to-completion” approach to concurrency",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780132902250"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0132902257"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 231,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.14.11.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=nBuA0hmspdMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=nBuA0hmspdMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=nBuA0hmspdMC&pg=PR15&dq=effective+javascript&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=nBuA0hmspdMC&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Effective_JavaScript.html?hl=&id=nBuA0hmspdMC"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=nBuA0hmspdMC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... \u003cb\u003eeffective\u003c/b\u003e programs. This latter category can be especially subtle, par- ticularly in a language as flexible and expressive as \u003cb\u003eJavaScript\u003c/b\u003e. This book is concerned with the pragmatics of \u003cb\u003eJavaScript\u003c/b\u003e. It is not an in- troductory book; I&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "wVDCjwEACAAJ",
+      "etag": "AjDrDx2rypU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/wVDCjwEACAAJ",
+      "volumeInfo": {
+        "title": "Effective Javascript",
+        "subtitle": "68 Specific Ways to Harness the Power of Javascript",
+        "authors": [
+          "David Herman"
+        ],
+        "publishedDate": "2016-03-08",
+        "description": "\"It's uncommon to have a programming language wonk who can speak in such comfortable and friendly language as David does. His walk through the syntax and semantics of JavaScript is both charming and hugely insightful; reminders of gotchas complement realistic use cases, paced at a comfortable curve. You'll find when you finish the book that you've gained a strong and comprehensive sense of mastery.\"-Paul Irish, developer advocate, Google Chrome \"This is not a book for those looking for shortcuts; rather it is hard-won experience distilled into a guided tour. It's one of the few books on JS that I'll recommend without hesitation.\"-Alex Russell, TC39 member, software engineer, Google In order to truly master JavaScript, you need to learn how to work effectively with the language's flexible, expressive features and how to avoid its pitfalls. No matter how long you've been writing JavaScript code, Effective JavaScript will help deepen your understanding of this powerful language, so you can build more predictable, reliable, and maintainable programs. Author David Herman, with his years of experience on Ecma's JavaScript standardization committee, illuminates the language's inner workings as never before-helping you take full advantage of JavaScript's expressiveness. Reflecting the latest versions of the JavaScript standard, the book offers well-proven techniques and best practices you'll rely on for years to come. Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You'll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency. Key features include Better ways to use prototype-based object-oriented programming Subtleties and solutions for working with arrays and dictionary objects Precise and practical explanations of JavaScript's functions and variable scoping semantics Useful JavaScript programming patterns and idioms, such as options objects and method chaining In-depth guidance on using JavaScript's unique \"run-to-completion\" approach to concurrency",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1530427223"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781530427222"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 228,
+        "printType": "BOOK",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=wVDCjwEACAAJ&dq=effective+javascript&hl=&as_pt=BOOKS&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=wVDCjwEACAAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Effective_Javascript.html?hl=&id=wVDCjwEACAAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=wVDCjwEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "&quot;-Paul Irish, developer advocate, Google Chrome &quot;This is not a book for those looking for shortcuts; rather it is hard-won experience distilled into a guided tour. It&#39;s one of the few books on JS that I&#39;ll recommend without hesitation."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "qBiEjwEACAAJ",
+      "etag": "/N5GBxESYQY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/qBiEjwEACAAJ",
+      "volumeInfo": {
+        "title": "Effective JavaScript",
+        "subtitle": "68 Specific Ways to Harness the Power of JavaScript",
+        "publishedDate": "2013",
+        "description": "Provides information on how to write better JavaScript programs, covering such topics as functions, arrays, library and API design, and concurrency.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0132902281"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780132902281"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 206,
+        "printType": "BOOK",
+        "categories": [
+          "JavaScript (Computer program language)"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=qBiEjwEACAAJ&dq=effective+javascript&hl=&as_pt=BOOKS&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=qBiEjwEACAAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Effective_JavaScript.html?hl=&id=qBiEjwEACAAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=qBiEjwEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Provides information on how to write better JavaScript programs, covering such topics as functions, arrays, library and API design, and concurrency."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "yg0fBAAAQBAJ",
+      "etag": "5climo2g2nw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/yg0fBAAAQBAJ",
+      "volumeInfo": {
+        "title": "Effective JavaScript　JavaScriptを使うときに知っておきたい68の冴えたやり方",
+        "authors": [
+          "Devid Herman"
+        ],
+        "publisher": "翔泳社",
+        "publishedDate": "2013-02-18",
+        "description": "JavaScriptを使うときに知っておきたい68の冴えたやり方 もはやWebアプリケーション作成のデファクトスタンダードとなった感のある開発言語・JavaScriptが、定番の“Effective”シリーズに、満を持して登場！微妙な挙動に悩むプログラマや、よりシンプルで可読性に富んだコードを志向する開発者に、実践的で即効性のある処方を施してくれる1冊です。68の「なるほど！」は、伊達じゃない。",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9784798131115"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "4798131113"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 218,
+        "printType": "BOOK",
+        "categories": [
+          "Reference"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "4.488.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=yg0fBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=yg0fBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "ja",
+        "previewLink": "http://books.google.com/books?id=yg0fBAAAQBAJ&pg=PR5&dq=effective+javascript&hl=&as_pt=BOOKS&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=yg0fBAAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Effective_JavaScript_JavaScript%E3%82%92%E4%BD%BF%E3%81%86.html?hl=&id=yg0fBAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Effective_JavaScript_JavaScript%E3%82%92%E4%BD%BF%E3%81%86-sample-pdf.acsm?id=yg0fBAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=yg0fBAAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... \u003cb\u003eJavaScript\u003c/b\u003e の入門書なら、ほかに素晴らしい本がある。たとえば Douglas Crockford の『 \u003cb\u003eJavaScript\u003c/b\u003e : The \u003cb\u003eGood\u003c/b\u003e Parts 』『 1 や、 Marijn Haverbeke の『 Eloquent \u003cb\u003eJavaScript\u003c/b\u003e 』* 2 などだ。本書で私が設定した目標は、読者が \u003cb\u003eJavaScript\u003c/b\u003e を効果的に&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "4D63DwAAQBAJ",
+      "etag": "xLamVibXLOQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/4D63DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Effective TypeScript",
+        "subtitle": "62 Specific Ways to Improve Your TypeScript",
+        "authors": [
+          "Dan Vanderkam"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2019-10-17",
+        "description": "TypeScript is a typed superset of JavaScript with the potential to solve many of the headaches for which JavaScript is famous. But TypeScript has a learning curve of its own, and understanding how to use it effectively can take time. This book guides you through 62 specific ways to improve your use of TypeScript. Author Dan Vanderkam, a principal software engineer at Sidewalk Labs, shows you how to apply these ideas, following the format popularized by Effective C++ and Effective Java (both from Addison-Wesley). You’ll advance from a beginning or intermediate user familiar with the basics to an advanced user who knows how to use the language well. Effective TypeScript is divided into eight chapters: Getting to Know TypeScript TypeScript’s Type System Type Inference Type Design Working with any Types Declarations and @types Writing and Running Your Code Migrating to TypeScript",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781492053699"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1492053694"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 273,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=4D63DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=4D63DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=4D63DwAAQBAJ&pg=PT7&dq=effective+javascript&hl=&as_pt=BOOKS&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=4D63DwAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Effective_TypeScript.html?hl=&id=4D63DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=4D63DwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... Effective Java and \u003cb\u003eEffective JavaScript\u003c/b\u003e. If you&#39;re already comfortable working in a few different programming languages, then diving straight into the odd corners of a new one can be an effective way to challenge your mental models and&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "KnbVEAAAQBAJ",
+      "etag": "PscCOtqAASw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/KnbVEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Mastering Javascript",
+        "authors": [
+          "Cybellium Ltd"
+        ],
+        "publisher": "Cybellium Ltd",
+        "publishedDate": "2023-09-06",
+        "description": "Cybellium Ltd is dedicated to empowering individuals and organizations with the knowledge and skills they need to navigate the ever-evolving computer science landscape securely and learn only the latest information available on any subject in the category of computer science including: - Information Technology (IT) - Cyber Security - Information Security - Big Data - Artificial Intelligence (AI) - Engineering - Robotics - Standards and compliance Our mission is to be at the forefront of computer science education, offering a wide and comprehensive range of resources, including books, courses, classes and training programs, tailored to meet the diverse needs of any subject in computer science. Visit https://www.cybellium.com for more books.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9798859157051"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 239,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=KnbVEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=KnbVEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=KnbVEAAAQBAJ&pg=PA95&dq=effective+javascript&hl=&as_pt=BOOKS&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=KnbVEAAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Mastering_Javascript.html?hl=&id=KnbVEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Mastering_Javascript-sample-pdf.acsm?id=KnbVEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=KnbVEAAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Cybellium. \u003cb\u003eJavaScript&#39;s\u003c/b\u003e runtime environment, typically a web browser or Node.\u003cb\u003ejs\u003c/b\u003e, provides a host of APIs for performing ... \u003cb\u003eeffective\u003c/b\u003e, and \u003cb\u003eefficient\u003c/b\u003e asynchronous code in \u003cb\u003eJavaScript\u003c/b\u003e. Before we delve into the nitty-gritty of handling&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "qhz0EAAAQBAJ",
+      "etag": "MnR4RT83teY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/qhz0EAAAQBAJ",
+      "volumeInfo": {
+        "title": "JavaScript Masterclass",
+        "subtitle": "A comprehensive guide to mastering JavaScript programming (English Edition)",
+        "authors": [
+          "Yanko Belov"
+        ],
+        "publisher": "BPB Publications",
+        "publishedDate": "2024-02-13",
+        "description": "Master the world's most dominant programming language KEY FEATURES ● Learn JavaScript fundamentals and advanced techniques. ● Advanced JavaScript ES2015 (ES6)+ concepts uncovered. ● Expert tips for optimizing code efficiency in JavaScript. DESCRIPTION JavaScript Masterclass is your comprehensive guide to mastering the most used language of the web. This book enables you to build dynamic websites, create interactive experiences, and level up your web development skills by taking you on a journey through the world of JavaScript. Starting with the basics, you will explore JavaScript's syntax, data types, and control structures. Learn about the latest language features in ES2022, object-oriented programming, and asynchronous programming. Dive deep into functions, closures, and modules, and gain a solid understanding of the often-tricky 'this' keyword. Discover the power of coercion. Explore advanced object concepts and how to work with popular frameworks like React and Vue. Test and debug your code effectively and optimize it for performance. Finally, go beyond tools and extensions to learn about code optimization, tool selection, collaboration, and emerging trends in JavaScript development. Whether you are a beginner or an experienced developer, this book equips you with the knowledge and skills to become a JavaScript master. WHAT YOU WILL LEARN ● Master JavaScript's core concepts, syntax, and data types. ● Apply the latest ES2022 features for more efficient coding. ● Tackle complex challenges with OOPs principles and asynchronous techniques. ● Create modular and maintainable code with closures and modules. ● Build real-world projects using popular frameworks like React and Vue. WHO THIS BOOK IS FOR This book is tailored for aspiring and experienced front-end designer crafting interactive experiences or a back-end developer building dynamic server-side applications and JavaScript developers looking to deepen their understanding and proficiency. TABLE OF CONTENTS 1. Fundamentals of JavaScript 2. The Latest Features in JavaScript 3. Object-oriented Programming in JavaScript 4. Asynchronous JavaScript 5. Functions, Closures, and Modules 6. \"this\" Keyword 7. Coercion 8. Advanced Objects 9. React and Vue 10. Testing and Debugging 11. Beyond Tools and Extensions",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789355517074"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "9355517076"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 501,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=qhz0EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=qhz0EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=qhz0EAAAQBAJ&pg=PT286&dq=effective+javascript&hl=&as_pt=BOOKS&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=qhz0EAAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/JavaScript_Masterclass.html?hl=&id=qhz0EAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/JavaScript_Masterclass-sample-epub.acsm?id=qhz0EAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/JavaScript_Masterclass-sample-pdf.acsm?id=qhz0EAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=qhz0EAAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... code reuse and enhancing the overall flexibility of JavaScript programs. Understanding this is essential for writing \u003cb\u003eeffective JavaScript\u003c/b\u003e code. It allows developers to write object-oriented code, where methods can reference and&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "l8dcCgAAQBAJ",
+      "etag": "8G2qNvRlEac",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/l8dcCgAAQBAJ",
+      "volumeInfo": {
+        "title": "Beautiful JavaScript",
+        "subtitle": "Leading Programmers Explain How They Think",
+        "authors": [
+          "Anton Kovalyov"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2015-08-13",
+        "description": "JavaScript is arguably the most polarizing and misunderstood programming language in the world. Many have attempted to replace it as the language of the Web, but JavaScript has survived, evolved, and thrived. Why did a language created in such hurry succeed where others failed? This guide gives you a rare glimpse into JavaScript from people intimately familiar with it. Chapters contributed by domain experts such as Jacob Thornton, Ariya Hidayat, and Sara Chipps show what they love about their favorite language—whether it’s turning the most feared features into useful tools, or how JavaScript can be used for self-expression. Contributors include: Angus Croll Jonathan Barronville Sara Chipps Marijn Haverbeke Ariya Hidayat Daryl Koopersmith Anton Kovalyov Rebecca Murphey Daniel Pupius Graeme Roberts Jenn Schiffer Jacob Thornton Ben Vinegar Rick Waldron Nicholas Zakas",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449371173"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1449371175"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 167,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=l8dcCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=l8dcCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=l8dcCgAAQBAJ&pg=PA154&dq=effective+javascript&hl=&as_pt=BOOKS&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=l8dcCgAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Beautiful_JavaScript.html?hl=&id=l8dcCgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=l8dcCgAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... jQuery Fundamentals, contributed to the jQuery Cookbook (O&#39;Reilly), and served as a technical reviewer for Garann Means&#39;s Node for Front-End Developers (O&#39;Reilly) and David Herman&#39;s \u003cb\u003eEffective JavaScript\u003c/b\u003e (Addison-Wesley Professio- nal)&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "IS0EAwAAQBAJ",
+      "etag": "Jne1T00GHsE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/IS0EAwAAQBAJ",
+      "volumeInfo": {
+        "title": "You Don't Know JS: Scope & Closures",
+        "authors": [
+          "Kyle Simpson"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2014-03-10",
+        "description": "No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. This concise yet in-depth guide takes you inside scope and closures, two core concepts you need to know to become a more efficient and effective JavaScript programmer. You’ll learn how and why they work, and how an understanding of closures can be a powerful part of your development skillset. Like other books in the \"You Don’t Know JS\" series, Scope and Closures dives into trickier parts of the language that many JavaScript programmers simply avoid. Armed with this knowledge, you can achieve true JavaScript mastery. Learn about scope, a set of rules to help JavaScript engines locate variables in your code Go deeper into nested scope, a series of containers for variables and functions Explore function- and block-based scope, “hoisting”, and the patterns and benefits of scope-based hiding Discover how to use closures for synchronous and asynchronous tasks, including the creation of JavaScript libraries",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449335564"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "144933556X"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 98,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.9.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=IS0EAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=IS0EAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=IS0EAwAAQBAJ&pg=PP2&dq=effective+javascript&hl=&as_pt=BOOKS&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=IS0EAwAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/You_Don_t_Know_JS_Scope_Closures.html?hl=&id=IS0EAwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=IS0EAwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... JavaScript , odds are you don&#39;t fully understand the language . This concise yet in - depth guide takes you inside scope and closures , two core concepts you need to know to become a more efficient and \u003cb\u003eeffective JavaScript\u003c/b\u003e programmer&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "8YEJDgAAQBAJ",
+      "etag": "lEn8ssWP+VY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/8YEJDgAAQBAJ",
+      "volumeInfo": {
+        "title": "Decision Management: Concepts, Methodologies, Tools, and Applications",
+        "subtitle": "Concepts, Methodologies, Tools, and Applications",
+        "authors": [
+          "Management Association, Information Resources"
+        ],
+        "publisher": "IGI Global",
+        "publishedDate": "2017-01-30",
+        "description": "The implementation of effective decision making protocols is crucial in any organizational environment in modern society. Emerging advancements in technology and analytics have optimized uses and applications of decision making systems. Decision Management: Concepts, Methodologies, Tools, and Applications is a compendium of the latest academic material on the control, support, usage, and strategies for implementing efficient decision making systems across a variety of industries and fields. Featuring comprehensive coverage on numerous perspectives, such as data visualization, pattern analysis, and predictive analytics, this multi-volume book is an essential reference source for researchers, academics, professionals, managers, students, and practitioners interested in the maintenance and optimization of decision management processes.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781522518389"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "152251838X"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 2350,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=8YEJDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=8YEJDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com/books?id=8YEJDgAAQBAJ&pg=PA1170&dq=effective+javascript&hl=&as_pt=BOOKS&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.com/books?id=8YEJDgAAQBAJ&dq=effective+javascript&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Decision_Management_Concepts_Methodologi.html?hl=&id=8YEJDgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com/books/download/Decision_Management_Concepts_Methodologi-sample-pdf.acsm?id=8YEJDgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=8YEJDgAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... \u003cb\u003eEffective JavaScript\u003c/b\u003e: 68 specific ways to harness the power of JavaScript. Upper Saddle River, N.J: Addison-Wesley. Hurwitz, J. (2013). Big data for dummies. Hoboken, N.J.: John Wiley &amp; Sons, Inc. Iliinsky, N. P. N., &amp; Steele, J&nbsp;..."
+      }
+    }
+  ]
+}

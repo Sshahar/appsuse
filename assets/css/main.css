@@ -38,4 +38,10 @@
 @import './apps/note/cmps/add-note.css';
 @import './apps/note/cmps/note-txt.css';
 @import './apps/note/cmps/note-edit.css';
+<<<<<<< HEAD
 @import './apps/note/cmps/note-filter.css';
+=======
+
+/* Book app */
+@import '../../apps/book/assets/style/main.css';
+>>>>>>> master
