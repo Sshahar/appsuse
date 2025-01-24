@@ -2,11 +2,13 @@ import { utilService } from '../../../services/util.service.js'
 
 const { useLocation, useNavigate } = ReactRouter
 const { useState, useEffect, useRef } = React
+const { Link, useSearchParams } = ReactRouterDOM
 
 export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdateMail }) {
     const navigate = useNavigate()
     const [isHovered, setIsHovered] = useState(false)
     const [isSelected, setIsSelected] = useState(false)
+    const [searchParams, setSearchParams] = useSearchParams()
 
     const selectStyle = { "order": "0", "padding": "0 10px 0 13px", "position": "relative", "width": "20px" }
 
@@ -22,8 +24,14 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdat
     }
 
     function onPreviewClick() {
-        // TODO: import history for it to work
-        // history.push('/mail')
+        // Are we in Draft folder?
+        const label = searchParams.get('labels')
+        if (label === 'draft') {
+            setCmpType(() => 'compose')
+            // TODO: pass data to MailCompose
+            return
+        }
+
         navigate(`${mail.id}`)
         setCmpType(() => 'details')
         setMailRead(mail)
