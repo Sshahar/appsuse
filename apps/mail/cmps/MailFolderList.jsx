@@ -12,10 +12,12 @@ export function MailFolderList({ setCmpType, filterByLabel, selectedFolder, onSe
         } else {
             filters.isStarred = false
         }
-        onSetFilter(filters)
 
         // "navigate"
-        if (navTo !== 'compost') navTo = 'list'
+        if (navTo !== 'compose') {
+            navTo = 'list'
+            onSetFilter(filters)
+        }
         setCmpType(navTo)
     }
 
