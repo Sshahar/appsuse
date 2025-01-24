@@ -30,6 +30,10 @@ export function MailCompose({ sendMail, setCmpType }) {
     }
 
     function onCloseCompose() {
+        // Add mail to draft
+        mailToAdd.labels = ['draft']
+        sendMail(mailToAdd)
+
         setCmpType('list')
     }
 

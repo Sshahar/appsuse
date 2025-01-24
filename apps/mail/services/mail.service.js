@@ -55,11 +55,12 @@ function query(filterBy = {}) {
             }
 
             // Is addressed to us?
-            // create a scope
-            if (true) {
-                const regex = new RegExp(loggedinUser.email, 'i')
-                mails = mails.filter(mail => regex.test(mail.to))
-            }
+            // this is server side logic, running as a client requrest, hence removed.
+            // if (true) {
+                   // create a scope
+            //     const regex = new RegExp(loggedinUser.email, 'i')
+            //     mails = mails.filter(mail => regex.test(mail.to))
+            // }
 
             return mails
         })

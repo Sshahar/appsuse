@@ -54,7 +54,7 @@ export function MailDetails() {
                         <span>to me</span>
                     </div>
                     {/* Date */}
-                    <span style={dateStyle}>{utilService.getLocaleDate(mail.sentAt)}</span>
+                    <span style={dateStyle}>{utilService.getLocaleDate(mail.sentAt || mail.createdAt) }</span>
                     {/* Star toggle button */}
                     {/* Reply */}
 

@@ -83,7 +83,7 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdat
                 <span>{mail.subject}</span>
                 {/* Date \ buttons */}
                 <span>
-                    <DynamicButtons cmpType={cmpType} sentAt={mail.sentAt} onDeleteMail={onDeleteMail} />
+                    <DynamicButtons cmpType={cmpType} sentAt={mail.sentAt || mail.createdAt} onDeleteMail={onDeleteMail} />
                 </span>
             </div>
 
