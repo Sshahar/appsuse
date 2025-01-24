@@ -18,7 +18,6 @@ export function AddNote({ addNote }) {
        if(!title&&!todos&&!url&&!txt) return
         setTimeout(() => {
             if (!addNoteRef.current.contains(document.activeElement)) {
-                debugger
                addNote(note)
                setNote(()=> ({type:noteTyp,info:{title: '', todos: '', url: '',txt:''  }}))
                console.log('Note reset:', note)

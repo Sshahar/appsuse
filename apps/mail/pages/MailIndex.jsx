@@ -29,7 +29,6 @@ export function MailIndex() {
     }
 
     function onSetFilter(newFilter) {
-        debugger
         setFilterBy(() => ({...filterBy, ...newFilter}))
     }
 
