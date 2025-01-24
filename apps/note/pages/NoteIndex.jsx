@@ -1,4 +1,5 @@
 import { noteService } from "../../../services/note.service.js"
+
 import { AddNote } from "../cmps/AddNote.jsx"
 import { showSuccessMsg } from "../../../services/event-bus.service.js"
 import { NoteList } from "../cmps/NoteList.jsx"
@@ -64,7 +65,6 @@ export function NoteIndex() {
     }
 
     function pinState(note){
-        console.log('pin')
         note.isPinned = !note.isPinned
         noteService.save(note).then(() =>loadNotes())
 

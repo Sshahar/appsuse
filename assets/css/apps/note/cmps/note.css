@@ -10,3 +10,6 @@
 .note-txt{
     margin-inline-start: 5px;
 }
+.note-preview{
+    height: fit-content;
+}

@@ -28,5 +28,6 @@ nav a.active {
    opacity: 1;
 }
 .keep-logo{
+    margin-inline-start: 28px;
     height: 30px;
 }

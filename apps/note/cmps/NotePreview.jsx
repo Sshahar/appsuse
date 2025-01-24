@@ -11,8 +11,9 @@ const [noteType,setTyp] = useState(null)
     },[])
 
 return (
-  
-      <DynamicCmp note={note} noteType={noteType} />
+    <div className="note-preview">
+    <DynamicCmp note={note} noteType={noteType} />
+    </div>
  
     
 )
