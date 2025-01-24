@@ -15,7 +15,7 @@ export function MailFolderList({ setCmpType, filterByLabel, selectedFolder, onSe
         onSetFilter(filters)
 
         // "navigate"
-        if (navTo !== 'compost') navTo = 'list'
+        if (navTo !== 'compose') navTo = 'list'
         setCmpType(navTo)
     }
 
