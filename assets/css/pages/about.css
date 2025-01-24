@@ -1,0 +1,20 @@
+.about {
+    .about-hero {
+        display: flex;
+        
+        img {
+            display: inline-block;
+            margin: auto;
+            width: 400px;
+        }
+    }
+
+    .centered-text {
+        display: grid;
+        grid-template-columns: 1fr 100ch 1fr;
+
+        span {
+            grid-column: 2;
+        }
+    }
+}
