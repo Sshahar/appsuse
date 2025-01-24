@@ -1,0 +1,22 @@
+.note-filter-contanier{
+    grid-column: 1;
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    width: 80px;
+}
+.note-filter-contanier svg{
+    padding-top: 3px;
+    width: 20px;
+    height: 20px;
+}
+.note-filter-contanier button{
+    background: none;
+    border: 0;
+    width: 70px;
+    margin-top: 15px;
+}
+.note-filter-contanier  .active{
+    background-color: rgb(254, 239, 195);
+    border-radius: 0px 25px 25px 0px;
+}
