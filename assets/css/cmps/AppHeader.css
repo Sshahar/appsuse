@@ -1,16 +1,21 @@
 header {
-    background: lightcyan;
+    background: white;
     border-bottom: 2px solid white;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07)
+    
 }
 
 .app-header {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
     margin: .5em;
+    opacity: 0.7;
 }
 
 nav a:active {
@@ -18,9 +23,9 @@ nav a:active {
 }
 
 nav a.active {
-    color: darkblue;
+   
     font-weight: bold;
-    text-decoration: overline;
+   opacity: 1;
 }
 .keep-logo{
     height: 30px;
