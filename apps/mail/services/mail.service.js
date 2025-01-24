@@ -70,7 +70,15 @@ function get(mailId) {
 }
 
 function remove(mailId) {
-    return storageService.remove(MAIL_KEY, mailId)
+    return get(mailId).then(mail => {
+        // Delete forever?
+        if (mail.removedAt) return storageService.remove(MAIL_KEY, mailId)
+        // Move to trash
+        mail.removedAt = new Date()
+        mail.labels.push('trash')
+        return save(mail)
+    })
+
 }
 
 function save(mail) {
