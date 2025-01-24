@@ -15,6 +15,7 @@ export function AppHeader() {
             <NavLink to="/about" onClick={() => setLogoType('default')}>About</NavLink>
             <NavLink onClick={() => setLogoType('mail')} to="/mail">Mail</NavLink>
             <NavLink onClick={() => setLogoType('note')} to="/note">Note</NavLink>
+            <NavLink onClick={() => setLogoType('book')} to="/book">Book</NavLink>
         </nav>
     </header>)
 }
@@ -24,6 +25,7 @@ function DynamicLogo(props) {
     // console.log('props:', props)
     switch (props.cmpType) {
         case 'default':
+        case 'book':
         case 'note':
             return <DefaultLogo {...props} />
         case 'mail':
