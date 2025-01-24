@@ -50,7 +50,7 @@ function query(filterBy = {}) {
             if (filterBy.isStarred) {
                 mails = mails.filter(mail => mail.isStarred)
             }
-            if (!!filterBy.labels) {
+            if (filterBy.labels && filterBy.labels.length) {
                 mails = mails.filter(mail => mail.labels.some(l => filterBy.labels.includes(l)))
             }
 
