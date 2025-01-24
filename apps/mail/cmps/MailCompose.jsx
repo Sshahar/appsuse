@@ -38,18 +38,16 @@ export function MailCompose({sendMail}) {
             <form className="main-compose-form" onSubmit={onSendMail}>
                 {/* To */}
                 <div className="head-div">
-                    <label htmlFor="">To: </label>
-                    <input value={to} onChange={handleChange} type="text" name='to' />
+                    <input value={to} onChange={handleChange} type="text" name='to' autoFocus placeholder="Recipient"/>
                 </div>
                 {/* Subject */}
                 <div className="head-div">
-                    <label htmlFor="">Subject: </label>
-                    <input value={subject} onChange={handleChange} type="text" name='subject' />
+                    <input value={subject} onChange={handleChange} type="text" name='subject' placeholder="Subject"/>
                 </div>
                 {/* Body */}
                 <textarea value={body} onChange={handleChange} type="text" name='body' ></textarea><br />
                 {/* Send */}
-                <button>Send</button>
+                <button className="compose-send-btn">Send</button>
             </form>
             </div>
 
