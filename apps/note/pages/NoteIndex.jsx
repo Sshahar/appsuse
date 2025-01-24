@@ -1,4 +1,4 @@
-import { noteService } from "../../../services/note.service.js"
+import { noteService } from "../services/note.service.js"
 
 import { AddNote } from "../cmps/AddNote.jsx"
 import { showSuccessMsg } from "../../../services/event-bus.service.js"
@@ -79,7 +79,7 @@ export function NoteIndex() {
         const noteCopy = {...note}
         delete noteCopy.id
         console.log(noteCopy)
-        noteService.save(noteCopy).then(() =>loadNotes())
+        noteService.save(noteCopy).then(() =>{loadNotes() ;showSuccessMsg(`note duplicated successfully!`)})
 
     }
     function onSetFilter(filterBy){

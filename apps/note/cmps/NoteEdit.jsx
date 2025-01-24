@@ -36,7 +36,6 @@ export function NoteEdit({note,onSetEdit,changeNote}){
     }
 
     
-    console.log(editNote.txt)
     return(
         <div className="modal">
             <div className="modal-content">

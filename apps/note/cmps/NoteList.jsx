@@ -3,10 +3,7 @@ import { NotePreview } from "./NotePreview.jsx"
 
 const { useEffect, useState } = React
 export function NoteList({ notes, onSetEdit, onRemoveNote, pinState, onChangeColor, onduplicate }) {
-    const [editMode, setEdit] = useState(false)
-    function toggleModal() {
-        setEdit(!editMode)
-    }
+    
 
     console.log(notes)
     return (

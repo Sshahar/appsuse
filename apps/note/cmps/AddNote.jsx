@@ -2,11 +2,11 @@ const { useRef, useState, useEffect } = React
 
 export function AddNote({ addNote }) {
     const [noteTyp, setTyp] = useState('NoteTxt')
-    const [note, setNote] = useState({ type: noteTyp, info: { title: '', todos: '', url: '', txt: '' } })
+    const [note, setNote] = useState(emptyNote())
     const addNoteRef = useRef()
 
     useEffect(() => {
-        setNote(() => ({ type: noteTyp, info: { title: '', todos: '', url: '', txt: '' } }))
+        setNote(() => (emptyNote()))
     }, [noteTyp])
 
     function onsetType(type) {
@@ -20,7 +20,7 @@ export function AddNote({ addNote }) {
         setTimeout(() => {
             if (!addNoteRef.current.contains(document.activeElement)) {
                 addNote(note)
-                setNote(() => ({ type: noteTyp, info: { title: '', todos: '', url: '', txt: '' } }))
+                setNote(() => (emptyNote()))
                 
             }
         }, 0)
@@ -34,8 +34,7 @@ export function AddNote({ addNote }) {
         const feild = target.name
         let value = target.value
         if (feild === 'title') {
-            const info = { ...note.info, [feild]: value }
-            setNote(prevNote => { return { ...prevNote, info, ...type } })
+            saveChange(feild,value,type)
             return
         }
         if (noteTyp === 'NoteImg') {
@@ -44,8 +43,7 @@ export function AddNote({ addNote }) {
                 const img = new Image()
                 img.onload = () => {
                     value = img.src
-                    const info = { ...note.info, [feild]: value }
-                    setNote(prevNote => { return { ...prevNote, info, ...type } })
+                    saveChange(feild,value,type)
 
                 }
                 img.src = ev.target.result
@@ -53,16 +51,24 @@ export function AddNote({ addNote }) {
             reader.readAsDataURL(target.files[0])
         } else if (noteTyp === 'NoteTodos') {
             value = value.split(',')
-            const info = { ...note.info, [feild]: value }
-            setNote(prevNote => { return { ...prevNote, info, ...type } })
+            saveChange(feild,value,type)
 
         } else {
-            const info = { ...note.info, [feild]: value }
-            setNote(prevNote => { return { ...prevNote, info, ...type } })
-            console.log(info)
+            saveChange(feild,value,type)
+            
         }
 
     }
+    function emptyNote(){
+        return { type: noteTyp, info: { title: '', todos: '', url: '', txt: '' } }
+    }
+
+    function saveChange(feild,value,type){
+        const info = { ...note.info, [feild]: value }
+            setNote(prevNote => { return { ...prevNote, info, ...type } })
+
+    }
+
     function getplaceholder() {
         if (noteTyp === 'NoteTxt') return 'enter note'
         else if (noteTyp === 'NoteTodos') return 'enter comma seprated list'
