@@ -47,7 +47,7 @@ export function MailCompose({ sendMail, setCmpType }) {
                     <img className="icon" src={`assets/img/mail/x.svg`} />
                 </button>
             </div>
-            <div>
+            <div style={{backgroundColor: 'white'}}>
                 <form className="main-compose-form" onSubmit={onSendMail}>
                     {/* To */}
                     <div className="head-div">

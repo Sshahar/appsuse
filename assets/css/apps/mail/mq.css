@@ -18,8 +18,18 @@
     }
 }
 
+/* Mobile only */
 @media (max-width: 500px) {
     .main-mail-index {
+        textarea {
+            /* margin-inline-start: 2vw; */
+            width: 80vw;
+        }
+
+        .mail-compose {
+            width: auto;
+            right: auto;
+        }
 
         .compose-container {
             justify-self: flex-start;
