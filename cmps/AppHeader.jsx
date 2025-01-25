@@ -8,10 +8,10 @@ export function AppHeader() {
 
     return (<header className="app-header">
         <div className="logo-items">
-        <svg className="icon" focusable="false" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-        <Link to="/">
-            <DynamicLogo cmpType={logoType} />
-        </Link>
+            <Link to="/">
+                <svg className="icon" focusable="false" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                <DynamicLogo cmpType={logoType} />
+            </Link>
         </div>
         <nav>
             <NavLink to="/" onClick={() => setLogoType('default')}>Home</NavLink>
@@ -27,13 +27,13 @@ export function AppHeader() {
 function DynamicLogo(props) {
     // console.log('props:', props)
     switch (props.cmpType) {
-       
+
         case 'note':
             return <NoteLogo {...props} />
         case 'mail':
             return <MailLogo {...props} />
 
-        default: return <DefaultLogo {...props}/>
+        default: return <DefaultLogo {...props} />
     }
 }
 
@@ -44,6 +44,6 @@ function DefaultLogo(props) {
 function MailLogo(props) {
     return (<h3><img src="assets/img/mail/logo.png" /></h3>)
 }
-function NoteLogo(props){
+function NoteLogo(props) {
     return (<h3 className="keep-logo"><img src="apps\note\assets\keep.png" /></h3>)
 }
