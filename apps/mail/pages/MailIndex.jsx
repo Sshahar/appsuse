@@ -35,6 +35,7 @@ export function MailIndex() {
 
     function onSendMail(mail) {
         mail.from = mailService.getLoggedinUser().email
+        mail.labels = ['sent']
         mailService.save(mail)
     }
 
