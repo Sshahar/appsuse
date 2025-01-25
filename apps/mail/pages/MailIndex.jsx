@@ -14,6 +14,7 @@ export function MailIndex() {
     const [sortBy, setSortBy] = useState({ by: 'sentAt', direction: -1 })
     const [searchParams, setSearchParams] = useSearchParams()
     const [filterBy, setFilterBy] = useState(mailService.getFilterFromSearchParams(searchParams))
+    const [selectedMail, setSelectedMail] = useState(null)
 
     useEffect(() => {
         setSearchParams(getTruthyValues(filterBy)) // {txt:'aba'}
@@ -81,7 +82,10 @@ export function MailIndex() {
             .catch(err => console.log('error updating mail:', err))
     }
 
-
+    // load draft mail to compose component
+    function onSetSelectedMail(mail) {
+        setSelectedMail(() => mail)
+    }
 
     return (
         <div className="main-mail-index">
@@ -103,6 +107,10 @@ export function MailIndex() {
                 // Mail list context
                 setMailRead={onSetMailRead}
                 onUpdateMail={onUpdateMail}
+                // Mail preview context
+                setSelectedMail={onSetSelectedMail}
+                // Mail compose context
+                selectedMail={selectedMail}
             />
         </div>
     )

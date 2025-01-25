@@ -4,7 +4,7 @@ const { useLocation, useNavigate } = ReactRouter
 const { useState, useEffect, useRef } = React
 const { Link, useSearchParams } = ReactRouterDOM
 
-export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdateMail }) {
+export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdateMail, setSelectedMail }) {
     const navigate = useNavigate()
     const [isHovered, setIsHovered] = useState(false)
     const [isSelected, setIsSelected] = useState(false)
@@ -18,6 +18,7 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdat
         // Are we in Draft folder?
         const label = searchParams.get('labels')
         if (label === 'draft') {
+            setSelectedMail(mail)
             setCmpType(() => 'compose')
             // TODO: pass data to MailCompose
             return

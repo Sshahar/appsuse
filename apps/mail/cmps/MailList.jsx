@@ -2,7 +2,7 @@ import { MailCompose } from "./MailCompose.jsx"
 import { MailPreview } from "./MailPreview.jsx"
 const { useState, useEffect, useRef } = React
 
-export function MailList({ mails, setCmpType, deleteMail, sortBy, setMailRead, sendMail, cmpType, onUpdateMail }) {
+export function MailList({ mails, setCmpType, deleteMail, sortBy, setMailRead, sendMail, cmpType, onUpdateMail, setSelectedMail, selectedMail }) {
 
     function getSortedMails() {
         switch (sortBy.by) {
@@ -18,13 +18,14 @@ export function MailList({ mails, setCmpType, deleteMail, sortBy, setMailRead, s
             <div className='mail-list'>
                 {sortedMails.map(mail => (
                     <MailPreview key={mail.id} mail={mail} setCmpType={setCmpType} deleteMail={deleteMail} setMailRead={setMailRead}
-                        onUpdateMail={onUpdateMail} />
+                        onUpdateMail={onUpdateMail}
+                        setSelectedMail={setSelectedMail} />
                 ))
                 }
             </div>
 
             {cmpType === 'compose' &&
-                <MailCompose sendMail={sendMail} setCmpType={setCmpType} />}
+                <MailCompose sendMail={sendMail} setCmpType={setCmpType} selectedMail={selectedMail}/>}
         </React.Fragment>
     )
 }
