@@ -1,7 +1,7 @@
 .about {
     .about-hero {
         display: flex;
-        
+
         img {
             display: inline-block;
             margin: auto;
@@ -11,7 +11,7 @@
 
     .centered-text {
         display: grid;
-        grid-template-columns: 1fr 100ch 1fr;
+        grid-template-columns: 1fr clamp(30vw, 100ch, 90vw) 1fr;
 
         span {
             grid-column: 2;
