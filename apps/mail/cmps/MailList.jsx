@@ -24,7 +24,7 @@ export function MailList({ mails, setCmpType, deleteMail, sortBy, setMailRead, s
             </div>
 
             {cmpType === 'compose' &&
-                <MailCompose sendMail={sendMail} />}
+                <MailCompose sendMail={sendMail} setCmpType={setCmpType} />}
         </React.Fragment>
     )
 }

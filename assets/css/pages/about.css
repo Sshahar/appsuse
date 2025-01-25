@@ -1,23 +1,20 @@
-.about-content{
-    margin-top: 20px;
-    margin-inline: 10px;
-    gap: 5px;
-    font-size: 14px;
-    text-wrap: pretty;
-    align-items: center;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  border-radius: 20px;
-}
-.about-content img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-.about-content .about-text{
-    margin-inline: 10px ;
-}
-@media (max-width:500px){
-    .about-content{
-        flex-direction: column;
+.about {
+    .about-hero {
+        display: flex;
+        
+        img {
+            display: inline-block;
+            margin: auto;
+            width: 400px;
+        }
+    }
+
+    .centered-text {
+        display: grid;
+        grid-template-columns: 1fr 100ch 1fr;
+
+        span {
+            grid-column: 2;
+        }
     }
 }

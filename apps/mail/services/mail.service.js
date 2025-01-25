@@ -50,16 +50,17 @@ function query(filterBy = {}) {
             if (filterBy.isStarred) {
                 mails = mails.filter(mail => mail.isStarred)
             }
-            if (!!filterBy.labels) {
+            if (filterBy.labels && filterBy.labels.length) {
                 mails = mails.filter(mail => mail.labels.some(l => filterBy.labels.includes(l)))
             }
 
             // Is addressed to us?
-            // create a scope
-            if (true) {
-                const regex = new RegExp(loggedinUser.email, 'i')
-                mails = mails.filter(mail => regex.test(mail.to))
-            }
+            // this is server side logic, running as a client requrest, hence removed.
+            // if (true) {
+                   // create a scope
+            //     const regex = new RegExp(loggedinUser.email, 'i')
+            //     mails = mails.filter(mail => regex.test(mail.to))
+            // }
 
             return mails
         })
@@ -70,7 +71,15 @@ function get(mailId) {
 }
 
 function remove(mailId) {
-    return storageService.remove(MAIL_KEY, mailId)
+    return get(mailId).then(mail => {
+        // Delete forever?
+        if (mail.removedAt) return storageService.remove(MAIL_KEY, mailId)
+        // Move to trash
+        mail.removedAt = new Date()
+        mail.labels.push('trash')
+        return save(mail)
+    })
+
 }
 
 function save(mail) {

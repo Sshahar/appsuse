@@ -2,12 +2,14 @@
     --main-bg-color: lightblue;
 
     /* Note vars */
-    
+
 
     /* Mail vars */
     --mail-clr-1: #F2F6FC;
+    --mail-clr-2: #ebf1fb;
     --mail-bgc-1: #F6F8FC;
     --mail-bgc-2: #E9EAEF;
     --mail-bgc-3: #D2E2FD;
     --mail-bgc-4: #C2E7FF;
+    --mail-bgc-5: #0b57d0;
 }
