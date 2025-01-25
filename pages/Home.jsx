@@ -1,14 +1,6 @@
 const { Container, Row, Col, Button } = ReactBootstrap
 const { Link } = ReactRouterDOM
 
-// export function Home() {
-//     return <section className="home">
-//         <h1>Welcome to the home page!</h1>
-//         <Button variant="info">Click Me</Button>
-
-//     </section>
-// }
-
 export function Home() {
     return (<section className="home">
         <div className="bg-light py-5">
