@@ -5,20 +5,20 @@ const { useState, useEffect, useRef } = React
 
 export function AppHeader() {
     const [logoType, setLogoType] = useState(getLogoType())
-    
-    function getLogoType(){
+
+    function getLogoType() {
         const url = window.location.href
-        if(url.includes('mail')) return('mail')
-        else if (url.includes('note')) return('note')
-        else return('default')
+        if (url.includes('mail')) return ('mail')
+        else if (url.includes('note')) return ('note')
+        else return ('default')
     }
     return (<header className="app-header">
-        <div className="logo-items">
-            <Link to="/">
+        <Link to="/">
+            <div className="logo-items">
                 <svg className="icon" focusable="false" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
                 <DynamicLogo cmpType={logoType} />
-            </Link>
-        </div>
+            </div>
+        </Link>
         <nav>
             <NavLink to="/" onClick={() => setLogoType('default')}>Home</NavLink>
             <NavLink to="/about" onClick={() => setLogoType('default')}>About</NavLink>
