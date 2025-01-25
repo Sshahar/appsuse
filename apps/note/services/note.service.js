@@ -29,7 +29,7 @@ function query(filterBy = null) {
 
 function get(noteId) {
     return storageService.get(NOTE_KEY, noteId)
-        .then(note => _setNextPrevCarId(note))
+        
 }
 
 function remove(noteId) {
@@ -87,10 +87,10 @@ function _createNote(createdAt, type,isPinned,style,info ) {
 
 
 function getFilterFromSearchParams(searchParams) {
-    const txt = searchParams.get('txt') || ''
+    const txt = searchParams.get('title') || ''
     const minSpeed = searchParams.get('minSpeed') || ''
     return {
-        txt,
-        minSpeed
+        title,
+        txt
     }
 }

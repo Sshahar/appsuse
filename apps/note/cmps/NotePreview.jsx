@@ -3,7 +3,7 @@ import { NoteTodos } from "./NoteTodos.jsx"
 import { NoteTxt } from "./NoteTxt.jsx"
 
 const { useState,useEffect} = React
-export function NotePreview({note}){
+export function NotePreview({note,checkTodo}){
 const [noteType,setTyp] = useState(null)
 
     useEffect(()=>{
@@ -12,7 +12,7 @@ const [noteType,setTyp] = useState(null)
 
 return (
     <div className="note-preview">
-    <DynamicCmp note={note} noteType={noteType} />
+    <DynamicCmp checkTodo={checkTodo} note={note} noteType={noteType} />
     </div>
  
     

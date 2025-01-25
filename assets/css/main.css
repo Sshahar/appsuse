@@ -12,6 +12,7 @@
 /* Pages */
 @import './pages/home.css';
 @import './apps/note/pages/NoteIndex.css';
+@import './pages/about.css';
 /* @import './apps/note/pages/NoteIndex.css'; */
 
 /* @import './apps/mail/pages/MailIndex.css'; */
@@ -39,6 +40,7 @@
 @import './apps/note/cmps/note-txt.css';
 @import './apps/note/cmps/note-edit.css';
 @import './apps/note/cmps/note-filter.css';
+@import './apps/note/cmps/note-todos.css';
 
 /* Book app */
 @import '../../apps/book/assets/style/main.css';

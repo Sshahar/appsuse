@@ -1,0 +1,14 @@
+.note-todos .note-todo-txt.checked{
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+.note-todos .note-todo-txt{
+    font-size: 0.8em;
+    text-align: center;
+    margin-left: 5px;
+    
+}
+.todos-container{
+    display: flex;
+    align-items: center;
+}
