@@ -1,9 +1,9 @@
 import { mailService } from "../services/mail.service.js"
 const { useState, useEffect, useRef } = React
 
-export function MailCompose({ sendMail, setCmpType }) {
+export function MailCompose({ sendMail, setCmpType, selectedMail }) {
     // TODO: move service calls to parent
-    const [mailToAdd, setMailToAdd] = useState(mailService.getEmptyMail())
+    const [mailToAdd, setMailToAdd] = useState(selectedMail || mailService.getEmptyMail())
 
     function handleChange({ target }) {
         const field = target.name
@@ -31,14 +31,15 @@ export function MailCompose({ sendMail, setCmpType }) {
 
     function onCloseCompose() {
         // Add mail to draft
-        mailToAdd.labels = ['draft']
-        sendMail(mailToAdd)
+        if (!mailToAdd.id) {
+            mailToAdd.labels = ['draft']
+            sendMail(mailToAdd)
+        }
 
         setCmpType('list')
     }
 
     const { to, subject, body } = mailToAdd
-
     return (
         <div className="mail-compose">
             <div className="new-message-header">
