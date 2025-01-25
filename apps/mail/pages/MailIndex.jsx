@@ -29,7 +29,7 @@ export function MailIndex() {
     }
 
     function onSetFilter(newFilter) {
-        setFilterBy(() => ({...filterBy, ...newFilter}))
+        setFilterBy(() => ({ ...filterBy, ...newFilter }))
     }
 
     function onSendMail(mail) {
@@ -52,7 +52,7 @@ export function MailIndex() {
 
     function getSelectedFolder() {
         if (filterBy.isStarred) return 'starred'
-        
+
         const labels = filterBy.labels
         if (labels.includes('inbox')) return 'inbox'
         if (labels.includes('sent')) return 'sent'

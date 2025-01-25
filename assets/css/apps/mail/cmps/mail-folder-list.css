@@ -1,11 +1,10 @@
 .main-mail-index {
-    
+
     .folder {
         position: relative;
         cursor: pointer;
         background-color: var(--mail-bgc-1);
         text-transform: capitalize;
-        margin-inline-start: 1em;
         padding: .3em;
     }
 
@@ -13,7 +12,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         border-radius: 16px;
         color: #001d35;
         height: 56px;

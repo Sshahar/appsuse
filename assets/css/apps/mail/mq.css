@@ -1,0 +1,62 @@
+/* not mobile */
+@media (min-width: 500px) {
+    .main-mail-index {
+        grid-template-columns: 160px 1fr;
+
+        .folder {
+            margin-inline-start: 1em;
+        }
+
+        .mail-preview {
+            display: grid;
+            grid-column: 2;
+            grid-auto-flow: column;
+            grid-template-columns: 20px 20px 1fr 1fr 1fr;
+            gap: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main-mail-index {
+
+        .compose-container {
+            justify-self: flex-start;
+        }
+
+        .mail-preview {
+            display: grid;
+            font-size: 11px;
+            font-weight: 600;
+
+            grid-template-columns: 25px 3fr 1fr;
+            grid-template-rows: repeat(3, auto);
+        }
+
+        .title {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .date {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .select {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        .subject {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        .star {
+            grid-row: 3;
+            grid-column: 3;
+        }
+    }
+}

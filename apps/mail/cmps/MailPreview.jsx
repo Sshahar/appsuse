@@ -14,15 +14,6 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdat
 
     const starStyle = { "padding": "0 10px 0 0", "WebkitBoxOrdinalGroup": "1", "WebkitOrder": "0", "order": "0", "width": "20px" }
 
-    const previewStyle = {
-        "display": "grid",
-        "gridColumn": 2,
-        "gridAutoFlow": "column",
-        "gridTemplateColumns": "20px 20px 1fr 1fr 1fr",
-        "gap": "10px",
-        "cursor": "pointer",
-    }
-
     function onPreviewClick() {
         // Are we in Draft folder?
         const label = searchParams.get('labels')
@@ -78,21 +69,20 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdat
     const starIcon = mail.isStarred ? 'star.png' : 'star-not.png'
     return (
         <React.Fragment>
-            <div className={getCssClasses()} style={previewStyle} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
+
+            <div className={getCssClasses()} onClick={onPreviewClick} onMouseEnter={onHover} onMouseLeave={onUnhover}>
                 {/* Select */}
-                <input type="checkbox" name="mail.id" style={selectStyle} onClick={onToggleSelected} defaultChecked={isSelected} />
+                <input className='select' type="checkbox" name="mail.id" style={selectStyle} onClick={onToggleSelected} defaultChecked={isSelected} />
                 {/* Star */}
-                <span style={starStyle} onClick={onToggleStarred}>
+                <span className='star' style={starStyle} onClick={onToggleStarred}>
                     <img className="icon" src={`assets/img/mail/${starIcon}`} />
                 </span>
                 {/* From */}
                 <span>{mail.from}</span>
                 {/* Subject */}
-                <span>{mail.subject}</span>
+                <span className='subject'>{mail.subject}</span>
                 {/* Date \ buttons */}
-                <span>
-                    <DynamicButtons cmpType={cmpType} sentAt={mail.sentAt || mail.createdAt} onDeleteMail={onDeleteMail} />
-                </span>
+                <DynamicButtons className='date' cmpType={cmpType} sentAt={mail.sentAt || mail.createdAt} onDeleteMail={onDeleteMail} />
             </div>
 
         </React.Fragment>
@@ -102,7 +92,7 @@ export function MailPreview({ mail, setCmpType, deleteMail, setMailRead, onUpdat
 function DynamicButtons(props) {
     switch (props.cmpType) {
         case 'date':
-            return (<span>{utilService.getLocaleDate(props.sentAt)}</span>)
+            return (<span className={props.className}>{utilService.getLocaleDate(props.sentAt)}</span>)
         case 'buttons':
             return (
                 <span onClick={props.onDeleteMail}>

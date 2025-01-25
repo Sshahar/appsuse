@@ -1,6 +1,5 @@
 .main-mail-index {
     display: grid;
-    grid-template-columns: 160px 1fr;
     background-color: #F6F8FC;
 
     .btn {
