@@ -49,8 +49,8 @@ export function NoteEdit({note,onSetEdit,changeNote}){
                 <textarea type="text" name={(note.type === 'NoteTodos')? 'todos':'txt'} onChange={onhadleChange} value={(note.type === 'NoteTodos')? editNote.todos:editNote.txt} />
                 </div>
                 <div className="form-btn">
-                <button onClick={() =>onSetEdit(null)}>close</button>
-                <button type="submit">save</button>
+                <button onClick={() =>onSetEdit(null)}>Cancel</button>
+                <button type="submit">Save</button>
                 </div>
                 
             </form>

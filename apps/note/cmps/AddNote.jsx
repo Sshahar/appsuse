@@ -70,8 +70,8 @@ export function AddNote({ addNote }) {
     }
 
     function getplaceholder() {
-        if (noteTyp === 'NoteTxt') return 'enter note'
-        else if (noteTyp === 'NoteTodos') return 'enter comma seprated list'
+        if (noteTyp === 'NoteTxt') return 'Enter note'
+        else if (noteTyp === 'NoteTodos') return 'Enter comma seprated list'
         else return 'choose image or change mode'
     }
 
@@ -81,7 +81,7 @@ export function AddNote({ addNote }) {
     return (
         <div ref={addNoteRef} onBlur={onsubmit} className="add-note">
             <div className="title-and-modes">
-                <input placeholder="title" onChange={(event) => { onhadleChange(event) }} value={note.info.title} type="text" name="title" />
+                <input placeholder="Title" onChange={(event) => { onhadleChange(event) }} value={note.info.title} type="text" name="title" />
                 <div className="note-modes">
                     <svg onClick={() => onsetType('NoteTxt')} className={(noteTyp === 'NoteTxt') ? 'active' : undefined} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                         <path d="M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l128 0 0 352c0 17.7 14.3 32 32 32s32-14.3 32-32l0-352 128 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 32 32 32z" />
