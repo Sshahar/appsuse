@@ -2,19 +2,16 @@ import { NoteEdit } from "./noteEdit.jsx"
 import { NotePreview } from "./NotePreview.jsx"
 
 const { useEffect, useState } = React
-export function NoteList({ notes, onSetEdit, onRemoveNote, pinState, onChangeColor, onduplicate }) {
-    const [editMode, setEdit] = useState(false)
-    function toggleModal() {
-        setEdit(!editMode)
-    }
-
-    console.log(notes)
+const { useNavigate, useSearchParams } = ReactRouterDOM
+export function NoteList({ notes, onSetEdit, onRemoveNote, pinState, onChangeColor, onduplicate,checkTodo }) {
+    
+ 
     return (
         <div className="note-list">
             {notes.map(note => {
                 return (
                     <article className="note" style={note.style} key={note.id}>
-                        <NotePreview note={note} />
+                        <NotePreview checkTodo={checkTodo} note={note} />
                         <div className="note-options">
                             <button onClick={() => onduplicate(note)}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -44,6 +41,7 @@ export function NoteList({ notes, onSetEdit, onRemoveNote, pinState, onChangeCol
                                 </svg>
                                 <input className="note-color-picker" onInput={(ev) => onChangeColor(note, ev.target.value)} value={note.style.backgroundColor} type="color" name="noteColor" id="noteColor" />
                             </label>
+                            
                         </div>
 
                     </article>

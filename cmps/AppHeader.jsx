@@ -4,8 +4,14 @@ const { Link, NavLink } = ReactRouterDOM
 const { useState, useEffect, useRef } = React
 
 export function AppHeader() {
-    const [logoType, setLogoType] = useState('default')
-
+    const [logoType, setLogoType] = useState(getLogoType())
+    
+    function getLogoType(){
+        const url = window.location.href
+        if(url.includes('mail')) return('mail')
+        else if (url.includes('note')) return('note')
+        else return('default')
+    }
     return (<header className="app-header">
         <div className="logo-items">
             <Link to="/">

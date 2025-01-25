@@ -1,4 +1,5 @@
-import { noteService } from "../../../services/note.service.js"
+import { noteService } from "../services/note.service.js"
+
 import { AddNote } from "../cmps/AddNote.jsx"
 import { showSuccessMsg } from "../../../services/event-bus.service.js"
 import { NoteList } from "../cmps/NoteList.jsx"
@@ -64,7 +65,6 @@ export function NoteIndex() {
     }
 
     function pinState(note){
-        console.log('pin')
         note.isPinned = !note.isPinned
         noteService.save(note).then(() =>loadNotes())
 
@@ -78,10 +78,16 @@ export function NoteIndex() {
     function onduplicate(note){
         const noteCopy = {...note}
         delete noteCopy.id
-        console.log(noteCopy)
-        noteService.save(noteCopy).then(() =>loadNotes())
+       
+        noteService.save(noteCopy).then(() =>{loadNotes() ;showSuccessMsg(`note duplicated successfully!`)})
 
     }
+     function checkTodo(note){
+        noteService.save(note).then(() =>loadNotes())
+
+     }
+   
+
     function onSetFilter(filterBy){
         setFilterBy(prevfiler => (filterBy === prevfiler )? null:filterBy)
 
@@ -91,7 +97,7 @@ export function NoteIndex() {
     return (<div className="note-index">
         <NoteFilter filter={filterBy} onSetFilter={onSetFilter}/>
       <AddNote addNote={addNote}/>
-     <NoteList onduplicate={onduplicate}  onChangeColor={onChangeColor} pinState={pinState} onSetEdit={onSetEdit} onRemoveNote={onRemoveNote} notes={notes}/>
+     <NoteList checkTodo={checkTodo} onduplicate={onduplicate}  onChangeColor={onChangeColor} pinState={pinState} onSetEdit={onSetEdit} onRemoveNote={onRemoveNote} notes={notes}/>
      {(editNote&&<NoteEdit note={editNote} changeNote={changeNote} onSetEdit={onSetEdit}/>)}
     </div>)
 }
