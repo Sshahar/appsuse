@@ -45,4 +45,11 @@
         }
     }
 
+    /* Labels header */
+    .labels-header {
+        ul li{
+            display: flex;
+            gap: 1em;
+        }
+    }
 }
