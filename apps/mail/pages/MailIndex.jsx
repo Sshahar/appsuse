@@ -6,31 +6,31 @@ export function MailIndex() {
             {/* Aside */}
             <aside>
                 {/* Compose */}
-                <button><img className="keep-auto" src={`${IMG_PATH}/compose.png`} /> Compose</button>
+                <button><img className="icon" src={`${IMG_PATH}/compose.png`} /> Compose</button>
                 {/* Folder list */}
                 <ul className="clean-list">
                     <li>
-                        <img className="keep-auto" src={`${IMG_PATH}/inbox.png`} />
+                        <img className="icon" src={`${IMG_PATH}/inbox.png`} />
                         <span className="capitalize">inbox</span>
                     </li>
                     <li>
-                        <img className="keep-auto" src={`${IMG_PATH}/starred.png`} />
+                        <img className="icon" src={`${IMG_PATH}/starred.png`} />
                         <span className="capitalize">starred</span>
                     </li>
                     <li>
-                        <img className="keep-auto" src={`${IMG_PATH}/snoozed.png`} />
+                        <img className="icon" src={`${IMG_PATH}/snoozed.png`} />
                         <span className="capitalize">snoozed</span>
                     </li>
                     <li>
-                        <img className="keep-auto" src={`${IMG_PATH}/important.png`} />
+                        <img className="icon" src={`${IMG_PATH}/important.png`} />
                         <span className="capitalize">important</span>
                     </li>
                     <li>
-                        <img className="keep-auto" src={`${IMG_PATH}/sent.png`} />
+                        <img className="icon" src={`${IMG_PATH}/sent.png`} />
                         <span className="capitalize">sent</span>
                     </li>
                     <li>
-                        <img className="keep-auto" src={`${IMG_PATH}/drafts.png`} />
+                        <img className="icon" src={`${IMG_PATH}/drafts.png`} />
                         <span className="capitalize">drafts</span>
                     </li>
                 </ul>
@@ -43,38 +43,38 @@ export function MailIndex() {
                     {/* Select buttons */}
                     <section>
                         <input type="checkbox" />
-                        <img className="keep-auto" src={`${IMG_PATH}/checkbox-arrow.png`} />
-                        <img className="keep-auto" src={`${IMG_PATH}/refresh.png`} />
-                        <img className="keep-auto" src={`${IMG_PATH}/more.png`} />
+                        <img className="icon" src={`${IMG_PATH}/checkbox-arrow.png`} />
+                        <img className="icon" src={`${IMG_PATH}/refresh.png`} />
+                        <img className="icon" src={`${IMG_PATH}/more.png`} />
                     </section>
                     {/* Pagination */}
                     <section>
                         <span>1-50 of 1,231</span>
-                        <img className="keep-auto" src={`${IMG_PATH}/newer.png`} />
-                        <img className="keep-auto" src={`${IMG_PATH}/older.png`} />
+                        <img className="icon" src={`${IMG_PATH}/newer.png`} />
+                        <img className="icon" src={`${IMG_PATH}/older.png`} />
                     </section>
                 </form>
                 {/* Labels header */}
                 <section className="labels-header">
                     <ul className="clean-list">
                         <li>
-                            <img className="keep-auto" src={`${IMG_PATH}/inbox.png`} />
+                            <img className="icon" src={`${IMG_PATH}/inbox.png`} />
                             <span className="capitalize">primary</span>
                         </li>
                         <li>
-                            <img className="keep-auto" src={`${IMG_PATH}/promotions.png`} />
+                            <img className="icon" src={`${IMG_PATH}/promotions.png`} />
                             <span className="capitalize">promotions</span>
                         </li>
                         <li>
-                            <img className="keep-auto" src={`${IMG_PATH}/social.png`} />
+                            <img className="icon" src={`${IMG_PATH}/social.png`} />
                             <span className="capitalize">social</span>
                         </li>
                         <li>
-                            <img className="keep-auto" src={`${IMG_PATH}/updates.png`} />
+                            <img className="icon" src={`${IMG_PATH}/updates.png`} />
                             <span className="capitalize">updates</span>
                         </li>
                         <li>
-                            <img className="keep-auto" src={`${IMG_PATH}/forums.png`} />
+                            <img className="icon" src={`${IMG_PATH}/forums.png`} />
                             <span className="capitalize">forums</span>
                         </li>
                     </ul>
@@ -87,9 +87,9 @@ export function MailIndex() {
                             {/* Select */}
                             <input type="checkbox" />
                             {/* Star */}
-                            <img className="keep-auto" src={`${IMG_PATH}/starred.png`} />
+                            <img className="icon" src={`${IMG_PATH}/starred.png`} />
                             {/* Important */}
-                            <img className="keep-auto" src={`${IMG_PATH}/important.png`} />
+                            <img className="icon" src={`${IMG_PATH}/important.png`} />
                             {/* Name */}
                             <span className="name">h-ridee</span>
                             {/* Subject */}

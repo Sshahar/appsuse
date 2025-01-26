@@ -26,7 +26,7 @@ function MailHeader() {
 
                 <div className="group">
                     {/* Search / filter */}
-                    <img className="keep-auto " src="assets/img/search.svg" />
+                    <img className="keep-auto" src="assets/img/search.svg" />
                     <input type="text" placeholder="Search mail" />
                     <img className="keep-auto" src="assets/img/search-options.svg" />
                 </div>
