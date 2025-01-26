@@ -46,3 +46,12 @@ header .logo-items {
 	cursor: pointer;
 	outline: inherit;
 }
+
+.circle {
+    border-radius: 50%;
+}
+
+.keep-auto {
+    width: auto;
+    height: auto;
+}

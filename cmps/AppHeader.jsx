@@ -15,7 +15,23 @@ export function AppHeader() {
 
 function MailHeader() {
     return (
-        <div>my header!</div>
+        <React.Fragment>
+            <header className="app-header">
+                {/* Hamburger */}
+                <img className="keep-auto" src="assets/img/hamburger.svg" />
+                {/* Logo */}
+                <img className="keep-auto" src="apps/mail/assets/img/logo.png" />
+                {/* Search / filter */}
+                <img className="keep-auto" src="assets/img/search.svg"/>
+                <input type="text" placeholder="Search mail"/>
+                <img className="keep-auto" src="assets/img/search-options.svg"/>
+                {/* Apps icons */}
+                <img className="keep-auto" src="assets/img/settings.svg"/>
+                <img className="keep-auto" src="assets/img/apps.svg"/>
+                <img className="keep-auto circle" src="assets/img/profile.jpeg"/>
+            </header>
+
+        </React.Fragment>
     )
 }
 
