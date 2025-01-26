@@ -13,15 +13,21 @@ export function FolderList() {
 
     const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
     return (
-        <ul className="clean-list">
-            {folders.map(folder => (
-                <li key={folder}>
-                    <NavLink to={`#${folder}`}>
-                        <img className="icon" src={`${IMG_PATH}/${folder}.png`} />
-                        <span className="capitalize">{folder}</span>
-                    </NavLink>
-                </li>
-            ))}
-        </ul>
+        <aside className="mail-folder-list">
+            {/* Compose */}
+            <button className="compose"><img className="mail-icon2" src={`${IMG_PATH}/compose.png`} /> Compose</button>
+            {/* Folder list */}
+            <ul className="clean-list">
+                {folders.map(folder => (
+                    <li key={folder}>
+                        <NavLink to={`#${folder}`}>
+                            <img className="icon" src={`${IMG_PATH}/${folder}.png`} />
+                            <span className="capitalize">{folder}</span>
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
+            {/* Labels (TODO: add them) */}
+        </aside>
     )
 }

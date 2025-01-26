@@ -9,13 +9,7 @@ export function MailIndex() {
     return (
         <section className="mail-index">
             {/* Aside */}
-            <aside className="mail-folder-list">
-                {/* Compose */}
-                <button className="compose"><img className="mail-icon2" src={`${IMG_PATH}/compose.png`} /> Compose</button>
-                {/* Folder list */}
-                <FolderList />
-                {/* Labels (TODO: add them) */}
-            </aside>
+            <FolderList />
 
             {/* Main */}
             <main>
