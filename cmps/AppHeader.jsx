@@ -1,7 +1,25 @@
 const { Link, NavLink } = ReactRouterDOM
-const { useState, useEffect, useRef } = React
+const { useState } = React
 
+// Dynamic app header
 export function AppHeader() {
+    const [headerType, setHeaderState] = useState('mail')
+
+    switch (headerType) {
+        case 'mail':
+            return <MailHeader />
+        default:
+            return <DefaultHeader />
+    }
+}
+
+function MailHeader() {
+    return (
+        <div>my header!</div>
+    )
+}
+
+function DefaultHeader() {
     const [logoType, setLogoType] = useState(getLogoType())
 
     function getLogoType() {
@@ -10,22 +28,23 @@ export function AppHeader() {
         else if (url.includes('note')) return ('note')
         else return ('default')
     }
-    return (<header className="app-header">
-        <Link to="/">
-            <div className="logo-items">
-                <DynamicLogo cmpType={logoType} />
-            </div>
-        </Link>
-        <nav>
-            <NavLink to="/" onClick={() => setLogoType('default')}>Home</NavLink>
-        <NavLink to="/about" onClick={() => setLogoType('default')}>About</NavLink>
-            <NavLink onClick={() => setLogoType('mail')} to="/mail">Mail</NavLink>
-            <NavLink onClick={() => setLogoType('note')} to="/note">Note</NavLink>
-            <NavLink onClick={() => setLogoType('book')} to="/book">Book</NavLink>
-        </nav>
-    </header>)
+    return (
+        <header className="app-header">
+            <Link to="/">
+                <div className="logo-items">
+                    <DynamicLogo cmpType={logoType} />
+                </div>
+            </Link>
+            <nav>
+                <NavLink to="/" onClick={() => setLogoType('default')}>Home</NavLink>
+                <NavLink to="/about" onClick={() => setLogoType('default')}>About</NavLink>
+                <NavLink onClick={() => setLogoType('mail')} to="/mail">Mail</NavLink>
+                <NavLink onClick={() => setLogoType('note')} to="/note">Note</NavLink>
+                <NavLink onClick={() => setLogoType('book')} to="/book">Book</NavLink>
+            </nav>
+        </header>
+    )
 }
-
 
 function DynamicLogo(props) {
     // console.log('props:', props)
@@ -44,6 +63,7 @@ function DefaultLogo(props) {
     return (<h3><img src="assets/img/main-logo.png" alt="" /></h3>)
 }
 
+// TODO: remove when mail header is complete
 function MailLogo(props) {
     return (<h3>Gmail!</h3>)
 }
