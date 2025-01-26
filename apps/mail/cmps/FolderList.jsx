@@ -1,4 +1,4 @@
-const { Link, NavLink, useLocation } = ReactRouterDOM
+const { NavLink, useLocation } = ReactRouterDOM
 const { useEffect } = React
 
 import { globalState } from "../services/globalState.js"
@@ -12,10 +12,11 @@ export function FolderList() {
     }, [location.hash])
 
     const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
+    const baseUrl = location.pathname + location.hash.split('?')[0]
     return (
         <aside className="mail-folder-list">
             {/* Compose */}
-            <button className="compose"><img className="mail-icon2" src={`${IMG_PATH}/compose.png`} /> Compose</button>
+            <NavLink to={baseUrl + "?compose=new"} className="compose"><img className="mail-icon2" src={`${IMG_PATH}/compose.png`} /> Compose</NavLink>
             {/* Folder list */}
             <ul className="clean-list">
                 {folders.map(folder => (
