@@ -73,7 +73,7 @@
 
     /* Folder list */
     .mail-folder-list {
-        ul li {
+        ul li a {
             display: flex;
             align-items: center;
             gap: 1.2em;

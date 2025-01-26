@@ -1,34 +1,27 @@
+const { Link, NavLink, useLocation } = ReactRouterDOM
+const { useEffect } = React
+
 import { globalState } from "../services/globalState.js"
 
 export function FolderList() {
     const IMG_PATH = globalState.getImgPath()
+    const location = useLocation()
 
+    useEffect(() => {
+        console.log('location.hash:', location.hash)
+    }, [location.hash])
+
+    const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
     return (
         <ul className="clean-list">
-            <li>
-                <img className="icon" src={`${IMG_PATH}/inbox.png`} />
-                <span className="capitalize">inbox</span>
-            </li>
-            <li>
-                <img className="icon" src={`${IMG_PATH}/starred.png`} />
-                <span className="capitalize">starred</span>
-            </li>
-            <li>
-                <img className="icon" src={`${IMG_PATH}/snoozed.png`} />
-                <span className="capitalize">snoozed</span>
-            </li>
-            <li>
-                <img className="icon" src={`${IMG_PATH}/important.png`} />
-                <span className="capitalize">important</span>
-            </li>
-            <li>
-                <img className="icon" src={`${IMG_PATH}/sent.png`} />
-                <span className="capitalize">sent</span>
-            </li>
-            <li>
-                <img className="icon" src={`${IMG_PATH}/drafts.png`} />
-                <span className="capitalize">drafts</span>
-            </li>
+            {folders.map(folder => (
+                <li key={folder}>
+                    <NavLink to={`#${folder}`}>
+                        <img className="icon" src={`${IMG_PATH}/${folder}.png`} />
+                        <span className="capitalize">{folder}</span>
+                    </NavLink>
+                </li>
+            ))}
         </ul>
     )
 }
