@@ -4,6 +4,12 @@
     overflow-x: hidden;
     font-size: 14px;
 
+    .left-btns {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0.5em;
+    }
+    
     .pagination-header {
         display: flex;
     }
@@ -19,8 +25,8 @@
 
     .mail-preview {
         max-width: 100vw;
-        display: flex;
-        gap: 1em;
+        display: grid;
+        grid-template-columns: calc(5em) 200px 1fr 96px;
         padding-block: 0.4em;
 
         .name {
@@ -31,12 +37,19 @@
             /* max-width: 20%; */
             white-space: nowrap;
             overflow-x: hidden;
-            flex: 0 4 auto;
+            /* flex: 0 4 auto; */
+            text-overflow: ellipsis;
             color: var(--mail-clr-1);
         }
 
         .subject {
             /* flex: 1 0 auto; */
+        }
+
+        .main-text {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 1ch;
         }
 
         .date {
