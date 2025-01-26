@@ -2,7 +2,7 @@ const IMG_PATH = 'apps/mail/assets/img'
 
 export function MailIndex() {
     return (
-        <React.Fragment>
+        <section className="mail-index">
             {/* Aside */}
             <aside>
                 {/* Compose */}
@@ -39,7 +39,7 @@ export function MailIndex() {
             {/* Main */}
             <main>
                 {/* Pagination header */}
-                <form>
+                <form className="pagination-header">
                     {/* Select buttons */}
                     <section>
                         <input type="checkbox" />
@@ -55,7 +55,7 @@ export function MailIndex() {
                     </section>
                 </form>
                 {/* Labels header */}
-                <section>
+                <section className="labels-header">
                     <ul className="clean-list">
                         <li>
                             <img className="keep-auto" src={`${IMG_PATH}/inbox.png`} />
@@ -82,6 +82,6 @@ export function MailIndex() {
                 {/* Preview list */}
                 <div>Mail preview list </div>
             </main>
-        </React.Fragment>
+        </section>
     )
 }
