@@ -1,4 +1,5 @@
 import { FolderList } from "../cmps/FolderList.jsx"
+import { LabelsHeader } from "../cmps/LabelsHeader.jsx"
 import { PreviewList } from "../cmps/PreviewList.jsx"
 import { globalState } from "../services/globalState.js"
 
@@ -33,30 +34,7 @@ export function MailIndex() {
                     </section>
                 </form>
                 {/* Labels header */}
-                <section className="labels-header">
-                    <ul className="clean-list">
-                        <li>
-                            <img className="icon" src={`${IMG_PATH}/inbox.png`} />
-                            <span className="capitalize">primary</span>
-                        </li>
-                        <li>
-                            <img className="icon" src={`${IMG_PATH}/promotions.png`} />
-                            <span className="capitalize">promotions</span>
-                        </li>
-                        <li>
-                            <img className="icon" src={`${IMG_PATH}/social.png`} />
-                            <span className="capitalize">social</span>
-                        </li>
-                        <li>
-                            <img className="icon" src={`${IMG_PATH}/updates.png`} />
-                            <span className="capitalize">updates</span>
-                        </li>
-                        <li>
-                            <img className="icon" src={`${IMG_PATH}/forums.png`} />
-                            <span className="capitalize">forums</span>
-                        </li>
-                    </ul>
-                </section>
+                <LabelsHeader />
 
                 {/* Preview list */}
                 <PreviewList />
