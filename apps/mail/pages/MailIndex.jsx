@@ -9,12 +9,30 @@ export function MailIndex() {
                 <button><img className="keep-auto" src={`${IMG_PATH}/compose.png`} /> Compose</button>
                 {/* Folder list */}
                 <ul className="clean-list">
-                    <li>inbox</li>
-                    <li>starred</li>
-                    <li>snoozed</li>
-                    <li>important</li>
-                    <li>sent</li>
-                    <li>drafts</li>
+                    <li>
+                        <img className="keep-auto" src={`${IMG_PATH}/inbox.png`} />
+                        <span className="capitalize">inbox</span>
+                    </li>
+                    <li>
+                        <img className="keep-auto" src={`${IMG_PATH}/starred.png`} />
+                        <span className="capitalize">starred</span>
+                    </li>
+                    <li>
+                        <img className="keep-auto" src={`${IMG_PATH}/snoozed.png`} />
+                        <span className="capitalize">snoozed</span>
+                    </li>
+                    <li>
+                        <img className="keep-auto" src={`${IMG_PATH}/important.png`} />
+                        <span className="capitalize">important</span>
+                    </li>
+                    <li>
+                        <img className="keep-auto" src={`${IMG_PATH}/sent.png`} />
+                        <span className="capitalize">sent</span>
+                    </li>
+                    <li>
+                        <img className="keep-auto" src={`${IMG_PATH}/drafts.png`} />
+                        <span className="capitalize">drafts</span>
+                    </li>
                 </ul>
                 {/* Labels (TODO: add them) */}
             </aside>
@@ -39,11 +57,26 @@ export function MailIndex() {
                 {/* Labels header */}
                 <section>
                     <ul className="clean-list">
-                        <li>primary</li>
-                        <li>promotions</li>
-                        <li>social</li>
-                        <li>updates</li>
-                        <li>forums</li>
+                        <li>
+                            <img className="keep-auto" src={`${IMG_PATH}/inbox.png`} />
+                            <span className="capitalize">primary</span>
+                        </li>
+                        <li>
+                            <img className="keep-auto" src={`${IMG_PATH}/promotions.png`} />
+                            <span className="capitalize">promotions</span>
+                        </li>
+                        <li>
+                            <img className="keep-auto" src={`${IMG_PATH}/social.png`} />
+                            <span className="capitalize">social</span>
+                        </li>
+                        <li>
+                            <img className="keep-auto" src={`${IMG_PATH}/updates.png`} />
+                            <span className="capitalize">updates</span>
+                        </li>
+                        <li>
+                            <img className="keep-auto" src={`${IMG_PATH}/forums.png`} />
+                            <span className="capitalize">forums</span>
+                        </li>
                     </ul>
                 </section>
                 {/* Preview list */}
