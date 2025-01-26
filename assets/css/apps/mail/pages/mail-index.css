@@ -17,6 +17,7 @@
     .pagination-header {
         display: flex;
         justify-content: space-between;
+        margin-block: var(--spacing-xs);
 
         .left-btns {
             display: flex;
@@ -29,6 +30,8 @@
             span {
                 font-size: 0.85em;
             }
+
+            margin-inline-end: var(--spacing-xl);
         }
     }
 
