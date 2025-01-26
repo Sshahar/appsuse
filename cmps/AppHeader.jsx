@@ -1,10 +1,16 @@
-const { Link, NavLink } = ReactRouterDOM
+const { useEffect } = React
+
+const { Link, NavLink, useLocation } = ReactRouterDOM
 const { useState } = React
 
 // Dynamic app header
 export function AppHeader() {
-    const [headerType, setHeaderState] = useState('mail')
+    const location = useLocation();
+    const [headerType, setHeaderState] = useState()
 
+    useEffect(() => {
+        setHeaderState(() => location.pathname.split('/')[1])
+    }, [location])
     switch (headerType) {
         case 'mail':
             return <MailHeader />
@@ -16,7 +22,7 @@ export function AppHeader() {
 function MailHeader() {
     return (
         <React.Fragment>
-            <header className="app-header">
+            <header className="mail-app-header">
                 <div className="group">
                     {/* Hamburger */}
                     <img className="hamburger" src="assets/img/hamburger.svg" />

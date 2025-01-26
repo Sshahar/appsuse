@@ -18,6 +18,7 @@
 /* Cmps */
 
 @import './cmps/UserMsg.css';
+@import './cmps/mail-app-header.css';
 @import './cmps/app-header.css';
 
 /* Mail Cmps */
