@@ -41,15 +41,17 @@ export function MailIndex() {
                 {/* Pagination header */}
                 <form className="pagination-header">
                     {/* Select buttons */}
-                    <section>
-                        <input type="checkbox" />
-                        <img className="icon" src={`${IMG_PATH}/checkbox-arrow.png`} />
+                    <section className="left-btns">
+                        <div>
+                            <input type="checkbox" />
+                            <img className="icon" src={`${IMG_PATH}/checkbox-arrow.png`} />
+                        </div>
                         <img className="icon" src={`${IMG_PATH}/refresh.png`} />
                         <img className="icon" src={`${IMG_PATH}/more.png`} />
                     </section>
                     {/* Pagination */}
-                    <section>
-                        <span>1-50 of 1,231</span>
+                    <section className="right-btns">
+                        <span>1–50 of 1,231</span>
                         <img className="icon" src={`${IMG_PATH}/newer.png`} />
                         <img className="icon" src={`${IMG_PATH}/older.png`} />
                     </section>
