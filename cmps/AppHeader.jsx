@@ -19,23 +19,22 @@ function MailHeader() {
             <header className="app-header">
                 <div className="group">
                     {/* Hamburger */}
-                    <img className="keep-auto" src="assets/img/hamburger.svg" />
+                    <img className="hamburger" src="assets/img/hamburger.svg" />
                     {/* Logo */}
-                    <img className="keep-auto" src="apps/mail/assets/img/logo.png" />
+                    <img className="mail-logo" src="apps/mail/assets/img/logo.png" />
                 </div>
 
-                <div className="group">
+                <div className="group search-group">
                     {/* Search / filter */}
-                    <img className="keep-auto" src="assets/img/search.svg" />
-                    <input type="text" placeholder="Search mail" />
-                    <img className="keep-auto" src="assets/img/search-options.svg" />
+                    <input className="mail-search clickable" type="text" placeholder="Search mail" />
+                    <button className="search-options"></button>
                 </div>
 
                 <div className="group">
                     {/* Apps icons */}
-                    <img className="keep-auto" src="assets/img/settings.svg" />
-                    <img className="keep-auto" src="assets/img/apps.svg" />
-                    <img className="keep-auto circle" src="assets/img/profile.jpeg" />
+                    <img className="mail-icon2" src="assets/img/settings.svg" />
+                    <img className="mail-icon2" src="assets/img/apps.svg" />
+                    <img className="mail-icon3 circle" src="assets/img/profile.jpeg" />
                 </div>
             </header>
 
