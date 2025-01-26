@@ -63,5 +63,14 @@
             margin-inline-start: 1em;
             padding-block: 0.35em;
         }
+
+        .compose {
+            /* background-color: var(--mail-bgc-1); */
+            border-radius: 28px;
+            padding: 1em;
+            padding-inline-end: 2.6em;
+            border: none;
+            margin-inline-start: 0.8em;
+        }
     }
 }

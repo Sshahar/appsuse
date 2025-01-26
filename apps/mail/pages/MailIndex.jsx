@@ -6,7 +6,7 @@ export function MailIndex() {
             {/* Aside */}
             <aside className="mail-folder-list">
                 {/* Compose */}
-                <button><img className="icon" src={`${IMG_PATH}/compose.png`} /> Compose</button>
+                <button className="compose"><img className="icon" src={`${IMG_PATH}/compose.png`} /> Compose</button>
                 {/* Folder list */}
                 <ul className="clean-list">
                     <li>
