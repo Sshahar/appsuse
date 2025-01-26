@@ -1,5 +1,3 @@
-import { CustomNavLink } from "./CustomNavLink.jsx"
-
 const { Link, NavLink } = ReactRouterDOM
 const { useState, useEffect, useRef } = React
 
@@ -20,7 +18,7 @@ export function AppHeader() {
         </Link>
         <nav>
             <NavLink to="/" onClick={() => setLogoType('default')}>Home</NavLink>
-            <NavLink to="/about" onClick={() => setLogoType('default')}>About</NavLink>
+        <NavLink to="/about" onClick={() => setLogoType('default')}>About</NavLink>
             <NavLink onClick={() => setLogoType('mail')} to="/mail">Mail</NavLink>
             <NavLink onClick={() => setLogoType('note')} to="/note">Note</NavLink>
             <NavLink onClick={() => setLogoType('book')} to="/book">Book</NavLink>
@@ -47,7 +45,7 @@ function DefaultLogo(props) {
 }
 
 function MailLogo(props) {
-    return (<h3><img src="assets/img/mail/logo.png" /></h3>)
+    return (<h3>Gmail!</h3>)
 }
 function NoteLogo(props) {
     return (<h3 className="keep-logo"><img src="apps\note\assets\keep.png" /></h3>)
