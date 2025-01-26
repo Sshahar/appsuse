@@ -80,7 +80,28 @@ export function MailIndex() {
                     </ul>
                 </section>
                 {/* Preview list */}
-                <div>Mail preview list </div>
+                <section>
+                    <ul className="clean-list">
+                        <li className="mail-preview">
+                            {/* TODO: add drag and drop icon on hover */}
+                            {/* Select */}
+                            <input type="checkbox" />
+                            {/* Star */}
+                            <img className="keep-auto" src={`${IMG_PATH}/starred.png`} />
+                            {/* Important */}
+                            <img className="keep-auto" src={`${IMG_PATH}/important.png`} />
+                            {/* Name */}
+                            <span className="name">h-ridee</span>
+                            {/* Subject */}
+                            <span className="subject">Nvidia Accounts -</span>
+                            {/* Body */}
+                            <span className="body">Hello,
+                                Your account just logged in using a(n) Windows device we don't</span>
+                            {/* Date  */}
+                            <span className="date">29/12/2024</span>
+                        </li>
+                    </ul>
+                </section>
             </main>
         </section>
     )

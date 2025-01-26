@@ -1,6 +1,7 @@
 .mail-index {
     display: grid;
     grid-template-columns: 250px 1fr;
+    overflow-x: hidden;
 
     .pagination-header {
         display: flex;
@@ -8,10 +9,40 @@
 
     .labels-header ul {
         display: flex;
-        li {
-        flex-grow: 1;
 
+        li {
+            flex-grow: 1;
             max-width: 250px;
         }
     }
+
+    .mail-preview {
+        max-width: 100vw;
+        display: flex;
+        gap: 1em;
+        padding-block: 0.4em;
+
+        .name {
+            flex: .22 0 auto;
+        }
+
+        .body {
+            /* max-width: 20%; */
+            white-space: nowrap;
+            overflow-x: hidden;
+            flex: 0 4 auto;
+            color: var(--mail-clr-1);
+        }
+
+        .subject {
+            /* flex: 1 0 auto; */
+        }
+
+        .date {
+            flex: 1 0 auto;
+            text-align: right;
+            margin-inline-end: 1.5em;
+        }
+    }
+
 }
