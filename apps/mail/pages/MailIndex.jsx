@@ -1,41 +1,22 @@
-const IMG_PATH = 'apps/mail/assets/img'
+import { FolderList } from "../cmps/FolderList.jsx"
+import { globalState } from "../services/globalState.js"
+
+
+
 
 export function MailIndex() {
+    const IMG_PATH = globalState.getImgPath()
     return (
         <section className="mail-index">
             {/* Aside */}
             <aside className="mail-folder-list">
                 {/* Compose */}
-                <button className="compose"><img className="icon" src={`${IMG_PATH}/compose.png`} /> Compose</button>
+                <button className="compose"><img className="mail-icon2" src={`${IMG_PATH}/compose.png`} /> Compose</button>
                 {/* Folder list */}
-                <ul className="clean-list">
-                    <li>
-                        <img className="icon" src={`${IMG_PATH}/inbox.png`} />
-                        <span className="capitalize">inbox</span>
-                    </li>
-                    <li>
-                        <img className="icon" src={`${IMG_PATH}/starred.png`} />
-                        <span className="capitalize">starred</span>
-                    </li>
-                    <li>
-                        <img className="icon" src={`${IMG_PATH}/snoozed.png`} />
-                        <span className="capitalize">snoozed</span>
-                    </li>
-                    <li>
-                        <img className="icon" src={`${IMG_PATH}/important.png`} />
-                        <span className="capitalize">important</span>
-                    </li>
-                    <li>
-                        <img className="icon" src={`${IMG_PATH}/sent.png`} />
-                        <span className="capitalize">sent</span>
-                    </li>
-                    <li>
-                        <img className="icon" src={`${IMG_PATH}/drafts.png`} />
-                        <span className="capitalize">drafts</span>
-                    </li>
-                </ul>
+                <FolderList />
                 {/* Labels (TODO: add them) */}
             </aside>
+
             {/* Main */}
             <main>
                 {/* Pagination header */}
@@ -81,6 +62,7 @@ export function MailIndex() {
                         </li>
                     </ul>
                 </section>
+
                 {/* Preview list */}
                 <section>
                     <ul className="clean-list">

@@ -83,11 +83,12 @@
 
         .compose {
             /* background-color: var(--mail-bgc-1); */
-            border-radius: 28px;
-            padding: 1em;
-            padding-inline-end: 2.6em;
+            border-radius: 14px;
+            padding: 0.6em;
+            padding-inline-end: 1.5em;
             border: none;
-            margin-inline-start: 0.8em;
+            margin-inline-start: 0.4em;
+            font-weight: 500;
         }
     }
 }
