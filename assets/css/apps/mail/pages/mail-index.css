@@ -68,20 +68,6 @@
         }
     }
 
-    /* Labels header */
-    .labels-header {
-        ul {
-            display: flex;
-        }
-        ul li {
-            display: flex;
-            gap: 1em;
-            flex-grow: 1;
-            max-width: 250px;
-            padding-block: 1.5em;
-        }
-    }
-
     /* Folder list */
     .mail-folder-list {
         ul li {

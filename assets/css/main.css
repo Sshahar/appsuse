@@ -21,7 +21,7 @@
 @import './cmps/app-header.css';
 
 /* Mail Cmps */
-
+@import './apps/mail/cmps/labels-header.css';
 
 
 /* Note Cmps */
