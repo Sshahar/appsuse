@@ -1,4 +1,4 @@
-import { globalState } from "../services/globalState"
+import { globalState } from "../services/globalState.js"
 
 const IMG_PATH = globalState.getImgPath()
 

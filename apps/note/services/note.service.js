@@ -1,5 +1,5 @@
-import { utilService } from './util.service.js'
-import { storageService } from './async-storage.service.js'
+import { utilService } from '../../../services/util.service.js'
+import { storageService } from '../../../services/async-storage.service.js'
 
 const NOTE_KEY = 'noteDB'
 _createNotes()
@@ -57,7 +57,6 @@ function getDefaultFilter() {
 }
 
 function _createNotes() {
-    console.log('hi')
     let notes = utilService.loadFromStorage(NOTE_KEY)
     if (!notes || !notes.length) {
         notes = [

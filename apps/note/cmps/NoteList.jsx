@@ -1,4 +1,3 @@
-import { NoteEdit } from "./noteEdit.jsx"
 import { NotePreview } from "./NotePreview.jsx"
 
 const { useEffect, useState } = React

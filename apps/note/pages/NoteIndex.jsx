@@ -3,7 +3,7 @@ import { noteService } from "../services/note.service.js"
 import { AddNote } from "../cmps/AddNote.jsx"
 import { showSuccessMsg } from "../../../services/event-bus.service.js"
 import { NoteList } from "../cmps/NoteList.jsx"
-import { NoteEdit } from "../cmps/noteEdit.jsx"
+import { NoteEdit } from "../cmps/NoteEdit.jsx"
 import { NoteFilter } from "../cmps/NoteFilter.jsx"
 
 const { useEffect, useState } = React
