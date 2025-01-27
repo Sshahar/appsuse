@@ -14,7 +14,7 @@ export function MailCompose({ saveAndClose }) {
             <section className="compose-header">
                 <span>New Message</span>
                 <button className="clean-btn" onClick={onSaveAndClose}>
-                    <img src={`${IMG_PATH}/save-and-close.png`} alt="" />
+                    <img className="mail-icon0" src={`${IMG_PATH}/close.png`} alt="" />
                 </button>
             </section>
 

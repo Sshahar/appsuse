@@ -43,7 +43,11 @@
     width: calc(var(--btn-padding-2) * 2 + var(--icon-px-3));
     height: calc(var(--btn-padding-2) * 2 + var(--icon-px-3));
     padding: var(--btn-padding-2);
+}
 
+.mail-icon0 {
+    width: var(--icon-px-0);
+    height: var(--icon-px-0);
 }
 
 header .logo-items {
