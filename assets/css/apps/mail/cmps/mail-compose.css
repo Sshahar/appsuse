@@ -1,0 +1,8 @@
+.mail-compose {
+    position: fixed;
+    bottom: 0;
+    right: 4em;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}

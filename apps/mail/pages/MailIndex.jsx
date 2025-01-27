@@ -5,6 +5,7 @@ import { FolderList } from "../cmps/FolderList.jsx"
 import { LabelsHeader } from "../cmps/LabelsHeader.jsx"
 import { PaginationHeader } from "../cmps/PaginationHeader.jsx"
 import { PreviewList } from "../cmps/PreviewList.jsx"
+import { MailCompose } from "../cmps/MailCompose.jsx"
 import { mailService } from "../services/mail.service.js"
 
 export function MailIndex() {
@@ -49,6 +50,18 @@ export function MailIndex() {
         setFilter(prevFilter => ({ ...prevFilter, label }))
     }
 
+    function saveAndClose() {
+        console.log('save and close')
+
+        // Close
+        navigate(location.pathname + location.hash.split('?')[0])
+    }
+
+
+    function _isCompose() {
+        return location.hash.split('?')[1] && location.hash.split('?')[1].startsWith('compose')
+    }
+    
     return (
         <section className="mail-index">
             {/* Aside */}
@@ -64,6 +77,9 @@ export function MailIndex() {
                 {/* Preview list */}
                 <PreviewList />
             </main>
+
+            {/* Compose  */}
+            {_isCompose() && <MailCompose saveAndClose={saveAndClose} />}
         </section>
     )
 }
