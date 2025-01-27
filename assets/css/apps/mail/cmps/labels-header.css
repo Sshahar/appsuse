@@ -15,4 +15,8 @@
         border-block-end: solid 3px var(--mail-clr-2);
         border-radius: 4px 4px 0 0;
     }
+
+    li:hover {
+        background-color: #F4F4F4;
+    }
 }
