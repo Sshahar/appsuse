@@ -11,11 +11,11 @@ export function MailIndex() {
     const location = useLocation()
     const navigate = useNavigate()
     const [mails, setMails] = useState([])
-    const [page, setPage] = useState(location.hash.split('?')[0])
+    const [folder, setFolder] = useState(location.hash.split('?')[0])
     const [filter, setFilter] = useState(mailService.getDefaultFilter())
 
     useEffect(() => {
-        if (!page) navigate("#inbox")
+        if (!folder) navigate("#inbox")
     }, [])
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export function MailIndex() {
     return (
         <section className="mail-index">
             {/* Aside */}
-            <FolderList />
+            <FolderList currentFolder={folder} />
 
             {/* Main */}
             <main>

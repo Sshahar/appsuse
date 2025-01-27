@@ -3,7 +3,7 @@ const { useEffect } = React
 
 import { globalState } from "../services/globalState.js"
 
-export function FolderList() {
+export function FolderList({currentFolder}) {
     const IMG_PATH = globalState.getImgPath()
     const location = useLocation()
 
