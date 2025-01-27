@@ -47,7 +47,7 @@ function save(mail) {
 }
 
 function getDefaultFilter() {
-    return { folder: "inbox" }
+    return { folder: 'inbox', label: 'primary' }
 }
 
 function _filter(mails, filter) {
