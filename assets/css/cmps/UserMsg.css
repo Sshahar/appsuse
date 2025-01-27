@@ -1,6 +1,10 @@
 .user-msg {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     background-color: lightgray;
-    padding: 1em;
+    padding-inline: 2em;
+    border-radius: 4px;
     position: absolute;
     top: 1em;
     right: 1em;
@@ -12,6 +16,11 @@
 
 .user-msg.error {
     background-color: lightpink;
+}
+.user-msg.info {
+    background-color: #252629;
+    color: #e7e7e7;
+    font-weight: 600;
 }
 
 
