@@ -8,13 +8,21 @@
     }
 
     .compose {
-        /* background-color: var(--mail-bgc-1); */
+        display: block;
+        width: fit-content;
+
+        background-color: var(--mail-bgc-1);
         border-radius: 14px;
         padding: 0.6em;
         padding-inline-end: 1.5em;
         border: none;
-        margin-inline-start: 0.4em;
+        margin-inline-start: 0.6em;
+        margin-block: 1em;
         font-weight: 500;
+    }
+    .compose:hover {
+        transition: box-shadow .08s linear, min-width .15s cubic-bezier(0.4,0,0.2,1);
+        box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
     }
 
     li {
