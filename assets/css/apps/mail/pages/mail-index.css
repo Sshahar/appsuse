@@ -8,4 +8,7 @@
     overflow-x: hidden;
     font-size: 14px;
 
+    main>* {
+        padding-left: 1em;
+    }
 }

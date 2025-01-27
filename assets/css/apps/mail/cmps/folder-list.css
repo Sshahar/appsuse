@@ -26,6 +26,8 @@
     }
 
     li {
+        padding-inline-start: 1em;
+        margin-inline-end: 1em;
         border-radius: 0 16px 16px 0;
     }
 

@@ -6,7 +6,8 @@
     background-color: white;
     padding-inline: 12px;
     padding-block-start: 6px;
-
+    margin-block-start: 6px;
+    
     .left-btns {
         display: flex;
         gap: 1.5em;
