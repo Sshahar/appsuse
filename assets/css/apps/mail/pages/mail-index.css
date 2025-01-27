@@ -90,5 +90,10 @@
             margin-inline-start: 0.4em;
             font-weight: 500;
         }
+
+        li.selected {
+            background-color: var(--mail-bgc-3);
+            border-radius: 0 16px 16px 0;
+        }
     }
 }

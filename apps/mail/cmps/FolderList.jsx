@@ -11,6 +11,15 @@ export function FolderList({currentFolder}) {
         console.log('location.hash:', location.hash)
     }, [location.hash])
 
+    function _getFolderImgSrc(folder) {
+        if (_isSelected(folder)) return `${IMG_PATH}/${folder}-fill.png`
+        return `${IMG_PATH}/${folder}.png`
+    }
+
+    function _isSelected(folder) {
+        return currentFolder.slice(1) === folder 
+    }
+
     const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
     const baseUrl = location.pathname + location.hash.split('?')[0]
     return (
@@ -20,9 +29,9 @@ export function FolderList({currentFolder}) {
             {/* Folder list */}
             <ul className="clean-list">
                 {folders.map(folder => (
-                    <li key={folder}>
+                    <li key={folder} className={_isSelected(folder) ? "selected" : ""}>
                         <NavLink to={`#${folder}`}>
-                            <img className="icon" src={`${IMG_PATH}/${folder}.png`} />
+                            <img className="icon" src={_getFolderImgSrc(folder)} />
                             <span className="capitalize">{folder}</span>
                         </NavLink>
                     </li>

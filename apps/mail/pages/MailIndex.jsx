@@ -11,7 +11,7 @@ export function MailIndex() {
     const location = useLocation()
     const navigate = useNavigate()
     const [mails, setMails] = useState([])
-    const [folder, setFolder] = useState(location.hash.split('?')[0])
+    const [folder, setFolder] = useState('')
     const [filter, setFilter] = useState(mailService.getDefaultFilter())
 
     useEffect(() => {
@@ -22,6 +22,11 @@ export function MailIndex() {
         loadMails()
     }, [filter])
 
+    useEffect(() => {
+        setFolder(location.hash.split('?')[0])
+    }, [location])
+
+    
     function loadMails() {
         console.log('Getting mails from server...')
         mailService.query()
