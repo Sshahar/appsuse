@@ -8,12 +8,6 @@
     overflow-x: hidden;
     font-size: 14px;
 
-    .left-btns {
-        display: grid;
-        grid-auto-flow: column;
-        gap: 0.5em;
-    }
-    
     .pagination-header {
         display: flex;
         justify-content: space-between;
