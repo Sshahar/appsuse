@@ -1,4 +1,5 @@
 const { useState, useEffect } = React
+const { useLocation, useNavigate } = ReactRouterDOM
 
 import { FolderList } from "../cmps/FolderList.jsx"
 import { LabelsHeader } from "../cmps/LabelsHeader.jsx"
@@ -7,10 +8,14 @@ import { PreviewList } from "../cmps/PreviewList.jsx"
 import { mailService } from "../services/mail.service.js"
 
 export function MailIndex() {
+    const location = useLocation()
+    const navigate = useNavigate()
     const [mails, setMails] = useState([])
+    const [page, setPage] = useState(location.hash.split('?')[0])
 
     useEffect(() => {
-        debugger
+        if (!page) navigate("#inbox")
+
         console.log('Getting mails from server...')
         mailService.query()
             .then(mails => {
