@@ -5,6 +5,10 @@
     padding-block: 0.4em;
 
     .name {
+        margin-inline-end: 1em;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+        white-space: nowrap;
         flex: .22 0 auto;
     }
 

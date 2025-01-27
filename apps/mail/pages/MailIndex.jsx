@@ -85,7 +85,7 @@ export function MailIndex() {
                 {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
 
                 {/* Preview list */}
-                <PreviewList />
+                <PreviewList mails={mails} />
             </main>
 
             {/* Compose  */}

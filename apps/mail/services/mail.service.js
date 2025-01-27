@@ -2,6 +2,7 @@ import { storageService } from "../../../services/async-storage.service.js";
 import { utilService } from "../../../services/util.service.js";
 
 const dbName = "mailDB"
+const loggedInUser = 'Me'
 
 export const mailService = {
     query,
@@ -66,7 +67,7 @@ function _createMail(mail) {
         isImportant: false,
         sentAt: undefined,
         removedAt: undefined,
-        from: 'Me',
+        from: loggedInUser,
         ...mail
     }
 }
