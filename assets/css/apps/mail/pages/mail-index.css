@@ -91,9 +91,16 @@
             font-weight: 500;
         }
 
+        li {
+            border-radius: 0 16px 16px 0;
+        }
+        
         li.selected {
             background-color: var(--mail-bgc-3);
-            border-radius: 0 16px 16px 0;
+        }
+
+        li:hover {
+            background-color: var(--mail-bgc-4);
         }
     }
 }
