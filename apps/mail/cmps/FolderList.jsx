@@ -17,7 +17,7 @@ export function FolderList({currentFolder}) {
     }
 
     function _isSelected(folder) {
-        return currentFolder.slice(1) === folder 
+        return currentFolder === folder 
     }
 
     const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]

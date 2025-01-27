@@ -23,10 +23,9 @@ export function MailIndex() {
     }, [filter])
 
     useEffect(() => {
-        setFolder(location.hash.split('?')[0])
+        setFolder(location.hash.split('?')[0].slice(1))
     }, [location])
 
-    
     function loadMails() {
         console.log('Getting mails from server...')
         mailService.query()
@@ -42,7 +41,7 @@ export function MailIndex() {
 
     function onSetLabel(label) {
         // console.log('Setting label:', label)
-        setFilter(prevFilter => ({...prevFilter, label}))
+        setFilter(prevFilter => ({ ...prevFilter, label }))
     }
 
     return (
@@ -55,7 +54,7 @@ export function MailIndex() {
                 {/* Pagination header */}
                 <PaginationHeader />
                 {/* Labels header */}
-                <LabelsHeader onSetLabel={onSetLabel}/>
+                {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
 
                 {/* Preview list */}
                 <PreviewList />
