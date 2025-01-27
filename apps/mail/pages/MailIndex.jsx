@@ -33,12 +33,18 @@ export function MailIndex() {
             .then(mails => {
                 setMails(mails)
 
-                console.log('Mails loaded successfuly ')
+                // console.log('Mails loaded successfuly ')
             })
             .catch(err => {
-                console.log('Couldn\'t load mails:', err)
+                // console.log('Couldn\'t load mails:', err)
             })
     }
+
+    function onSetLabel(label) {
+        // console.log('Setting label:', label)
+        setFilter(prevFilter => ({...prevFilter, label}))
+    }
+
     return (
         <section className="mail-index">
             {/* Aside */}
@@ -49,7 +55,7 @@ export function MailIndex() {
                 {/* Pagination header */}
                 <PaginationHeader />
                 {/* Labels header */}
-                <LabelsHeader />
+                <LabelsHeader onSetLabel={onSetLabel}/>
 
                 {/* Preview list */}
                 <PreviewList />
