@@ -1,6 +1,7 @@
 const { useState, useEffect } = React
 const { useLocation, useNavigate } = ReactRouterDOM
 
+import { showUserMsg } from '../../../services/event-bus.service.js'
 import { FolderList } from "../cmps/FolderList.jsx"
 import { LabelsHeader } from "../cmps/LabelsHeader.jsx"
 import { PaginationHeader } from "../cmps/PaginationHeader.jsx"
@@ -51,9 +52,18 @@ export function MailIndex() {
     }
 
     function sendMail(mailToAdd, isDraft) {
-        console.log('mailToAdd:', mailToAdd)
+        showUserMsg("Sending...")
 
-        // Close
+        // TODO: on empty subject & body - prompt user "are you sure"
+
+        mailService.save(mailToAdd)
+            .then(savedMail => {
+                showUserMsg("Message sent")
+            })
+            .catch(err => {
+                showUserMsg("Connection error")
+            })
+
         navigate(location.pathname + location.hash.split('?')[0])
     }
 

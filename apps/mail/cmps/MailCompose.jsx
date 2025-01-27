@@ -34,7 +34,7 @@ export function MailCompose({ sendMail }) {
             {/* Form */}
             <form onSubmit={composeMail}>
                 <div>
-                    <input value={inputs.recipient || ''} onChange={handleChange} name="recipient" autoFocus type="text" placeholder="Recipients" />
+                    <input value={inputs.to || ''} onChange={handleChange} name="to" autoFocus type="text" placeholder="Recipients" />
                 </div>
                 <div>
                     <input value={inputs.subject || ''} onChange={handleChange} name="subject" type="text" placeholder="Subject" />

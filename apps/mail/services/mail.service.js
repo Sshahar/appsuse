@@ -29,7 +29,6 @@ function query(filter = {}) {
             console.log('wat is de pbleom?')
         })
 }
-
 function get(mailId) {
     return query()
         .then(mails => mails.find(mail => mail.id === mailId))
@@ -40,10 +39,11 @@ function remove(mailId) {
 }
 
 function save(mail) {
-    // TODO: test this function
-    if (mail.id) return storageService.put(dbName, mail)
+    // POST mail
+    mail.sentAt = new Date().getTime()
+    return storageService.post(dbName, _createMail(mail))
 
-    return storageService.post(dbName, mail)
+    // TODO: add draft support
 }
 
 function getDefaultFilter() {
@@ -54,6 +54,58 @@ function _filter(mails, filter) {
     // TODO: add filtering
 
     return mails
+}
+
+function _createMail(mail) {
+    console.log('mail:', mail)
+
+    return {
+        createdAt: new Date().getTime(),
+        isRead: false,
+        isStarred: false,
+        isImportant: false,
+        sentAt: undefined,
+        removedAt: undefined,
+        from: 'Me',
+        ...mail
+    }
+}
+
+
+// check outside of inbox
+function getSpecificFolder(mail) {
+    // NOTE: DOES NOT RETURN INBOX IF OTHER CONDITIONS ARE MET
+    // TO CHECK FOR INBOX, USE _isInbox(mail)
+
+    // starred - isStarred
+    if (mail.isStarred) return 'starred'
+    // snoozed - TODO: implement
+
+    // important - isImportant
+    if (mail.isImportant) return 'important'
+
+    // sent - (from.localeCompare('Me') === 0)
+    if (_isSent(mail)) return 'sent'
+
+    // drafts - created but not sent
+    if (_isDrafts(mail)) return 'drafts'
+
+    return 'inbox'
+}
+
+function _isInbox(mail) {
+    // TODO: implement add !snoozed condition
+    // inbox - !sent && !snoozed && !drafts
+    return (!_isSent(mail) && !_isDraft(mail))
+}
+
+function _isSent({ sentAt, from }) {
+    return sentAt && from.localeCompare('Me') === 0
+}
+
+
+function _isDraft({ createdAt, sentAt }) {
+    return createdAt && !sentAt
 }
 
 function _createMails() {
