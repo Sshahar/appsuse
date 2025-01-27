@@ -29,4 +29,8 @@ img {
 /* mail basics */
 body.mail {
     background-color: var(--mail-bgc-5);
+
+    input {
+        padding: 0;
+    }
 }
