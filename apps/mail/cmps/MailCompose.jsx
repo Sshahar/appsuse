@@ -1,11 +1,24 @@
+const { useState } = React
+
 import { globalState } from "../services/globalState.js"
 
 const IMG_PATH = globalState.getImgPath()
 
-export function MailCompose({ saveAndClose }) {
+export function MailCompose({ sendMail }) {
+    const [inputs, setInputs] = useState({})
+
+    function handleChange(ev) {
+        const { name, value } = ev.target
+        setInputs(prevInputs => ({ ...prevInputs, [name]: value }))
+    }
 
     function onSaveAndClose() {
-        saveAndClose()
+        sendMail(inputs, true)
+    }
+
+    function composeMail(ev) {
+        ev.preventDefault()
+        sendMail(inputs, false)
     }
 
     return (
@@ -19,15 +32,15 @@ export function MailCompose({ saveAndClose }) {
             </section>
 
             {/* Form */}
-            <form>
+            <form onSubmit={composeMail}>
                 <div>
-                    <input autoFocus type="text" placeholder="Recipients"/>
+                    <input value={inputs.recipient || ''} onChange={handleChange} name="recipient" autoFocus type="text" placeholder="Recipients" />
                 </div>
                 <div>
-                    <input type="text" placeholder="Subject"/>
+                    <input value={inputs.subject || ''} onChange={handleChange} name="subject" type="text" placeholder="Subject" />
                 </div>
                 <div className="body">
-                    <textarea name="" id=""></textarea>
+                    <textarea value={inputs.body || ''} onChange={handleChange} name="body"></textarea>
                 </div>
 
                 {/* Buttons */}

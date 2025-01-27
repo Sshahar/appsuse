@@ -50,8 +50,8 @@ export function MailIndex() {
         setFilter(prevFilter => ({ ...prevFilter, label }))
     }
 
-    function saveAndClose() {
-        console.log('save and close')
+    function sendMail(mailToAdd, isDraft) {
+        console.log('mailToAdd:', mailToAdd)
 
         // Close
         navigate(location.pathname + location.hash.split('?')[0])
@@ -61,7 +61,7 @@ export function MailIndex() {
     function _isCompose() {
         return location.hash.split('?')[1] && location.hash.split('?')[1].startsWith('compose')
     }
-    
+
     return (
         <section className="mail-index">
             {/* Aside */}
@@ -79,7 +79,7 @@ export function MailIndex() {
             </main>
 
             {/* Compose  */}
-            {_isCompose() && <MailCompose saveAndClose={saveAndClose} />}
+            {_isCompose() && <MailCompose sendMail={sendMail} />}
         </section>
     )
 }
