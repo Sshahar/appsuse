@@ -24,6 +24,7 @@
 /* Mail Cmps */
 @import './apps/mail/cmps/labels-header.css';
 @import './apps/mail/cmps/folder-list.css';
+@import './apps/mail/cmps/mail-preview.css';
 
 
 /* Note Cmps */

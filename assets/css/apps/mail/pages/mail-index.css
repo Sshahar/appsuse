@@ -35,40 +35,4 @@
         }
     }
 
-    .mail-preview {
-        max-width: 100vw;
-        display: grid;
-        grid-template-columns: calc(5em) 200px 1fr 96px;
-        padding-block: 0.4em;
-
-        .name {
-            flex: .22 0 auto;
-        }
-
-        .body {
-            color: var(--mail-clr-1);
-            margin-inline-start: 1ch;
-        }
-
-        .subject {
-            text-overflow: ellipsis;
-            overflow-x: hidden;
-            white-space: nowrap;
-
-            /* flex: 1 0 auto; */
-        }
-
-        .main-text {
-            display: grid;
-            grid-auto-flow: column;
-            /* gap: 1ch; */
-        }
-
-        .date {
-            flex: 1 0 auto;
-            text-align: right;
-            margin-inline-end: 1.5em;
-        }
-    }
-    
 }
