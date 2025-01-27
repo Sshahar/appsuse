@@ -1,0 +1,20 @@
+.pagination-header {
+    display: flex;
+    justify-content: space-between;
+    margin-block: var(--spacing-xs);
+
+    .left-btns {
+        display: flex;
+        gap: 1.5em;
+    }
+    .right-btns {
+        display: flex;
+        gap: 1.5em;
+
+        span {
+            font-size: 0.85em;
+        }
+
+        margin-inline-end: var(--spacing-xl);
+    }
+}
