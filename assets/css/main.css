@@ -23,6 +23,7 @@
 
 /* Mail Cmps */
 @import './apps/mail/cmps/labels-header.css';
+@import './apps/mail/cmps/folder-list.css';
 
 
 /* Note Cmps */

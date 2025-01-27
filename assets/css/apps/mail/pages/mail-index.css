@@ -70,37 +70,5 @@
             margin-inline-end: 1.5em;
         }
     }
-
-    /* Folder list */
-    .mail-folder-list {
-        ul li a {
-            display: flex;
-            align-items: center;
-            gap: 1.2em;
-            margin-inline-start: 1em;
-            padding-block: 0.35em;
-        }
-
-        .compose {
-            /* background-color: var(--mail-bgc-1); */
-            border-radius: 14px;
-            padding: 0.6em;
-            padding-inline-end: 1.5em;
-            border: none;
-            margin-inline-start: 0.4em;
-            font-weight: 500;
-        }
-
-        li {
-            border-radius: 0 16px 16px 0;
-        }
-        
-        li.selected {
-            background-color: var(--mail-bgc-3);
-        }
-
-        li:hover {
-            background-color: var(--mail-bgc-4);
-        }
-    }
+    
 }
