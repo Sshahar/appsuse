@@ -58,3 +58,10 @@
         object-fit: none;
     }
 }
+
+/* overwrite header settings */
+header.mail-app-header {
+    background: var(--mail-bgc-5);
+    border-bottom: none;
+    box-shadow: none;
+}

@@ -16,6 +16,11 @@ export function MailIndex() {
 
     useEffect(() => {
         if (!folder) navigate("#inbox")
+        $('body').addClass('mail')
+
+        return () => {
+            $('body').removeClass('mail')
+        }
     }, [])
 
     useEffect(() => {

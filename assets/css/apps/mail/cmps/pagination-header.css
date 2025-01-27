@@ -1,7 +1,11 @@
 .pagination-header {
     display: flex;
     justify-content: space-between;
-    margin-block: var(--spacing-xs);
+    border-block: var(--spacing-xs) solid white;
+    border-radius: 16px 16px 0 0 ;
+    background-color: white;
+    padding-inline: 12px;
+    padding-block-start: 6px;
 
     .left-btns {
         display: flex;
