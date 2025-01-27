@@ -14,7 +14,7 @@ export function LabelsHeader() {
     return (<section className="labels-header">
         <ul className="clean-list">
             {labels.map(label => (
-                <li>
+                <li className="clickable">
                     <img className="icon" src={`${IMG_PATH}/${_getLabelImgSrc(label)}.png`} />
                     <span className="capitalize">{label}</span>
                 </li>
