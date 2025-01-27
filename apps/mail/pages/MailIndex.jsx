@@ -12,25 +12,28 @@ export function MailIndex() {
     const navigate = useNavigate()
     const [mails, setMails] = useState([])
     const [page, setPage] = useState(location.hash.split('?')[0])
+    const [filter, setFilter] = useState(mailService.getDefaultFilter())
 
     useEffect(() => {
         if (!page) navigate("#inbox")
+    }, [])
 
+    useEffect(() => {
+        loadMails()
+    }, [filter])
+
+    function loadMails() {
         console.log('Getting mails from server...')
         mailService.query()
             .then(mails => {
                 setMails(mails)
 
-                // TODO: display success message
-
+                console.log('Mails loaded successfuly ')
             })
             .catch(err => {
-                console.log('error fetching mails:', err)
-
-                // TODO: display error message
+                console.log('Couldn\'t load mails:', err)
             })
-    }, [])
-
+    }
     return (
         <section className="mail-index">
             {/* Aside */}

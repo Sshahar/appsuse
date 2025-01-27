@@ -8,6 +8,7 @@ export const mailService = {
     get,
     remove,
     save,
+    getDefaultFilter,
 }
 
 function query(filter = {}) {
@@ -45,6 +46,10 @@ function save(mail) {
     return storageService.post(dbName, mail)
 }
 
+function getDefaultFilter() {
+    return { folder: "inbox" }
+}
+
 function _filter(mails, filter) {
     // TODO: add filtering
 
@@ -55,5 +60,5 @@ function _createMails() {
     console.log('Generating new mail db...')
     return fetch('apps/mail/demo-data/mails.json')
         .then(json => json.json())
-        .catch(err => console.log('error at loading mails:', err ))
+        .catch(err => console.log('error at loading mails:', err))
 }
