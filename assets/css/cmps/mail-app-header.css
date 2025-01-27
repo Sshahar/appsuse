@@ -16,6 +16,9 @@
         background-color: var(--mail-bgc-2);
         border-radius: 24px;
 
+        input {
+            font-weight: 500;
+        }
     }
 
     .hamburger {

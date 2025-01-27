@@ -21,7 +21,12 @@
         border-radius: 0 16px 16px 0;
     }
 
+    li:nth-child(1) {
+        font-weight: 700;
+    }
+    
     li.selected {
+        font-weight: 700;
         background-color: var(--mail-bgc-3);
     }
 
