@@ -5,9 +5,22 @@ const IMG_PATH = globalState.getImgPath()
 
 export function PreviewList({ mails }) {
 
-    function _getDate({sentAt, createdAt}) {
+    function _getDate({ sentAt, createdAt }) {
         const date = sentAt || createdAt
         return utilService.getLocaleDate(date)
+    }
+
+    function _getStarPath({ isStarred }) {
+        debugger
+        let src = 'not-starred.png'
+        if (isStarred) src = 'starred.png'
+        return `${IMG_PATH}/${src}`
+    }
+
+    function _getStarClasses({ isStarred }) {
+        const classes = ['icon']
+        if (isStarred) classes.push('filled')
+        return classes.join(' ')
     }
 
     return (
@@ -21,7 +34,7 @@ export function PreviewList({ mails }) {
                             {/* Select */}
                             <input type="checkbox" />
                             {/* Star */}
-                            <img className="icon" src={`${IMG_PATH}/starred.png`} />
+                            <img className={_getStarClasses(mail)} src={_getStarPath(mail)} />
                             {/* Important */}
                             <img className="icon" src={`${IMG_PATH}/important.png`} />
                         </div>

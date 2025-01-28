@@ -15,7 +15,15 @@
         display: grid;
         grid-auto-flow: column;
         gap: 0.5em;
+    }
+
+    /* NOTE: Opacity cannot be overwritten */
+    .left-btns * {
         opacity: 0.32;
+    }
+    
+    .left-btns .filled {
+        opacity: 1;
     }
 
     .left-btns *:hover {
@@ -55,7 +63,7 @@
 }
 
 .mail-preview:hover {
-    .left-btns {
+    .left-btns * {
         opacity: 1;
     }
 

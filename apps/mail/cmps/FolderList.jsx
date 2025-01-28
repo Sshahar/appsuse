@@ -7,6 +7,7 @@ export function FolderList({ currentFolder }) {
     const location = useLocation()
 
     function _getFolderImgSrc(folder) {
+        if (folder === 'starred') folder = 'not-' + folder
         if (_isSelected(folder)) return `${IMG_PATH}/${folder}-fill.png`
         return `${IMG_PATH}/${folder}.png`
     }
