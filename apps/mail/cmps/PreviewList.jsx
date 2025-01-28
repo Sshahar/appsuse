@@ -3,7 +3,7 @@ import { utilService } from "../../../services/util.service.js"
 
 const IMG_PATH = globalState.getImgPath()
 
-export function PreviewList({ mails }) {
+export function PreviewList({ mails, onChangeMail }) {
 
     function _getDate({ sentAt, createdAt }) {
         const date = sentAt || createdAt
@@ -11,7 +11,6 @@ export function PreviewList({ mails }) {
     }
 
     function _getStarPath({ isStarred }) {
-        debugger
         let src = 'not-starred.png'
         if (isStarred) src = 'starred.png'
         return `${IMG_PATH}/${src}`
@@ -21,6 +20,11 @@ export function PreviewList({ mails }) {
         const classes = ['icon']
         if (isStarred) classes.push('filled')
         return classes.join(' ')
+    }
+
+    function onToggleStarred(mail) {
+        mail.isStarred = !mail.isStarred
+        onChangeMail(mail)
     }
 
     return (
@@ -34,7 +38,7 @@ export function PreviewList({ mails }) {
                             {/* Select */}
                             <input type="checkbox" />
                             {/* Star */}
-                            <img className={_getStarClasses(mail)} src={_getStarPath(mail)} />
+                            <img onClick={() => onToggleStarred(mail)} className={_getStarClasses(mail)} src={_getStarPath(mail)} />
                             {/* Important */}
                             <img className="icon" src={`${IMG_PATH}/important.png`} />
                         </div>

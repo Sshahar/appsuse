@@ -56,6 +56,20 @@ export function MailIndex() {
         setFilter(prevFilter => ({ ...prevFilter, label }))
     }
 
+    function onChangeMail(mail) {
+        mailService.save(mail)
+            .then(savedMail => {
+                const updateIdx = mails.findIndex(m => m.id === savedMail.id)
+                setMails(prevMails => {
+                    prevMails[updateIdx] = savedMail
+                    return [...prevMails]
+                })
+            })
+            .catch(err => {
+                showUserMsg('Connection error')
+            })
+    }
+
     function sendMail(mailToAdd, isDraft) {
         showUserMsg("Sending...")
 
@@ -90,7 +104,7 @@ export function MailIndex() {
                 {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
 
                 {/* Preview list */}
-                <PreviewList mails={mails} />
+                <PreviewList mails={mails} onChangeMail={onChangeMail} />
             </main>
 
             {/* Compose  */}

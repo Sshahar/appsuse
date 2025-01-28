@@ -41,8 +41,11 @@ function remove(mailId) {
 }
 
 function save(mail) {
+    // Update mail
+    if (mail.id) return storageService.put(dbName, _createMail(mail))
+    
     // POST mail
-    mail.sentAt = new Date().getTime()
+    if (!mail.sentAt) mail.sentAt = new Date().getTime()
     return storageService.post(dbName, _createMail(mail))
 
     // TODO: add draft support
