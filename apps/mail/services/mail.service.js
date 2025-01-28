@@ -10,6 +10,7 @@ export const mailService = {
     remove,
     save,
     getDefaultFilter,
+    sort,
 }
 
 function query(filter = {}) {
@@ -29,6 +30,7 @@ function query(filter = {}) {
             console.log('wat is de pbleom?')
         })
 }
+
 function get(mailId) {
     return query()
         .then(mails => mails.find(mail => mail.id === mailId))
@@ -48,6 +50,13 @@ function save(mail) {
 
 function getDefaultFilter() {
     return { folder: 'inbox', label: 'primary' }
+}
+
+function sort(mails) {
+    return mails.toSorted((m1, m2) => {
+        if (m1.sentAt && m2.sentAt) return m2.sentAt - m1.sentAt
+        return m2.createdAt - m1.createdAt
+    })
 }
 
 function _filter(mails, filter) {

@@ -41,6 +41,7 @@ export function MailIndex() {
         console.log('Getting mails from server...')
         mailService.query(filter)
             .then(mails => {
+                mails = mailService.sort(mails)
                 setMails(mails)
 
                 // console.log('Mails loaded successfuly ')
