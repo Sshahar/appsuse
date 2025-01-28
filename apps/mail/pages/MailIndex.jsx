@@ -8,10 +8,12 @@ import { PaginationHeader } from "../cmps/PaginationHeader.jsx"
 import { PreviewList } from "../cmps/PreviewList.jsx"
 import { MailCompose } from "../cmps/MailCompose.jsx"
 import { mailService } from "../services/mail.service.js"
+import { MailDetails } from '../cmps/MailDetails.jsx'
 
 export function MailIndex() {
     const location = useLocation()
     const navigate = useNavigate()
+    const [page, setPage] = useState('preview') // 'preview' \ 'details'
     const [mails, setMails] = useState([])
     const [folder, setFolder] = useState('')
     const [filter, setFilter] = useState(mailService.getDefaultFilter())
@@ -96,8 +98,8 @@ export function MailIndex() {
             {/* Aside */}
             <FolderList currentFolder={folder} />
 
-            {/* Main */}
-            <main>
+            {/* Preview Page */}
+            {page === 'preview' && <main>
                 {/* Pagination header */}
                 <PaginationHeader />
                 {/* Labels header */}
@@ -105,7 +107,18 @@ export function MailIndex() {
 
                 {/* Preview list */}
                 <PreviewList mails={mails} onChangeMail={onChangeMail} />
-            </main>
+            </main>}
+
+            {/* Details Page */}
+            {page === 'details' && <main>
+                {/* Pagination header */}
+                <PaginationHeader />
+                {/* Labels header */}
+                {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
+
+                {/* Mail Details */}
+                <MailDetails />
+            </main>}
 
             {/* Compose  */}
             {_isCompose() && <MailCompose sendMail={sendMail} />}
