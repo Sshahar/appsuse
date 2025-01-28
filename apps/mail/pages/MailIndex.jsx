@@ -13,7 +13,7 @@ import { MailDetails } from '../cmps/MailDetails.jsx'
 export function MailIndex() {
     const location = useLocation()
     const navigate = useNavigate()
-    const [page, setPage] = useState('preview') // 'preview' \ 'details'
+    const [page, setPage] = useState('details') // 'preview' \ 'details'
     const [mails, setMails] = useState([])
     const [folder, setFolder] = useState('')
     const [filter, setFilter] = useState(mailService.getDefaultFilter())
@@ -98,27 +98,36 @@ export function MailIndex() {
             {/* Aside */}
             <FolderList currentFolder={folder} />
 
-            {/* Preview Page */}
-            {page === 'preview' && <main>
-                {/* Pagination header */}
-                <PaginationHeader />
-                {/* Labels header */}
-                {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
+            <main>
+                {/* Preview Page */}
+                {page === 'preview' &&
+                    <React.Fragment>
 
-                {/* Preview list */}
-                <PreviewList mails={mails} onChangeMail={onChangeMail} />
-            </main>}
+                        {/* Pagination header */}
+                        < PaginationHeader />
+                        {/* Labels header */}
+                        {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
 
-            {/* Details Page */}
-            {page === 'details' && <main>
-                {/* Pagination header */}
-                <PaginationHeader />
-                {/* Labels header */}
-                {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
+                        {/* Preview list */}
+                        <PreviewList mails={mails} onChangeMail={onChangeMail} />
+                    </React.Fragment>
+                }
+                {/* Details Page */}
+                {page === 'details' &&
+                    <React.Fragment>
 
-                {/* Mail Details */}
-                <MailDetails />
-            </main>}
+                        {/* Pagination header */}
+                        <PaginationHeader />
+                        {/* Labels header */}
+                        {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
+
+                        {/* Mail Details */}
+                        <MailDetails />
+                    </React.Fragment>
+                }
+            </main>
+
+
 
             {/* Compose  */}
             {_isCompose() && <MailCompose sendMail={sendMail} />}
