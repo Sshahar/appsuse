@@ -98,7 +98,7 @@ export function MailIndex() {
             {/* Aside */}
             <FolderList currentFolder={folder} />
 
-            <main>
+            <main className='mail-details'>
                 {/* Preview Page */}
                 {page === 'preview' &&
                     <React.Fragment>
@@ -118,9 +118,7 @@ export function MailIndex() {
 
                         {/* Pagination header */}
                         <PaginationHeader />
-                        {/* Labels header */}
-                        {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
-
+                        
                         {/* Mail Details */}
                         <MailDetails />
                     </React.Fragment>
