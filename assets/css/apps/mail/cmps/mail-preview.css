@@ -1,5 +1,4 @@
 .mail-preview {
-    max-width: 100vw;
     display: grid;
     grid-template-columns: calc(5em) 200px 1fr 96px;
     padding-block: 0.4em;
