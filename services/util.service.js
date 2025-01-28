@@ -80,7 +80,7 @@ function getClientLocale() {
 
 
 function getLocaleDate(date, options = {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+    year: 'numeric', month: 'numeric', day: 'numeric',
 }) {
     return new Date(date).toLocaleDateString(getClientLocale(), options)
 }
