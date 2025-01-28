@@ -33,9 +33,13 @@ export function MailIndex() {
         setFolder(location.hash.split('?')[0].slice(1))
     }, [location])
 
+    useEffect(() => {
+        setFilter(prevFilter => ({ ...prevFilter, folder }))
+    }, [folder])
+
     function loadMails() {
         console.log('Getting mails from server...')
-        mailService.query()
+        mailService.query(filter)
             .then(mails => {
                 setMails(mails)
 

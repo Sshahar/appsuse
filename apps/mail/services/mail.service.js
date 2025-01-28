@@ -23,7 +23,6 @@ function query(filter = {}) {
                         return _filter(mails, filter)
                     })
             }
-            // TODO: filter mails
             return _filter(mails, filter)
         })
         .catch(err => {
@@ -52,9 +51,17 @@ function getDefaultFilter() {
 }
 
 function _filter(mails, filter) {
-    // TODO: add filtering
+    const { folder } = filter
+    if (folder) {
+        mails = mails.filter(mail => _filterByFolder(mail, folder))
+    }
 
     return mails
+}
+
+function _filterByFolder(mail, folder) {
+    if (folder === 'inbox') return _isInbox(mail)
+    return folder === getSpecificFolder(mail)
 }
 
 function _createMail(mail) {
@@ -97,7 +104,7 @@ function getSpecificFolder(mail) {
 function _isInbox(mail) {
     // TODO: implement add !snoozed condition
     // inbox - !sent && !snoozed && !drafts
-    return (!_isSent(mail) && !_isDraft(mail))
+    return (!_isSent(mail) && !_isDrafts(mail))
 }
 
 function _isSent({ sentAt, from }) {
@@ -105,7 +112,7 @@ function _isSent({ sentAt, from }) {
 }
 
 
-function _isDraft({ createdAt, sentAt }) {
+function _isDrafts({ createdAt, sentAt }) {
     return createdAt && !sentAt
 }
 

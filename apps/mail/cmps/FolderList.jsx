@@ -1,15 +1,10 @@
 const { NavLink, useLocation } = ReactRouterDOM
-const { useEffect } = React
 
 import { globalState } from "../services/globalState.js"
 
-export function FolderList({currentFolder}) {
+export function FolderList({ currentFolder }) {
     const IMG_PATH = globalState.getImgPath()
     const location = useLocation()
-
-    useEffect(() => {
-        console.log('location.hash:', location.hash)
-    }, [location.hash])
 
     function _getFolderImgSrc(folder) {
         if (_isSelected(folder)) return `${IMG_PATH}/${folder}-fill.png`
@@ -17,7 +12,7 @@ export function FolderList({currentFolder}) {
     }
 
     function _isSelected(folder) {
-        return currentFolder === folder 
+        return currentFolder === folder
     }
 
     const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
