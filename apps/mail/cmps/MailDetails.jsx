@@ -58,11 +58,11 @@ export function MailDetails() {
                     with some textaybe?\n\
                     with some text, maybe?with some text, maybe?\n\
 \n\
-                    with some text, maybe?with some text, maybe?".split('').map(c => {
-                        if (c === '\n') return <br/>
-                        return c
+                    with some text, maybe?with some text, maybe?".split('').map((c, i) => {
+                        if (c === '\n') return <React.Fragment key={i}><br /></React.Fragment>
+                        return <React.Fragment key={i}>{c}</React.Fragment>
                     })
-}
+                    }
 
                 </span>
 
