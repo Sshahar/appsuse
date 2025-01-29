@@ -12,6 +12,7 @@ export const mailService = {
     getDefaultFilter,
     sort,
     isDrafts,
+    getMailTypeCounts,
 }
 
 function query(filter = {}) {
@@ -44,7 +45,7 @@ function remove(mailId) {
 function save(mail) {
     // Update mail
     if (mail.id) return storageService.put(dbName, _createMail(mail))
-    
+
     // POST mail
     if (!mail.sentAt) mail.sentAt = new Date().getTime()
     return storageService.post(dbName, _createMail(mail))
@@ -134,4 +135,13 @@ function _createMails() {
     return fetch('apps/mail/demo-data/mails.json')
         .then(json => json.json())
         .catch(err => console.log('error at loading mails:', err))
+}
+
+function getMailTypeCounts() {
+    return query()
+        .then(mails => {
+            const inbox = mails.filter(m => _isInbox(m) && !m.isRead).length
+            const drafts = mails.filter(m => isDrafts(m) && mailService.isDrafts(m))
+            return { inbox, drafts }
+        })
 }

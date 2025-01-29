@@ -17,6 +17,7 @@ export function MailIndex() {
     const [mails, setMails] = useState([])
     const [folder, setFolder] = useState('')
     const [filter, setFilter] = useState(mailService.getDefaultFilter())
+    const [mailTypeCounts, setMailTypeCounts] = useState({ inbox: '', drafts: '' })
 
     useEffect(() => {
         if (!folder) navigate("#inbox")
@@ -38,6 +39,10 @@ export function MailIndex() {
     useEffect(() => {
         setFilter(prevFilter => ({ ...prevFilter, folder }))
     }, [folder])
+
+    useEffect(() => {
+        mailService.getMailTypeCounts().then(counts => setMailTypeCounts(counts))
+    }, [mails])
 
     function loadMails() {
         console.log('Getting mails from server...')
@@ -93,16 +98,10 @@ export function MailIndex() {
         return location.hash.split('?')[1] && location.hash.split('?')[1].startsWith('compose')
     }
 
-    function getMailTypeCounts() {
-        const inbox = mails.filter(m => !m.isRead).length
-        const drafts = mails.filter(m => mailService.isDrafts(m))
-        return { inbox, drafts }
-    }
-
     return (
         <section className="mail-index">
             {/* Aside */}
-            <FolderList mailTypeCounts={getMailTypeCounts()} currentFolder={folder} />
+            <FolderList mailTypeCounts={mailTypeCounts} currentFolder={folder} />
 
             <main className='mail-details'>
                 {/* Preview Page */}
