@@ -1,52 +1,45 @@
-.mail-folder-list {
-    .count {
-        position: absolute;
-        right: 1em;
-        font-weight: bold;
-    }
-    
-    ul li a {
-        display: flex;
-        align-items: center;
-        gap: 1.2em;
-        margin-inline-start: 1em;
-        padding-block: 0.35em;
-    }
-
-    .compose {
-        display: block;
-        width: fit-content;
-
-        background-color: var(--mail-bgc-1);
-        border-radius: 14px;
-        padding: 0.6em;
-        padding-inline-end: 1.5em;
-        border: none;
-        margin-inline-start: 0.6em;
-        margin-block: 1em;
-        font-weight: 500;
-    }
-    .compose:hover {
-        transition: box-shadow .08s linear, min-width .15s cubic-bezier(0.4,0,0.2,1);
-        box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
-    }
-
-    li {
-        padding-inline-start: 1em;
-        margin-inline-end: 1em;
-        border-radius: 0 16px 16px 0;
-    }
-
-    li:nth-child(1) {
-        font-weight: 700;
-    }
-    
-    li.selected {
-        font-weight: 700;
-        background-color: var(--mail-bgc-3);
-    }
-
-    li:hover {
-        background-color: var(--mail-bgc-4);
-    }
+.mail-folder-list .count {
+  position: absolute;
+  right: 1em;
+  font-weight: bold;
 }
+.mail-folder-list ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  margin-inline-start: 1em;
+  padding-block: 0.35em;
+}
+.mail-folder-list .compose {
+  display: block;
+  width: fit-content;
+  background-color: var(--mail-bgc-1);
+  border-radius: 14px;
+  padding: 0.6em;
+  padding-inline-end: 1.5em;
+  border: none;
+  margin-inline-start: 0.6em;
+  margin-block: 1em;
+  font-weight: 500;
+}
+.mail-folder-list .compose:hover {
+  transition: box-shadow 0.08s linear, min-width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
+.mail-folder-list li {
+  padding-inline-start: 1em;
+  margin-inline-end: 1em;
+  border-radius: 0 16px 16px 0;
+}
+.mail-folder-list li:nth-child(1) {
+  font-weight: 700;
+}
+.mail-folder-list li.selected {
+  font-weight: 700;
+  background-color: var(--mail-bgc-3);
+}
+.mail-folder-list li:hover {
+  background-color: var(--mail-bgc-4);
+}
+
+/*# sourceMappingURL=folder-list.css.map */

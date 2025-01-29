@@ -2,3 +2,4 @@
 todo.txt
 node_modules
 package-lock.json
+*.css.map

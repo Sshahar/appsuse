@@ -1,26 +1,24 @@
 .pagination-header {
-    display: flex;
-    justify-content: space-between;
-    border-block: var(--spacing-xs) solid white;
-    border-radius: 16px 16px 0 0;
-    background-color: white;
-    padding-inline: 12px;
-    padding-block-start: 6px;
-    margin-block-start: 6px;
-
-    .left-btns {
-        display: flex;
-        gap: 1.5em;
-    }
-
-    .right-btns {
-        display: flex;
-        gap: 1.5em;
-
-        span {
-            font-size: 0.85em;
-        }
-
-        margin-inline-end: var(--spacing-xl);
-    }
+  display: flex;
+  justify-content: space-between;
+  border-block: var(--spacing-xs) solid white;
+  border-radius: 16px 16px 0 0;
+  background-color: white;
+  padding-inline: 12px;
+  padding-block-start: 6px;
+  margin-block-start: 6px;
 }
+.pagination-header .left-btns {
+  display: flex;
+  gap: 1.5em;
+}
+.pagination-header .right-btns {
+  display: flex;
+  gap: 1.5em;
+  margin-inline-end: var(--spacing-xl);
+}
+.pagination-header .right-btns span {
+  font-size: 0.85em;
+}
+
+/*# sourceMappingURL=pagination-header.css.map */

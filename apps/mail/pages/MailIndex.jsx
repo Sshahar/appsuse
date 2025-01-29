@@ -13,7 +13,7 @@ import { MailDetails } from '../cmps/MailDetails.jsx'
 export function MailIndex() {
     const location = useLocation()
     const navigate = useNavigate()
-    const [page, setPage] = useState('details') // 'preview' \ 'details'
+    const [page, setPage] = useState('preview')
     const [mails, setMails] = useState([])
     const [folder, setFolder] = useState('')
     const [filter, setFilter] = useState(mailService.getDefaultFilter())
