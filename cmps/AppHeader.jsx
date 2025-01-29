@@ -38,8 +38,8 @@ function MailHeader() {
 
                 <div className="group">
                     {/* Apps icons */}
-                    <img className="mail-icon2" src="assets/img/settings.svg" />
-                    <img className="mail-icon2" src="assets/img/apps.svg" />
+                    <img className="opacity-1 mail-icon2" src="assets/img/settings.svg" />
+                    <img className="opacity-1 mail-icon2" src="assets/img/apps.svg" />
                     <img className="mail-icon3 circle" src="assets/img/profile.jpeg" />
                 </div>
             </header>

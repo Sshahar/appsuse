@@ -33,6 +33,10 @@
     width: 20px;
 }
 
+.opacity-1 {
+    opacity: var(--opacity-1);
+}
+
 .mail-icon2 {
     width: calc(var(--btn-padding) * 2 + var(--icon-px-2));
     height: calc(var(--btn-padding) * 2 + var(--icon-px-2));

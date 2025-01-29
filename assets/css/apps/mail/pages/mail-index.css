@@ -8,7 +8,7 @@
     overflow-x: hidden;
     font-size: 14px;
 
-    main>* {
+    main.preview-page>* {
         padding-left: 1em;
     }
 }
