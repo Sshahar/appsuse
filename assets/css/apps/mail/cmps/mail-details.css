@@ -1,71 +1,61 @@
 .mail-details {
-    background-color: white;
-    border-radius: 16px;
-    >*:not(.subheader,.pagination-header) {
-        margin-inline-start: 3.428571429em;
-        margin-inline-end: 2em;
-    }
-
-    .footer-btn {
-        display: inline-flex;
-        gap: 10px;
-        opacity: 0.75;
-        border: 1px solid #747775;
-        border-radius: 18px;
-        margin-right: 8px;
-        font-weight: 500;
-        padding-block: .5em;
-        padding-inline: 1em;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-block-start: 1em;
-
-        .left-section {
-            display: flex;
-            gap: .5em;
-        }
-
-        .right-section {
-            display: flex;
-            gap: 1em;
-        }
-
-    }
-
-    .subheader {
-        display: flex;
-        justify-content: space-between;
-        margin-block-start: 1em;
-        margin-inline-end: 2em;
-
-        .name {
-            font-weight: bold;
-        }
-
-        .left-section {
-            display: flex;
-        }
-
-        .right-section {
-            display: flex;
-            gap: 1em;
-        }
-    }
-
-    .body {
-        display: flex;
-    }
-
-    .footer {
-        display: flex;
-        padding-block: 3em;
-    }
+  background-color: white;
+  border-radius: 16px;
 }
+.mail-details > *:not(.subheader, .pagination-header) {
+  margin-inline-start: 3.428571429em;
+  margin-inline-end: 2em;
+}
+.mail-details .footer-btn {
+  display: inline-flex;
+  gap: 10px;
+  opacity: 0.75;
+  border: 1px solid #747775;
+  border-radius: 18px;
+  margin-right: 8px;
+  font-weight: 500;
+  padding-block: 0.5em;
+  padding-inline: 1em;
+}
+.mail-details h2 {
+  font-size: 22px;
+}
+.mail-details .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-start: 1em;
+}
+.mail-details .header .left-section {
+  display: flex;
+  gap: 0.5em;
+}
+.mail-details .header .right-section {
+  display: flex;
+  gap: 1em;
+}
+.mail-details .subheader {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 1em;
+  margin-inline-end: 2em;
+}
+.mail-details .subheader .name {
+  font-weight: bold;
+}
+.mail-details .subheader .left-section {
+  display: flex;
+}
+.mail-details .subheader .right-section {
+  display: flex;
+  gap: 1em;
+}
+.mail-details .body {
+  display: flex;
+}
+.mail-details .footer {
+  display: flex;
+  padding-block: 3em;
+}
+
+/*# sourceMappingURL=mail-details.css.map */
