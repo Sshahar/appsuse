@@ -1,4 +1,6 @@
 .mail-details {
+    background-color: white;
+    border-radius: 16px;
     >*:not(.subheader) {
         margin-inline-start: 3.428571429em;
         margin-inline-end: 2em;
