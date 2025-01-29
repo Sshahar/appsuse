@@ -4,7 +4,7 @@ const { useLocation, useNavigate } = ReactRouterDOM
 import { showUserMsg } from '../../../services/event-bus.service.js'
 import { FolderList } from "../cmps/FolderList.jsx"
 import { LabelsHeader } from "../cmps/LabelsHeader.jsx"
-import { PaginationHeader } from "../cmps/PaginationHeader.jsx"
+import { DetailsPaginationHeader, PaginationHeader } from "../cmps/PaginationHeader.jsx"
 import { PreviewList } from "../cmps/PreviewList.jsx"
 import { MailCompose } from "../cmps/MailCompose.jsx"
 import { mailService } from "../services/mail.service.js"
@@ -117,8 +117,8 @@ export function MailIndex() {
                     <React.Fragment>
 
                         {/* Pagination header */}
-                        <PaginationHeader />
-                        
+                        <DetailsPaginationHeader />
+
                         {/* Mail Details */}
                         <MailDetails />
                     </React.Fragment>
