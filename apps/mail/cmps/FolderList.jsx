@@ -2,7 +2,7 @@ const { NavLink, useLocation } = ReactRouterDOM
 
 import { globalState } from "../services/globalState.js"
 
-export function FolderList({ currentFolder }) {
+export function FolderList({ currentFolder, mailTypeCounts }) {
     const IMG_PATH = globalState.getImgPath()
     const location = useLocation()
 
@@ -26,9 +26,12 @@ export function FolderList({ currentFolder }) {
             <ul className="clean-list">
                 {folders.map(folder => (
                     <li key={folder} className={_isSelected(folder) ? "selected" : ""}>
-                        <NavLink to={`#${folder}`}>
+                        <NavLink style={{ position: 'relative' }} to={`#${folder}`}>
                             <img className="icon" src={_getFolderImgSrc(folder)} />
                             <span className="capitalize">{folder}</span>
+                            {['inbox', 'drafts'].includes(folder) &&
+                                <span className="count">{mailTypeCounts[folder]}</span>
+                            }
                         </NavLink>
                     </li>
                 ))}

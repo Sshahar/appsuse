@@ -93,10 +93,16 @@ export function MailIndex() {
         return location.hash.split('?')[1] && location.hash.split('?')[1].startsWith('compose')
     }
 
+    function getMailTypeCounts() {
+        const inbox = mails.filter(m => !m.isRead).length
+        const drafts = mails.filter(m => mailService.isDrafts(m))
+        return { inbox, drafts }
+    }
+
     return (
         <section className="mail-index">
             {/* Aside */}
-            <FolderList currentFolder={folder} />
+            <FolderList mailTypeCounts={getMailTypeCounts()} currentFolder={folder} />
 
             <main className='mail-details'>
                 {/* Preview Page */}

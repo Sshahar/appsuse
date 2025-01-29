@@ -11,6 +11,7 @@ export const mailService = {
     save,
     getDefaultFilter,
     sort,
+    isDrafts,
 }
 
 function query(filter = {}) {
@@ -108,7 +109,7 @@ function getSpecificFolder(mail) {
     if (_isSent(mail)) return 'sent'
 
     // drafts - created but not sent
-    if (_isDrafts(mail)) return 'drafts'
+    if (isDrafts(mail)) return 'drafts'
 
     return 'inbox'
 }
@@ -116,7 +117,7 @@ function getSpecificFolder(mail) {
 function _isInbox(mail) {
     // TODO: implement add !snoozed condition
     // inbox - !sent && !snoozed && !drafts
-    return (!_isSent(mail) && !_isDrafts(mail))
+    return (!_isSent(mail) && !isDrafts(mail))
 }
 
 function _isSent({ sentAt, from }) {
@@ -124,7 +125,7 @@ function _isSent({ sentAt, from }) {
 }
 
 
-function _isDrafts({ createdAt, sentAt }) {
+function isDrafts({ createdAt, sentAt }) {
     return createdAt && !sentAt
 }
 

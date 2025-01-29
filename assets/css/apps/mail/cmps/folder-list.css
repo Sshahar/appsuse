@@ -1,4 +1,10 @@
 .mail-folder-list {
+    .count {
+        position: absolute;
+        right: 1em;
+        font-weight: bold;
+    }
+    
     ul li a {
         display: flex;
         align-items: center;
