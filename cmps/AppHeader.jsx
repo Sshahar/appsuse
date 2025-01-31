@@ -17,7 +17,7 @@ export function AppHeader() {
 }
 
 function MailHeader() {
-    const [areAppsShown, setAreAppsShown] = useState(true) // TODO: change to false by default
+    const [areAppsShown, setAreAppsShown] = useState(false)
     const location = useLocation()
     const [page, setPage] = useState(location.pathname.split('/')[1])
 
@@ -36,6 +36,10 @@ function MailHeader() {
         { name: 'note' },
     ]
 
+    function onNav() {
+        setAreAppsShown(false)
+    }
+    
     const isDefaultPage = !['mail', 'note'].includes(page)
 
     return (
@@ -83,7 +87,7 @@ function MailHeader() {
                 {areAppsShown &&
                     <div className="apps-window">
                         {apps.map(  a => (
-                            <NavLink key={a.name} className="app-link" to={`/${a.name}`}>
+                            <NavLink onClick={onNav} key={a.name} className="app-link" to={`/${a.name}`}>
                                 <img className="icon-4" src={`assets/img/${a.name}.png`} />
                                 <span>{a.name}</span>
                             </NavLink>
