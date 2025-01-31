@@ -1,9 +1,12 @@
+const { useNavigate } = ReactRouterDOM
+
 import { globalState } from "../services/globalState.js"
 import { utilService } from "../../../services/util.service.js"
 
 const IMG_PATH = globalState.getImgPath()
 
 export function PreviewList({ mails, onChangeMail }) {
+    const navigate = useNavigate()
 
     function _getDate({ sentAt, createdAt }) {
         const date = sentAt || createdAt
@@ -27,11 +30,15 @@ export function PreviewList({ mails, onChangeMail }) {
         onChangeMail(mail)
     }
 
+    function onMailClick(mail) {
+        navigate(`/mail/${mail.id}`)
+    }
+
     return (
         <section>
             <ul className="clean-list">
                 {mails.map(mail => (
-                    <li key={mail.id} className="mail-preview">
+                    <li key={mail.id} className="mail-preview" onClick={() => onMailClick(mail)}>
                         {/* TODO: add drag and drop icon on hover */}
                         {/* Left button group */}
                         <div className="left-btns">

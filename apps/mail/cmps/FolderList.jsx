@@ -16,8 +16,16 @@ export function FolderList({ currentFolder, mailTypeCounts }) {
         return currentFolder === folder
     }
 
+    function _getSuffixes() {
+        const suffixes = location.hash.split('?')[1] ? location.hash.split('?')[1] : ''
+        if (!suffixes) return ''
+        return '?' + suffixes
+    }
+
     const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
     const baseUrl = location.pathname + location.hash.split('?')[0]
+    const _getAddress = (folder) => `/mail#${folder}${_getSuffixes()}`
+    
     return (
         <aside className="mail-folder-list">
             {/* Compose */}
@@ -26,7 +34,7 @@ export function FolderList({ currentFolder, mailTypeCounts }) {
             <ul className="clean-list">
                 {folders.map(folder => (
                     <li key={folder} className={_isSelected(folder) ? "selected" : ""}>
-                        <NavLink style={{ position: 'relative' }} to={`#${folder}`}>
+                        <NavLink style={{ position: 'relative' }} to={_getAddress(folder)}>
                             <img className="icon" src={_getFolderImgSrc(folder)} />
                             <span className="capitalize">{folder}</span>
                             {['inbox', 'drafts'].includes(folder) &&

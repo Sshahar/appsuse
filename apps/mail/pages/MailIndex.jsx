@@ -1,5 +1,5 @@
 const { useState, useEffect } = React
-const { useLocation, useNavigate } = ReactRouterDOM
+const { useLocation, useNavigate, useParams } = ReactRouterDOM
 
 import { showUserMsg } from '../../../services/event-bus.service.js'
 import { FolderList } from "../cmps/FolderList.jsx"
@@ -13,6 +13,7 @@ import { MailDetails } from '../cmps/MailDetails.jsx'
 export function MailIndex() {
     const location = useLocation()
     const navigate = useNavigate()
+    const { mailId } = useParams()
     const [page, setPage] = useState('preview')
     const [mails, setMails] = useState([])
     const [folder, setFolder] = useState('')
@@ -43,6 +44,11 @@ export function MailIndex() {
     useEffect(() => {
         mailService.getMailTypeCounts().then(counts => setMailTypeCounts(counts))
     }, [mails])
+
+    useEffect(() => {
+        if (!mailId) setPage('preview')
+        else setPage('details')
+    }, [mailId])
 
     function loadMails() {
         console.log('Getting mails from server...')
@@ -98,27 +104,31 @@ export function MailIndex() {
         return location.hash.split('?')[1] && location.hash.split('?')[1].startsWith('compose')
     }
 
+    const mainPageCss = page === 'preview' ? 'mail-preview' : 'mail-details'
     return (
         <section className="mail-index">
             {/* Aside */}
             <FolderList mailTypeCounts={mailTypeCounts} currentFolder={folder} />
 
-            <main className='mail-details'>
-                {/* Preview Page */}
-                {page === 'preview' &&
-                    <React.Fragment>
+            {page === 'preview' &&
+                <React.Fragment>
 
+                    <main>
                         {/* Pagination header */}
                         < PaginationHeader />
+                        {/* Preview Page */}
+
                         {/* Labels header */}
                         {(folder === 'inbox') && <LabelsHeader currentLabel={filter.label} onSetLabel={onSetLabel} />}
 
                         {/* Preview list */}
-                        <PreviewList mails={mails} onChangeMail={onChangeMail} />
-                    </React.Fragment>
-                }
-                {/* Details Page */}
-                {page === 'details' &&
+                        <PreviewList className={mainPageCss} mails={mails} onChangeMail={onChangeMail} />
+                    </main>
+                </React.Fragment>
+            }
+            {/* Details Page */}
+            {page === 'details' &&
+                <main className={mainPageCss}>
                     <React.Fragment>
 
                         {/* Pagination header */}
@@ -127,13 +137,13 @@ export function MailIndex() {
                         {/* Mail Details */}
                         <MailDetails />
                     </React.Fragment>
-                }
-            </main>
+                </main>
+            }
 
 
 
             {/* Compose  */}
             {_isCompose() && <MailCompose sendMail={sendMail} />}
-        </section>
+        </section >
     )
 }

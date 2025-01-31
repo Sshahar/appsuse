@@ -11,6 +11,7 @@ import { BookIndex } from "./apps/book/pages/BookIndex.jsx"
 import { BookDetails } from "./apps/book/pages/BookDetails.jsx"
 import { BookAdd } from "./apps/book/cmps/BookAdd.jsx"
 import { Dashboard } from "./apps/book/pages/Dashboard.jsx"
+import { MailDetails } from "./apps/mail/cmps/MailDetails.jsx"
 
 
 
@@ -22,8 +23,9 @@ export function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 {/* Mail app */}
-                <Route path="/mail" element={<MailIndex />}>
-                </Route>
+                <Route path="/mail" element={<MailIndex />}/>
+                <Route path="/mail/:mailId" element={<MailIndex />}/>
+                
 
                 {/* Note app */}
                 <Route path="/note" element={<NoteIndex />} />

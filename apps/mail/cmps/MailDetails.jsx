@@ -1,15 +1,39 @@
+const { useState, useEffect, useRef } = React
+const { useParams } = ReactRouterDOM
+
+
 import { globalState } from "../services/globalState.js"
+import { mailService } from "../services/mail.service.js"
+
 
 const IMG_PATH = globalState.getImgPath()
 
 export function MailDetails() {
+    const { mailId } = useParams()
+    const [mail, setMail] = useState(null)
+
+    useEffect(() => {
+        loadMail()
+    }, [])
+
+    function loadMail() {
+        mailService.get(mailId)
+            .then(setMail)
+    }
+
+    if (!mail) return <div>Loading...</div>
+
+    const { subject, from, fromName, body } = mail
     return (
         <React.Fragment>
+            {/* NOTE: mail for debugging: */}
+            {/* {mail && JSON.stringify(mail, null, 2)} */}
+            
             {/* Header */}
             <section className="header">
                 <div className="left-section">
                     {/* Subject */}
-                    <h2>long text</h2>
+                    <h2>{subject}</h2>
                     {/* Important */}
                     <span><img className="icon" style={{ 'marginBlockStart': '5px' }} src={`${IMG_PATH}/important.png`} alt="" /></span>
                     {/* TODO: add Label */}
@@ -28,9 +52,9 @@ export function MailDetails() {
                     {/* Profile picture */}
                     <img className="mail-icon3 circle" src="assets/img/profile.jpeg" />
                     {/* Name */}
-                    <span className="name">Shahar margalit</span>
+                    <span className="name">{fromName}</span>
                     {/* From */}
-                    <span className="opacity-1">&lt;shaharma@gmail.com&gt;</span>
+                    <span className="opacity-1">&lt;{from}&gt;</span>
                 </div>
 
                 <div className="right-section">
@@ -48,22 +72,11 @@ export function MailDetails() {
             {/* Body */}
             <section className="body">
                 <span>
-                    {"with some text, maybe?\n\
-                    with some text, maybe?with some text, maybe?\n\
-                    with some text, maybe?with some text, maybe?with some text, maybe?\n\
-\n\
-                    with some text, maybe?with some text, maybe?with some text, maybe?with some text, maybe?\n\
-\n\
-\n\
-                    with some textaybe?\n\
-                    with some text, maybe?with some text, maybe?\n\
-\n\
-                    with some text, maybe?with some text, maybe?".split('').map((c, i) => {
+                    {body && body.split('').map((c, i) => {
                         if (c === '\n') return <React.Fragment key={i}><br /></React.Fragment>
                         return <React.Fragment key={i}>{c}</React.Fragment>
                     })
                     }
-
                 </span>
 
 

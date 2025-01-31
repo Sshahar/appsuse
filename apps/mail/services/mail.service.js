@@ -2,7 +2,7 @@ import { storageService } from "../../../services/async-storage.service.js";
 import { utilService } from "../../../services/util.service.js";
 
 const dbName = "mailDB"
-const loggedInUser = 'Me'
+const loggedInUser = { address: 'shaharma@gmail.com', name: 'Me' }
 
 export const mailService = {
     query,
@@ -12,7 +12,7 @@ export const mailService = {
     getDefaultFilter,
     sort,
     isDrafts,
-    getMailTypeCounts,
+    getMailTypeCounts
 }
 
 function query(filter = {}) {
@@ -88,7 +88,8 @@ function _createMail(mail) {
         isImportant: false,
         sentAt: undefined,
         removedAt: undefined,
-        from: loggedInUser,
+        from: loggedInUser.address,
+        fromName: loggedInUser.name,
         ...mail
     }
 }
@@ -122,7 +123,7 @@ function _isInbox(mail) {
 }
 
 function _isSent({ sentAt, from }) {
-    return sentAt && from.localeCompare('Me') === 0
+    return sentAt && from.localeCompare(loggedInUser.address) === 0
 }
 
 
