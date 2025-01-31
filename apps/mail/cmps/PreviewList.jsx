@@ -25,7 +25,9 @@ export function PreviewList({ mails, onChangeMail }) {
         return classes.join(' ')
     }
 
-    function onToggleStarred(mail) {
+    function onToggleStarred(ev, mail) {
+        ev.stopPropagation()
+
         mail.isStarred = !mail.isStarred
         onChangeMail(mail)
     }
@@ -45,7 +47,7 @@ export function PreviewList({ mails, onChangeMail }) {
                             {/* Select */}
                             <input type="checkbox" />
                             {/* Star */}
-                            <img onClick={() => onToggleStarred(mail)} className={_getStarClasses(mail)} src={_getStarPath(mail)} />
+                            <img onClick={(ev) => onToggleStarred(ev, mail)} className={_getStarClasses(mail)} src={_getStarPath(mail)} />
                             {/* Important */}
                             <img className="icon" src={`${IMG_PATH}/important.png`} />
                         </div>
