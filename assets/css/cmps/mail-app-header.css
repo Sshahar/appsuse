@@ -1,4 +1,5 @@
 .mail-app-header {
+    position: relative;
     display: grid;
     grid-template-columns: 250px 1fr 168px;
     padding: var(--btn-padding);
@@ -12,7 +13,8 @@
 
     .search-group {
         position: relative;
-        width: 720px; /* should be max width */ 
+        width: 720px;
+        /* should be max width */
         gap: 0;
         background-color: var(--mail-bgc-2);
         border-radius: 24px;
@@ -66,4 +68,19 @@ header.mail-app-header {
     background: var(--mail-bgc-5);
     border-bottom: none;
     box-shadow: none;
+}
+
+.icon-4 {
+    height: 3.3em;
+    width: 3.3em;
+}
+
+.keep-logo img, .default-logo img{
+    height: 28px;
+    width: 28px;
+}
+
+.mail-app-header .right-group {
+    grid-column: 3;
+    justify-self: center;
 }

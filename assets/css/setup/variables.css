@@ -22,4 +22,11 @@
     --btn-padding-2: 4px;
     --spacing-xs: 12px;
     --spacing-xl: 60px;
+    
+    /* App vars */
+    --app-bgc-1: #F8FAFD;
+    --app-bgc-2: #E8EDF6;
+    ----header-px: 60px;
+    --font-px-1: 14px
+    
 }

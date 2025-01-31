@@ -1,4 +1,4 @@
 .app {
     display: grid;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: var(--header-px) 1fr;
 }
