@@ -22,10 +22,10 @@ export function FolderList({ currentFolder, mailTypeCounts }) {
         return '?' + suffixes
     }
 
-    const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts',]
+    const folders = ['inbox', 'starred', 'snoozed', 'important', 'sent', 'drafts', 'bin']
     const baseUrl = location.pathname + location.hash.split('?')[0]
     const _getAddress = (folder) => `/mail#${folder}${_getSuffixes()}`
-    
+
     return (
         <aside className="mail-folder-list">
             {/* Compose */}

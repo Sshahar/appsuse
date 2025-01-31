@@ -48,9 +48,17 @@ function randomLabels() {
     if (Math.random() < inboxChance) {
         return Math.random() > 0.05 ? ["inbox"] : ["inbox", "starred"];
     } else {
-        const labelCombos = [["sent"], ["trash"], ["draft"], ["starred", "sent"], ["starred", "draft"], ["starred", "trash"]];
+        const labelCombos = [["sent"], ["bin"], ["draft"], ["starred", "sent"], ["starred", "draft"], ["starred", "bin"]];
         return labelCombos[Math.floor(Math.random() * labelCombos.length)];
     }
+}
+
+// Helper function to set isImportant and ensure it's false when "bin" is in the labels
+function randomIsImportant(labels) {
+    if (labels.includes("bin")) {
+        return false;
+    }
+    return Math.random() < 0.9;  // 90% chance of being important
 }
 
 // Specific timestamps for sentAt: today, last week, next week, next month, next year
@@ -65,7 +73,7 @@ const nextYear = new Date(today);
 nextYear.setFullYear(today.getFullYear() + 1);
 
 // Only 5% of emails should be starred (adjust for larger counts)
-const totalEmails = 25;
+const totalEmails = 5;
 const starLimit = Math.floor(totalEmails * 0.05);
 let starredEmailsCount = 0;
 
@@ -82,6 +90,8 @@ for (let i = 0; i < totalEmails; i++) {
     }
 
     const { email: fromEmail, fromName } = randomNameEmail();
+    
+    const isImportant = randomIsImportant(labels);
 
     emails.push({
         id: `e${100 + i}`,
@@ -90,6 +100,7 @@ for (let i = 0; i < totalEmails; i++) {
         body: randomBody(),
         isRead: Math.random() > 0.5,
         isStarred: labels.includes('starred'),
+        isImportant: isImportant,
         sentAt: randomTimestamp(new Date(today.getFullYear() - 5, 0, 1), new Date(2025, 0, 26)), // Ensure sentAt up to 26/1/2025
         removedAt: null,
         labels: labels,

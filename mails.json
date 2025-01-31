@@ -1,0 +1,87 @@
+[
+    {
+        "id": "e100",
+        "createdAt": 1665700072966,
+        "subject": "New job offer",
+        "body": "We need to reschedule the meeting.",
+        "isRead": false,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1726155493880,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "david123.goldman640@gmail.com",
+        "fromName": "David Goldman",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e101",
+        "createdAt": 1630944259870,
+        "subject": "Out of office",
+        "body": "Will you join me on this trip?",
+        "isRead": true,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1627382378643,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "rachel22.goldman719@gmail.com",
+        "fromName": "Rachel Goldman",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e102",
+        "createdAt": 1586260218751,
+        "subject": "Follow-up on conversation",
+        "body": "Let's catch up soon!",
+        "isRead": false,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1670069930246,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "john47.goldman704@hotmail.com",
+        "fromName": "John Goldman",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e103",
+        "createdAt": 1662026461005,
+        "subject": "Quick question",
+        "body": "Don't forget about our call later today!",
+        "isRead": true,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1683724981660,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "yossi34.kaplan114@appsus.com",
+        "fromName": "Yossi Kaplan",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e104",
+        "createdAt": 1628934526879,
+        "subject": "Vacation plans",
+        "body": "I'm going on vacation, see you soon!",
+        "isRead": true,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1640883637945,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "dany89.johnson905@gmail.com",
+        "fromName": "Dany Johnson",
+        "to": "john-doe@appsus.com"
+    }
+]

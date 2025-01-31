@@ -1,403 +1,87 @@
 [
     {
         "id": "e100",
-        "createdAt": 1737146101212,
-        "subject": "Miss you!",
-        "body": "Here's the document you requested.",
-        "isRead": false,
+        "createdAt": 1705972660901,
+        "subject": "Birthday party",
+        "body": "Will you join me on this trip?",
+        "isRead": true,
         "isStarred": false,
-        "sentAt": 1599704135875,
+        "isImportant": true,
+        "sentAt": 1614929026408,
         "removedAt": null,
         "labels": [
             "inbox"
         ],
-        "from": "michael98.kaplan215@gmail.com",
-        "fromName": "Michael Kaplan",
+        "from": "yael22.cohen541@yahoo.com",
+        "fromName": "Yael Cohen",
         "to": "john-doe@appsus.com"
     },
     {
         "id": "e101",
-        "createdAt": 1592215273779,
-        "subject": "Birthday party",
-        "body": "Let's catch up soon!",
-        "isRead": true,
-        "isStarred": true,
-        "sentAt": 1678209257565,
+        "createdAt": 1704958752283,
+        "subject": "Out of office",
+        "body": "We need to reschedule the meeting.",
+        "isRead": false,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1609355755477,
         "removedAt": null,
         "labels": [
-            "starred",
-            "draft"
+            "inbox"
         ],
-        "from": "sarah56.smith469@appsus.com",
-        "fromName": "Sarah Smith",
+        "from": "mark123.johnson249@yahoo.com",
+        "fromName": "Mark Johnson",
         "to": "john-doe@appsus.com"
     },
     {
         "id": "e102",
-        "createdAt": 1702750099601,
-        "subject": "New job offer",
-        "body": "Let's catch up soon!",
+        "createdAt": 1650446636919,
+        "subject": "Vacation plans",
+        "body": "Here's the document you requested.",
         "isRead": true,
         "isStarred": false,
-        "sentAt": 1621609838750,
-        "removedAt": null,
+        "isImportant": true,
+        "sentAt": 1619391315766,
+        "removedAt": 1619391365766,
         "labels": [
             "inbox"
         ],
-        "from": "noa99.smith947@yahoo.com",
-        "fromName": "Noa Smith",
+        "from": "rachel22.cohen594@hotmail.com",
+        "fromName": "Rachel Cohen",
         "to": "john-doe@appsus.com"
     },
     {
         "id": "e103",
-        "createdAt": 1676172346030,
-        "subject": "Weekly update",
-        "body": "Happy to help with the project details.",
+        "createdAt": 1638997623450,
+        "subject": "Project deadline",
+        "body": "I'm going on vacation, see you soon!",
         "isRead": false,
         "isStarred": false,
-        "sentAt": 1628911653561,
+        "isImportant": true,
+        "sentAt": 1612551969719,
         "removedAt": null,
         "labels": [
             "inbox"
         ],
-        "from": "john47.levi402@hotmail.com",
-        "fromName": "John Levi",
-        "to": "john-doe@appsus.com"
+        "from": "sarah56.katz658@hotmail.com",
+        "fromName": "Sarah Katz",
+        "to": "mark123.cohen690@appsus.com"
     },
     {
         "id": "e104",
-        "createdAt": 1698796176236,
-        "subject": "Invitation to event",
-        "body": "We need to reschedule the meeting.",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1635783486714,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "eitan7.goldman652@yahoo.com",
-        "fromName": "Eitan Goldman",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e105",
-        "createdAt": 1609687471521,
+        "createdAt": 1666983726386,
         "subject": "Lunch next week?",
-        "body": "Looking forward to seeing you next week.",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1578928841245,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "john47.levi665@gmail.com",
-        "fromName": "John Levi",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e106",
-        "createdAt": 1693606632254,
-        "subject": "Quick question",
-        "body": "Don't forget about our call later today!",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1689469716147,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "noa99.cohen191@yahoo.com",
-        "fromName": "Noa Cohen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e107",
-        "createdAt": 1609855212559,
-        "subject": "Lunch next week?",
-        "body": "Let's catch up soon!",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1699174030447,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "yael22.levi371@appsus.com",
-        "fromName": "Yael Levi",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e108",
-        "createdAt": 1602133004227,
-        "subject": "Out of office",
-        "body": "Here's the document you requested.",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1601341432658,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "dany89.cohen123@gmail.com",
-        "fromName": "Dany Cohen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e109",
-        "createdAt": 1622369008135,
-        "subject": "Meeting tomorrow",
-        "body": "Can we discuss the new job opportunity?",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1710063939372,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "noa99.johnson540@hotmail.com",
-        "fromName": "Noa Johnson",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e110",
-        "createdAt": 1584084886902,
-        "subject": "Follow-up on conversation",
         "body": "Here's the document you requested.",
         "isRead": false,
         "isStarred": false,
-        "sentAt": 1700798985110,
+        "isImportant": true,
+        "sentAt": 1590323578674,
         "removedAt": null,
         "labels": [
             "inbox"
         ],
-        "from": "shira56.rosen461@yahoo.com",
-        "fromName": "Shira Rosen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e111",
-        "createdAt": 1719738390511,
-        "subject": "Lunch next week?",
-        "body": "Will you join me on this trip?",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1670544788786,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "yossi34.katz153@appsus.com",
-        "fromName": "Yossi Katz",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e112",
-        "createdAt": 1587018231229,
-        "subject": "Check this out",
-        "body": "Looking forward to seeing you next week.",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1712955461933,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "david123.rosen865@appsus.com",
-        "fromName": "David Rosen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e113",
-        "createdAt": 1718124166465,
-        "subject": "Project deadline",
-        "body": "I'm going on vacation, see you soon!",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1648305585438,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "yael22.rosen854@appsus.com",
-        "fromName": "Yael Rosen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e114",
-        "createdAt": 1734109370502,
-        "subject": "Lunch next week?",
-        "body": "Will you join me on this trip?",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1672348801209,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "noa99.cohen742@yahoo.com",
-        "fromName": "Noa Cohen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e115",
-        "createdAt": 1680775725172,
-        "subject": "Birthday party",
-        "body": "Here's the document you requested.",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1591363859553,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "dany89.levi242@appsus.com",
-        "fromName": "Dany Levi",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e116",
-        "createdAt": 1631611032989,
-        "subject": "Weekly update",
-        "body": "Looking forward to seeing you next week.",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1608795941900,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "mark123.goldman452@gmail.com",
-        "fromName": "Mark Goldman",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e117",
-        "createdAt": 1592000084846,
-        "subject": "Miss you!",
-        "body": "Looking forward to seeing you next week.",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1709214291284,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "noa99.cohen769@gmail.com",
-        "fromName": "Noa Cohen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e118",
-        "createdAt": 1605058196620,
-        "subject": "Meeting tomorrow",
-        "body": "Happy to help with the project details.",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1680878160806,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "mark123.kaplan433@gmail.com",
-        "fromName": "Mark Kaplan",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e119",
-        "createdAt": 1643299832223,
-        "subject": "Follow-up on conversation",
-        "body": "I'm going on vacation, see you soon!",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1580987940361,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "shira56.smith914@gmail.com",
-        "fromName": "Shira Smith",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e120",
-        "createdAt": 1594243202260,
-        "subject": "Project deadline",
-        "body": "Here's the document you requested.",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1633547012878,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "dany89.katz547@appsus.com",
-        "fromName": "Dany Katz",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e121",
-        "createdAt": 1695412015401,
-        "subject": "Invitation to event",
-        "body": "We need to reschedule the meeting.",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1689941195725,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "sarah56.rosen798@appsus.com",
-        "fromName": "Sarah Rosen",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e122",
-        "createdAt": 1599534982328,
-        "subject": "Quick question",
-        "body": "Can we discuss the new job opportunity?",
-        "isRead": false,
-        "isStarred": false,
-        "sentAt": 1639974345037,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "noa99.goldman873@yahoo.com",
-        "fromName": "Noa Goldman",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e123",
-        "createdAt": 1602461216567,
-        "subject": "Weekly update",
-        "body": "Looking forward to seeing you next week.",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1654432247492,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "michael98.katz580@yahoo.com",
-        "fromName": "Michael Katz",
-        "to": "john-doe@appsus.com"
-    },
-    {
-        "id": "e124",
-        "createdAt": 1654876442175,
-        "subject": "Check this out",
-        "body": "I'm going on vacation, see you soon!",
-        "isRead": true,
-        "isStarred": false,
-        "sentAt": 1716764721119,
-        "removedAt": null,
-        "labels": [
-            "inbox"
-        ],
-        "from": "david123.cohen508@hotmail.com",
-        "fromName": "David Cohen",
+        "from": "sarah56.levi802@hotmail.com",
+        "fromName": "Sarah Levi",
         "to": "john-doe@appsus.com"
     }
 ]

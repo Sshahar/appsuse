@@ -113,6 +113,8 @@ function getSpecificFolder(mail) {
     // drafts - created but not sent
     if (isDrafts(mail)) return 'drafts'
 
+    if (mail.removedAt) return 'bin'
+    
     return 'inbox'
 }
 
