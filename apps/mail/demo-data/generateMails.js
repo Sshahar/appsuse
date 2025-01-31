@@ -48,14 +48,14 @@ function randomLabels() {
     if (Math.random() < inboxChance) {
         return Math.random() > 0.05 ? ["inbox"] : ["inbox", "starred"];
     } else {
-        const labelCombos = [["sent"], ["trash"], ["draft"], ["starred", "sent"], ["starred", "draft"], ["starred", "trash"]];
+        const labelCombos = [["sent"], ["bin"], ["draft"], ["starred", "sent"], ["starred", "draft"], ["starred", "bin"]];
         return labelCombos[Math.floor(Math.random() * labelCombos.length)];
     }
 }
 
-// Helper function to set isImportant and ensure it's false when "trash" is in the labels
+// Helper function to set isImportant and ensure it's false when "bin" is in the labels
 function randomIsImportant(labels) {
-    if (labels.includes("trash")) {
+    if (labels.includes("bin")) {
         return false;
     }
     return Math.random() < 0.9;  // 90% chance of being important

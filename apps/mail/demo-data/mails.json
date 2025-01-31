@@ -1,0 +1,87 @@
+[
+    {
+        "id": "e100",
+        "createdAt": 1705972660901,
+        "subject": "Birthday party",
+        "body": "Will you join me on this trip?",
+        "isRead": true,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1614929026408,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "yael22.cohen541@yahoo.com",
+        "fromName": "Yael Cohen",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e101",
+        "createdAt": 1704958752283,
+        "subject": "Out of office",
+        "body": "We need to reschedule the meeting.",
+        "isRead": false,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1609355755477,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "mark123.johnson249@yahoo.com",
+        "fromName": "Mark Johnson",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e102",
+        "createdAt": 1650446636919,
+        "subject": "Vacation plans",
+        "body": "Here's the document you requested.",
+        "isRead": true,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1619391315766,
+        "removedAt": 1619391365766,
+        "labels": [
+            "inbox"
+        ],
+        "from": "rachel22.cohen594@hotmail.com",
+        "fromName": "Rachel Cohen",
+        "to": "john-doe@appsus.com"
+    },
+    {
+        "id": "e103",
+        "createdAt": 1638997623450,
+        "subject": "Project deadline",
+        "body": "I'm going on vacation, see you soon!",
+        "isRead": false,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1612551969719,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "sarah56.katz658@hotmail.com",
+        "fromName": "Sarah Katz",
+        "to": "mark123.cohen690@appsus.com"
+    },
+    {
+        "id": "e104",
+        "createdAt": 1666983726386,
+        "subject": "Lunch next week?",
+        "body": "Here's the document you requested.",
+        "isRead": false,
+        "isStarred": false,
+        "isImportant": true,
+        "sentAt": 1590323578674,
+        "removedAt": null,
+        "labels": [
+            "inbox"
+        ],
+        "from": "sarah56.levi802@hotmail.com",
+        "fromName": "Sarah Levi",
+        "to": "john-doe@appsus.com"
+    }
+]

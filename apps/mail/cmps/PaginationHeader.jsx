@@ -37,7 +37,7 @@ export function DetailsPaginationHeader() {
             <img className="icon" src={`${IMG_PATH}/report-spam.png`} />
 
             {/* delete */}
-            <img className="icon" src={`${IMG_PATH}/trash.png`} />
+            <img className="icon" src={`${IMG_PATH}/bin.png`} />
 
             {/* |  */}
             <span className="opacity-1">|</span>
