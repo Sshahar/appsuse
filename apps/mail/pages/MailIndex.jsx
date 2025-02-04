@@ -1,7 +1,7 @@
 const { useState, useEffect } = React
 const { useLocation, useNavigate, useParams } = ReactRouterDOM
 
-import { showUserMsg } from '../../../services/event-bus.service.js'
+import { showInfoMsg } from '../../../services/event-bus.service.js'
 import { FolderList } from "../cmps/FolderList.jsx"
 import { LabelsHeader } from "../cmps/LabelsHeader.jsx"
 import { DetailsPaginationHeader, PaginationHeader } from "../cmps/PaginationHeader.jsx"
@@ -79,26 +79,40 @@ export function MailIndex() {
                 })
             })
             .catch(err => {
-                showUserMsg('Connection error')
+                showInfoMsg('Connection error')
             })
     }
 
     function sendMail(mailToAdd, isDraft) {
-        showUserMsg("Sending...")
+        showInfoMsg("Sending...")
 
         // TODO: on empty subject & body - prompt user "are you sure"
 
         mailService.save(mailToAdd)
             .then(savedMail => {
-                showUserMsg("Message sent")
+                showInfoMsg("Message sent")
             })
             .catch(err => {
-                showUserMsg("Connection error")
+                showInfoMsg("Connection error")
             })
 
         navigate(location.pathname + location.hash.split('?')[0])
     }
 
+    function onDeleteMail(mailIdToDelete) {
+        if (!mailIdToDelete) mailIdToDelete = mailId
+
+        mailService.remove(mailIdToDelete)
+        .then(() => {
+            showInfoMsg('Mail deleted')
+            navigate('/mail' + location.hash.split('?')[0])
+            setMails(prevMails => prevMails.filter(m => m.id !== mailIdToDelete))
+        })
+        .catch(err => {
+            console.log('MailIndex -> onDeleteMail err:', err)
+            showInfoMsg('Cannot delete mail')
+        })
+    }
 
     function _isCompose() {
         return location.hash.split('?')[1] && location.hash.split('?')[1].startsWith('compose')
@@ -132,7 +146,7 @@ export function MailIndex() {
                     <React.Fragment>
 
                         {/* Pagination header */}
-                        <DetailsPaginationHeader />
+                        <DetailsPaginationHeader onDeleteMail={onDeleteMail} />
 
                         {/* Mail Details */}
                         <MailDetails />

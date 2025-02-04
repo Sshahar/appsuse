@@ -23,7 +23,11 @@ export function PaginationHeader() {
     )
 }
 
-export function DetailsPaginationHeader() {
+export function DetailsPaginationHeader({onDeleteMail}) {
+    function _onDeleteMail() {
+        onDeleteMail()
+    }
+    
     return (<form className="pagination-header details">
         {/* Left button group */}
         <section className="left-btns">
@@ -37,7 +41,7 @@ export function DetailsPaginationHeader() {
             <img className="icon" src={`${IMG_PATH}/report-spam.png`} />
 
             {/* delete */}
-            <img className="icon" src={`${IMG_PATH}/bin.png`} />
+            <img className="icon" src={`${IMG_PATH}/bin.png`} onClick={_onDeleteMail} />
 
             {/* |  */}
             <span className="opacity-1">|</span>

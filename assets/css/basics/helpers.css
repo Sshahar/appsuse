@@ -37,6 +37,12 @@
     opacity: var(--opacity-1);
 }
 
+.btn.icon {
+    width: calc(var(--btn-padding) * 2 + var(--icon-px));
+    height: calc(var(--btn-padding) * 2 + var(--icon-px));
+    padding: var(--btn-padding);
+}
+
 .mail-icon2 {
     width: calc(var(--btn-padding) * 2 + var(--icon-px-2));
     height: calc(var(--btn-padding) * 2 + var(--icon-px-2));
